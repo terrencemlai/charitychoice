@@ -19,7 +19,7 @@
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.jsx",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -27,7 +27,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch --mode=development",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "node server.js"
   },
   "engines": {
     "node": "10.13.0",
