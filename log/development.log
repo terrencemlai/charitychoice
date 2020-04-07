@@ -412,3 +412,1009 @@ Completed 200 OK in 1948ms (Views: 1943.6ms | ActiveRecord: 0.0ms)
   [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 13:57:14 -0400
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/f31dc51f44c507ac/variables" for ::1 at 2020-04-07 13:57:15 -0400
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 13:58:46 -0400
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/15d0e0cddcf0d1f6/variables" for ::1 at 2020-04-07 13:58:46 -0400
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 13:58:48 -0400
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/871925ed4515d938/variables" for ::1 at 2020-04-07 13:58:48 -0400
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 13:59:16 -0400
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/8edfb0c938747e66/variables" for ::1 at 2020-04-07 13:59:16 -0400
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 13:59:49 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/997e10bf79296c3d/variables" for ::1 at 2020-04-07 13:59:50 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:03:14 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template teachers/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/046c5b25b5d70602/variables" for ::1 at 2020-04-07 14:03:15 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:04:36 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (542.8ms)
+Completed 500 Internal Server Error in 561ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `new_teacher' for #<#<Class:0x00007fc9ae21f398>:0x00007fc9ade23b68>
+Did you mean?  new_teacher_url:
+  app/views/teachers/new.html.erb:1:in `_app_views_teachers_new_html_erb___2080717820109531897_70252091215480'
+  app/controllers/teachers_controller.rb:4:in `new'
+
+Started POST "/__better_errors/18f8d74b882514fd/variables" for ::1 at 2020-04-07 14:04:36 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:04:52 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1492ms (Views: 1491.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSchool Load (1.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+Started POST "/teachers/new" for ::1 at 2020-04-07 14:05:51 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/teachers/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/teachers/new" for ::1 at 2020-04-07 14:07:34 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/teachers/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/teachers/new" for ::1 at 2020-04-07 14:08:08 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/teachers/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:08:13 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 58ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:08:45 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"KmjMsITKLrn1Sb4NWDV+Cp4gHxYbNHO47X4hQnHCAySWOL9Kq/Zb2jcaig/rfsAMHfJ0tq/Clb8RXgm/PY3WjQ==", "user"=>{"email"=>"user4@gmail.com"}, "teacher"=>{"full_name"=>"user4", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 40.9ms)
+
+
+
+ActiveModel::UnknownAttributeError - unknown attribute 'email' for Teacher.:
+  app/controllers/teachers_controller.rb:9:in `create'
+
+Started POST "/__better_errors/60c625999184f904/variables" for ::1 at 2020-04-07 14:08:46 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:09:21 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:09:36 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ME2iatJTa5WM2mKjJ+ysA0/OBU7pTng1nGKzhZI1z2GMHdGQ/W8e9k6JVqGUpxIFzBxu7l24njJgQpt43noayA==", "user"=>{"email"=>"user4@gmail.com"}, "teacher"=>{"full_name"=>"user4", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 73.4ms)
+
+
+
+ActiveModel::UnknownAttributeError - unknown attribute 'email' for Teacher.:
+  app/controllers/teachers_controller.rb:9:in `create'
+
+Started POST "/__better_errors/8c9da10871489749/variables" for ::1 at 2020-04-07 14:09:37 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:09:47 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:10:02 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:10:16 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"XySDOv7NAWz0cATiREw7xSuf5mfHTMj4m9k6hKFMaJHjdPDA0fF0DzYjMOD3B4XDqE2Nx3O6Lv9n+RJ57QO9OA==", "user"=>{"email"=>"user4"}, "teacher"=>{"full_name"=>"user4", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 33.1ms)
+
+
+
+NoMethodError - undefined method `teacher=' for #<User:0x00007fc9b33c71a0>
+Did you mean?  teacher_id=:
+  app/controllers/teachers_controller.rb:11:in `create'
+
+Started POST "/__better_errors/9ea2e7712928277c/variables" for ::1 at 2020-04-07 14:10:16 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:10:27 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:10:42 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"A610fNugO/xDO2ryGJ5HZsRKl8QLRSV0cMXeJ6ezM/u//QeG9JxOn4FoXvCr1flgR5j8ZL+zw3OM5fba6/zmUg==", "user"=>{"email"=>"user4"}, "teacher"=>{"full_name"=>"user4", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[36mUser Create (29.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_teacher", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4"], ["is_teacher", true], ["created_at", "2020-04-07 18:10:42.699578"], ["updated_at", "2020-04-07 18:10:42.699578"]]
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[36mSchool Load (1.1ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[36mTeacher Create (24.8ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "user4"], ["teacher_name", "Mrs. Kotch"], ["school_id", 4], ["created_at", "2020-04-07 18:10:42.803530"], ["updated_at", "2020-04-07 18:10:42.803530"]]
+  ↳ app/controllers/teachers_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:13
+Completed 200 OK in 255ms (Views: 0.6ms | ActiveRecord: 166.9ms)
+
+
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeacher Load (22.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (22.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:23:42 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:23:59 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"W5gosclY1kz5HIBfXGpddPROLmvfMW5I4+NRi4TeeL7nyFtL5mSjLztPtF3vIeNyd5xFy2vHiE8fw3l2yJGtFw==", "user"=>{"email"=>"user5@gmail.com"}, "teacher"=>{"full_name"=>"user 5", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user5@gmail.com"], ["created_at", "2020-04-07 18:23:59.618085"], ["updated_at", "2020-04-07 18:23:59.618085"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mSchool Load (1.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "user 5"], ["teacher_name", "Mrs. Kotch"], ["school_id", 4], ["created_at", "2020-04-07 18:23:59.715993"], ["updated_at", "2020-04-07 18:23:59.715993"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[36mUser Update (29.3ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 3], ["updated_at", "2020-04-07 18:23:59.721308"], ["id", 4]]
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:14
+Completed 200 OK in 254ms (Views: 0.9ms | ActiveRecord: 173.1ms)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:28:05 -0400
+
+SyntaxError - syntax error, unexpected '\n', expecting =>
+...   render json: @user, @teacher
+...                               ^:
+  app/controllers/teachers_controller.rb:15:in `'
+
+Started POST "/__better_errors/9dc629225550a844/variables" for ::1 at 2020-04-07 14:28:05 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:28:23 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:28:47 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ER9sq8hIQ9Er/79rEGVvj8+BpL/AglB69FM2qcIKpvatTx9R53Q2sumsi2mjLtGJTFPPH3R0tn0Icx5UjkVzXw==", "user"=>{"email"=>"user6"}, "teacher"=>{"full_name"=>"user 6", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user6"], ["created_at", "2020-04-07 18:28:47.773210"], ["updated_at", "2020-04-07 18:28:47.773210"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mTeacher Create (1.0ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "user 6"], ["teacher_name", "Mrs. Kotch"], ["school_id", 4], ["created_at", "2020-04-07 18:28:47.827255"], ["updated_at", "2020-04-07 18:28:47.827255"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[36mUser Update (25.0ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 4], ["updated_at", "2020-04-07 18:28:47.832437"], ["id", 5]]
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:14
+Completed 200 OK in 186ms (Views: 2.1ms | ActiveRecord: 87.8ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:29:50 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:30:02 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"GRrmNo+liSIOlHfthoXFrOdMELd8YqPFDEXDMP8bEH+lSpXMoJn8QczHQ+81znuqZJ57F8iURcLwZevNs1TF1g==", "user"=>{"email"=>"user6"}, "teacher"=>{"full_name"=>"user6", "school_id"=>"4", "teacher_name"=>"Mrs. Kotch"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user6"], ["created_at", "2020-04-07 18:30:03.025148"], ["updated_at", "2020-04-07 18:30:03.025148"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mTeacher Create (23.9ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "user6"], ["teacher_name", "Mrs. Kotch"], ["school_id", 4], ["created_at", "2020-04-07 18:30:03.085525"], ["updated_at", "2020-04-07 18:30:03.085525"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 5], ["updated_at", "2020-04-07 18:30:03.112355"], ["id", 6]]
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:14
+Completed 200 OK in 154ms (Views: 0.7ms | ActiveRecord: 101.1ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:41:11 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:41:19 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"UQ9ju8VbFQtSrR7w+SBmzlUS6UUUaH2LzH42JASLa3ztXxBB6mdgaJD+KvJKa9jI1sCC5aCem4wwXh7ZSMS+1Q==", "user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mUser Create (4.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", ""], ["created_at", "2020-04-07 18:41:19.334117"], ["updated_at", "2020-04-07 18:41:19.334117"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:11
+Completed 422 Unprocessable Entity in 21ms (Views: 0.2ms | ActiveRecord: 6.1ms)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:47:07 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 1607ms (Views: 1607.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:47:10 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"Baw6RKobajl+ZWhZHb/Hsvub7oA5QYpXaZRHGDaPInG5/Em+hScfWrw2XFuu9Hm0eEmFII23bFCVtG/lesD32A==", "user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - :in and :within must be a Range:
+  app/models/user.rb:16:in `<class:User>'
+  app/models/user.rb:15:in `<top (required)>'
+  app/controllers/teachers_controller.rb:8:in `create'
+
+Started POST "/__better_errors/8dd44c75789854b9/variables" for ::1 at 2020-04-07 14:47:10 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:47:29 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:47:31 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"znkVDMvW4EyEGRWhRDUWT/Bj0GcXeal1e7tt52AISvtyKWb25OqVL0ZKIaP3fqhJc7G7x6OPT3KHm0UaLEefUg==", "user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:11
+Completed 422 Unprocessable Entity in 72ms (Views: 0.3ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:49:46 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:49:48 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"bEgmliXviTFcLZOeA1/CE4rQn9ObS30IP2asFupT26TQGFVsCtP8Up5+p5ywFHwVCQL0cy+9mw/DRoTrphwODQ==", "user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:11
+Completed 422 Unprocessable Entity in 68ms (Views: 0.3ms | ActiveRecord: 38.6ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 14:50:06 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"bEgmliXviTFcLZOeA1/CE4rQn9ObS30IP2asFupT26TQGFVsCtP8Up5+p5ywFHwVCQL0cy+9mw/DRoTrphwODQ==", "user"=>{"email"=>"user5@gmail.com"}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user5@gmail.com"], ["created_at", "2020-04-07 18:50:06.098623"], ["updated_at", "2020-04-07 18:50:06.098623"]]
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:11
+Completed 422 Unprocessable Entity in 16ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 14:51:40 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/teachers" for ::1 at 2020-04-07 15:06:06 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"IRleqb4aWASK8jqLSxi45A/9vQ98dJ8IviY0Cug1GnCdSS1TkSYtZ0ihDon4UwbijC/Wr8iCeQ9CBhz3pHrP2Q==", "user"=>{"email"=>"user_01@gmail.com"}, "teacher"=>{"full_name"=>"", "school_id"=>"", "teacher_name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_01@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:12
+Completed 422 Unprocessable Entity in 72ms (Views: 0.2ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:13:46 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/new.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <option value=school.id name="...
+...                              ^
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...=( <option value=school.id name="teacher[school_id]">school....
+...                           ^~~~
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:15: unknown regexp options - lct
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:15: unmatched close parenthesis: /option> );@output_buffer.safe_append='
+'.freeze;             end 
+@output_buffer.safe_append='        </
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:16: syntax error, unexpected '<'
+    <label>Teacher Name
+    ^
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:16: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <label>Teacher Name
+                   ^~~~
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+        <input type="text" name="teacher[teacher_name]" valu...
+                           ^~~~
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="teacher[teacher_name]" value="">
+...                          ^~~~~
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:18: syntax error, unexpected '<'
+    </label>
+    ^
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:19: unknown regexp options - btt
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:20: syntax error, unexpected '<'
+</form>'.freeze;
+^
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:24: unterminated regexp meets end of file
+          end
+             ^
+/Users/terrencelai/Desktop/CharityChoice/app/views/teachers/new.html.erb:24: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/teachers/new.html.erb:13:in `'
+  app/controllers/teachers_controller.rb:5:in `new'
+
+Started POST "/__better_errors/e8ca991a60d75d80/variables" for ::1 at 2020-04-07 15:13:47 -0400
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:15:47 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (12.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 159ms (Views: 99.6ms | ActiveRecord: 58.8ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:16:01 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (1.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:16:02 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:16:19 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (1.0ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:16:37 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (1.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:16:53 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"dKvMQmkaXWxTZHDpWo+shGPNBLYxLTxmfSebKR4EwPLI+7+4RiYoD5E3ROvpxBKC4B9vFoXb2mGBB7PUUksVWw==", "user"=>{"email"=>"user 7"}, "teacher"=>{"full_name"=>"user 7", "teacher_name"=>"Mr Smith"}}
+  [1m[35m (25.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 7"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user 7"], ["created_at", "2020-04-07 19:16:53.488297"], ["updated_at", "2020-04-07 19:16:53.488297"]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (44.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:12
+Completed 422 Unprocessable Entity in 254ms (Views: 0.6ms | ActiveRecord: 167.6ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:17:16 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"dKvMQmkaXWxTZHDpWo+shGPNBLYxLTxmfSebKR4EwPLI+7+4RiYoD5E3ROvpxBKC4B9vFoXb2mGBB7PUUksVWw==", "user"=>{"email"=>"user 7"}, "teacher"=>{"full_name"=>"user 7", "teacher_name"=>"Mr Smith"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 7"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:12
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:24:09 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (8.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 97ms (Views: 68.4ms | ActiveRecord: 22.5ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:24:52 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"5XbbatAF4B0jE3rqzjedrwVogIRswAXv2+G1uT6qh3lZJqiQ/zmVfuFATuh9fCOphrrrJNg24+gnwZ1EcuVS0A==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"Mr. Smith"}}
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (24.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 151ms (Views: 0.3ms | ActiveRecord: 89.8ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:25:28 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (2.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 77ms (Views: 55.7ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:25:40 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ndfuL0VwX6rmOLWvhlmf24BuEXfPLn0xB+d0m1Brnd4hh53VakwqySRrga01EiHdA7x613vYmzb7x1xmHCRIdw==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:16
+  [1m[35m (25.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 100ms (Views: 0.4ms | ActiveRecord: 61.8ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:25:50 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ndfuL0VwX6rmOLWvhlmf24BuEXfPLn0xB+d0m1Brnd4hh53VakwqySRrga01EiHdA7x613vYmzb7x1xmHCRIdw==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:25:58 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ndfuL0VwX6rmOLWvhlmf24BuEXfPLn0xB+d0m1Brnd4hh53VakwqySRrga01EiHdA7x613vYmzb7x1xmHCRIdw==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (24.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:16
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 38ms (Views: 0.3ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:26:31 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:26:41 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"DRSrjYRXfTUUA8s/eR3vFTWlZ6dZvpPsiUgBfHE52NexRNh3q2sIVtZQ/z3KVlETtncMB+1Idet1aCmBPXYNfg==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 10ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:29:06 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (7.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 71ms (Views: 49.0ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:29:18 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"5Mf8tadtzuIzqskzJZ0JjTUX5lFEn9/xrdsLArmgX8VYl49PiFG7gfH5/TGW1reLtsWN8fBpOfZR+yP/9e+KbA==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/teachers_controller.rb:18
+Completed 422 Unprocessable Entity in 24062ms (Views: 0.3ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/teachers/new" for ::1 at 2020-04-07 15:30:28 -0400
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/teachers/new.html.erb:12
+  Rendered teachers/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:30:37 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"ca84bwORp7W/jLpgcoXlZ15vxEpdJ3J41pGyocLDr4nN/0uVLK3S1n3fjmLBzlth3b2v6unRlH8qsZpcjox6IA==", "user"=>{"email"=>"user 8"}, "teacher"=>{"full_name"=>"user 8", "school_id"=>"4", "teacher_name"=>"John Smith"}}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:14
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user 8"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user 8"], ["created_at", "2020-04-07 19:30:46.810187"], ["updated_at", "2020-04-07 19:30:46.810187"]]
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[36mTeacher Create (1.8ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "user 8"], ["teacher_name", "John Smith"], ["school_id", 4], ["created_at", "2020-04-07 19:30:46.815636"], ["updated_at", "2020-04-07 19:30:46.815636"]]
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:23
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user 8"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 6], ["updated_at", "2020-04-07 19:30:46.823575"], ["id", 10]]
+  ↳ app/controllers/teachers_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:23
+Completed 200 OK in 9220ms (Views: 0.7ms | ActiveRecord: 21.8ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (19.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (3.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (25.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.5ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.5ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSchool Load (23.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (25.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSchool Create (0.7ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Townsend Harris High School"], ["city", "Flushing"], ["state", "NY"], ["zip", "11367"], ["latitude", 40.73498], ["longitude", -73.821274], ["grade_range", "9-12"], ["created_at", "2020-04-07 19:36:10.771818"], ["updated_at", "2020-04-07 19:36:10.771818"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mTeacher Create (0.8ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "Jane Doe"], ["teacher_name", "Ms. Doe"], ["school_id", 5], ["created_at", "2020-04-07 19:36:10.818880"], ["updated_at", "2020-04-07 19:36:10.818880"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_01@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_teacher", "teacher_id", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "user_01@gmail.com"], ["is_teacher", true], ["teacher_id", 7], ["password_digest", "abc"], ["session_token", "xyz"], ["created_at", "2020-04-07 19:36:10.827419"], ["updated_at", "2020-04-07 19:36:10.827419"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_02@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_teacher", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user_02@gmail.com"], ["is_teacher", false], ["password_digest", "abc"], ["session_token", "xyz"], ["created_at", "2020-04-07 19:36:10.833540"], ["updated_at", "2020-04-07 19:36:10.833540"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 15:42:40 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:5:in `new'
+
+Started POST "/__better_errors/d7f05c88767d9f99/variables" for ::1 at 2020-04-07 15:42:41 -0400
+  [1m[36mSchool Load (3.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE School Load (0.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE School Load (0.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 15:45:52 -0400
+Processing by Api::TeachersController#new as JSON
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/teachers/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/terrencelai/Desktop/CharityChoice/app/views"
+:
+  app/controllers/api/teachers_controller.rb:5:in `new'
+
+Started POST "/__better_errors/823700bd96ec2d46/variables" for ::1 at 2020-04-07 15:45:53 -0400
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE School Load (0.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE School Load (0.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/api/teachers/new" for ::1 at 2020-04-07 15:46:10 -0400
+Processing by Api::TeachersController#new as JSON
+  Rendering api/teachers/new.html.erb within layouts/application
+  [1m[36mSchool Load (7.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/teachers/new.html.erb:12
+  Rendered api/teachers/new.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 1515ms (Views: 1493.0ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/teachers" for ::1 at 2020-04-07 15:46:48 -0400
+Processing by TeachersController#create as HTML
+  Parameters: {"authenticity_token"=>"CqzYPFRARmdGdKXFONXiBPlYJ7tu79QcWgM9PyjVPRa2/KvGe3wzBIQnkceLnlwCeopMG9oZMhumIxXCZJrovw==", "user"=>{"email"=>"user2@gmail.com"}, "teacher"=>{"full_name"=>"User2", "school_id"=>"5", "teacher_name"=>"Mrs. Kotch"}}
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:12
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user2@gmail.com"], ["created_at", "2020-04-07 19:46:48.440786"], ["updated_at", "2020-04-07 19:46:48.440786"]]
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[36mTeacher Create (1.2ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["full_name", "User2"], ["teacher_name", "Mrs. Kotch"], ["school_id", 5], ["created_at", "2020-04-07 19:46:48.447471"], ["updated_at", "2020-04-07 19:46:48.447471"]]
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[35m (35.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/teachers_controller.rb:21
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user2@gmail.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:21
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 8], ["updated_at", "2020-04-07 19:46:48.491442"], ["id", 13]]
+  ↳ app/controllers/teachers_controller.rb:21
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/teachers_controller.rb:21
+Completed 200 OK in 239ms (Views: 1.7ms | ActiveRecord: 141.5ms)
+
+

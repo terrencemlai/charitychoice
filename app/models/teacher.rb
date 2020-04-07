@@ -10,6 +10,9 @@
 #  updated_at   :datetime         not null
 #
 class Teacher < ApplicationRecord
+    validates :full_name, presence: true
+    validates :teacher_name, presence: true
+    validates :school_id, presence: true
 
     belongs_to :school,
     primary_key: :id,

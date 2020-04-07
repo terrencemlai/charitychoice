@@ -13,6 +13,7 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
+    validates :email, presence: true, uniqueness: true
 
     belongs_to :teacher_info,
     primary_key: :id,
