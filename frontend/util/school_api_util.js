@@ -4,3 +4,4 @@ export const getSchools = () => (
         url: 'api/schools'
     })
 )
+

@@ -1,4 +1,4 @@
-require 'byebug'
+# require 'byebug'
 
 class Api::TeachersController <  ApplicationController
 
@@ -8,7 +8,7 @@ class Api::TeachersController <  ApplicationController
     end
 
     def create
-        debugger
+        # debugger
         @user = User.new(user_params)
         @teacher = Teacher.new(teacher_params)
 

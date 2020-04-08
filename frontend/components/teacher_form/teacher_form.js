@@ -13,7 +13,8 @@ class TeacherForm extends React.Component {
         this.props.getSchools();
     }
 
-    changeField(field){
+    handleChange(field){
+        // debugger;
         return e => this.setState({ [field]: e.target.value })
     }
 
@@ -29,53 +30,66 @@ class TeacherForm extends React.Component {
 
     render () {
         const honorifics = ["Coach", "Dr.", "Mr.", "Mrs.", "Ms.", "Mx."];
-
+        const schoolOptions = () => {
+            if (this.props.schools.length > 0 ) {
+                return this.props.schools.map( school => (<option value={school.id}>{school.name}, {school.city}, {school.state}</option>))
+            } else {
+                return <option>No Matches</option>
+            }
+        }
+            
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Email
-                        <input 
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.changeField('email')}
-                        />
-                    </label>
+                <form className="createTeacherForm" onSubmit={this.handleSubmit}>
+                <div>
+                        <label>
+                            Your personal email address
+                            <input 
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.handleChange('email')}
+                            />
+                        </label>
+                    </div>
 
-                    <label>
-                        Full Name
-                        <input 
-                        type="text"
-                        value={this.state.full_name}
-                        onChange={this.changeField('full_name')}
-                        />
-                    </label>
+                    <div>
+                        <label>
+                            Full name
+                            <input 
+                            type="text"
+                            value={this.state.full_name}
+                            onChange={this.handleChange('full_name')}
+                            />
+                        </label>
+                    </div>
 
-                    <label>
-                        School
-                    </label>
-                        <select onChange={this.changeField('school_id')}>
+                    <div>
+                        <label>
+                            Find your school
+                        </label>
+                        <select onChange={this.handleChange('school_id')}>
                             <option value=''>Select School</option>
-                            <option value="11">Townsend Harris</option>
+                            {schoolOptions()}
                         </select>
+                    </div>
 
-                    <label>
-                        Honorific
-                        <select onChange={this.changeField('honorific')}>
-                            {honorifics.map( honorific => (
-                                <option value={honorific}>{honorific}</option>
-                            ))}
-                        </select>
-                    </label>
-
-                    <label>
-                        Teacher Name
-                        <input 
-                        type="text"
-                        value={this.state.teacher_name}
-                        onChange={this.changeField('teacher_name')}
-                        />
-                    </label>
+                    <div>
+                        <label>
+                        What do your students call you?
+                        </label>
+                        <div>
+                            <select onChange={this.handleChange('honorific')}>
+                                {honorifics.map( honorific => (
+                                    <option key={honorific} value={honorific}>{honorific}</option>
+                                    ))}
+                            </select>
+                            <input 
+                            type="text"
+                            value={this.state.teacher_name}
+                            onChange={this.handleChange('teacher_name')}
+                            />
+                        </div>
+                    </div>
 
                     <button>
                         Create
@@ -87,3 +101,6 @@ class TeacherForm extends React.Component {
 }
 
 export default TeacherForm;
+
+
+

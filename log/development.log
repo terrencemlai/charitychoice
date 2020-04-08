@@ -2968,3 +2968,888 @@ Started GET "/api/schools" for ::1 at 2020-04-07 23:52:05 -0400
 
 LoadError - Unable to autoload constant Api::SchoolsController, expected /Users/terrencelai/Desktop/CharityChoice/app/controllers/api/schools_controller.rb to define it:
 
+Started GET "/" for ::1 at 2020-04-07 23:57:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 420ms (Views: 412.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:30:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 620ms (Views: 611.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:31:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 447ms (Views: 442.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:32:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 481ms (Views: 476.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-08 09:33:59 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "honorific"=>"", "teacher_name"=>"", "school_id"=>""}}
+Started GET "/" for ::1 at 2020-04-08 09:34:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 573ms (Views: 570.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Exists (153.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 15458ms (Views: 0.3ms | ActiveRecord: 576.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:34:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-08 09:37:27 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "honorific"=>"", "teacher_name"=>"", "school_id"=>""}}
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+Started GET "/" for ::1 at 2020-04-08 09:37:32 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:17
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+  [1m[35m (41.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 5344ms (Views: 0.3ms | ActiveRecord: 44.1ms)
+
+
+Completed 200 OK in 630ms (Views: 624.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:37:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:37:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:38:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:39:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 459ms (Views: 454.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 09:40:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 471ms (Views: 464.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 10:44:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2430ms (Views: 2420.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 10:50:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 858ms (Views: 825.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 10:53:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 464ms (Views: 460.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 10:53:49 -0400
+
+LoadError - Unable to autoload constant Api::SchoolsController, expected /Users/terrencelai/Desktop/CharityChoice/app/controllers/api/schools_controller.rb to define it:
+
+Started GET "/" for ::1 at 2020-04-08 11:05:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:05:09 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (157.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (268.2ms)
+Completed 200 OK in 301ms (Views: 90.5ms | ActiveRecord: 198.2ms)
+
+
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (28.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTeacher Load (22.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (20.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.5ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.6ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.8ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.5ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (1.7ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSchool Load (24.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (21.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mSchool Create (0.8ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Townsend Harris High School"], ["city", "Flushing"], ["state", "NY"], ["zip", "11367"], ["latitude", 40.73498], ["longitude", -73.821274], ["grade_range", "9-12"], ["created_at", "2020-04-08 15:19:44.933373"], ["updated_at", "2020-04-08 15:19:44.933373"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSchool Create (0.5ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Isaac Newton MS for Math and Science"], ["city", "New York"], ["state", "NY"], ["zip", "10029"], ["latitude", 40.794123], ["longitude", -73.93305], ["grade_range", "6-8"], ["created_at", "2020-04-08 15:19:44.939005"], ["updated_at", "2020-04-08 15:19:44.939005"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mSchool Create (0.5ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Grant Street Elementary"], ["city", "Port Townsend"], ["state", "WA"], ["zip", "98368"], ["latitude", 48.112157], ["longitude", -122.791922], ["grade_range", "PreK-8"], ["created_at", "2020-04-08 15:19:44.944606"], ["updated_at", "2020-04-08 15:19:44.944606"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at", "honorific") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["full_name", "Jane Doe"], ["teacher_name", "Doe"], ["school_id", 12], ["created_at", "2020-04-08 15:19:44.978907"], ["updated_at", "2020-04-08 15:19:44.978907"], ["honorific", "Ms."]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_01@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_teacher", "teacher_id", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "user_01@gmail.com"], ["is_teacher", true], ["teacher_id", 23], ["password_digest", "$2a$12$MIX2Hy1o2B/8xQBTmoyfGuU0zGro/Ije1ZUhLRMWuFQ2TKqkjR92."], ["session_token", "CT_1uxGyHHmfnqBq-M250w"], ["created_at", "2020-04-08 15:19:45.230720"], ["updated_at", "2020-04-08 15:19:45.230720"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_02@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user_02@gmail.com"], ["password_digest", "$2a$12$YiDtuZSaeJKZvzzgodDS.eaHT3w05S1yR0rBgoJDzMZtQVR3eYD4G"], ["session_token", "gmXIZ9M5Go3oiHnNi6DqaQ"], ["created_at", "2020-04-08 15:19:45.479101"], ["updated_at", "2020-04-08 15:19:45.479101"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_03@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user_03@gmail.com"], ["session_token", "anYzpKF_sboY0za6uilu5A"], ["created_at", "2020-04-08 15:19:45.485035"], ["updated_at", "2020-04-08 15:19:45.485035"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[36mSchool Load (1.0ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+Started GET "/" for ::1 at 2020-04-08 11:28:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 114ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:28:33 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (24.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (36.4ms)
+Completed 200 OK in 55ms (Views: 29.5ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:32:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 472ms (Views: 467.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:32:12 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (281.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (284.6ms)
+Completed 200 OK in 306ms (Views: 23.6ms | ActiveRecord: 281.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:33:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 647ms (Views: 636.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:34:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 538ms (Views: 534.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:34:34 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (2.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (8.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:35:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 482ms (Views: 476.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:35:37 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (71.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (74.0ms)
+Completed 200 OK in 101ms (Views: 29.1ms | ActiveRecord: 71.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:36:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 500ms (Views: 495.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:37:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 459ms (Views: 454.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:38:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 508ms (Views: 504.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:39:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 617ms (Views: 612.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:50:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 817ms (Views: 807.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:50:08 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (41.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (44.1ms)
+Completed 200 OK in 56ms (Views: 14.5ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:51:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 452ms (Views: 446.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:51:05 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (26.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (28.6ms)
+Completed 200 OK in 47ms (Views: 20.3ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:52:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 436ms (Views: 430.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:52:29 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (27.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (34.2ms)
+Completed 200 OK in 53ms (Views: 25.4ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:52:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 465ms (Views: 460.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:52:55 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (38.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (41.1ms)
+Completed 200 OK in 66ms (Views: 26.9ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:54:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 449ms (Views: 445.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:54:31 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (33.1ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (36.3ms)
+Completed 200 OK in 56ms (Views: 23.0ms | ActiveRecord: 33.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 11:55:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 470ms (Views: 463.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 11:55:30 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (43.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (46.3ms)
+Completed 200 OK in 65ms (Views: 21.5ms | ActiveRecord: 43.3ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-08 11:55:53 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>"user13"}, "teacher"=>{"full_name"=>"user13", "school_id"=>"13", "honorific"=>"Mrs.", "teacher_name"=>"Smith"}}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user13"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user13"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "user13"], ["created_at", "2020-04-08 15:55:54.145060"], ["updated_at", "2020-04-08 15:55:54.145060"]]
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at", "honorific") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["full_name", "user13"], ["teacher_name", "Smith"], ["school_id", 13], ["created_at", "2020-04-08 15:55:54.150825"], ["updated_at", "2020-04-08 15:55:54.150825"], ["honorific", "Mrs."]]
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teachers_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user13"], ["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:25
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "is_teacher" = $1, "teacher_id" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["is_teacher", true], ["teacher_id", 24], ["updated_at", "2020-04-08 15:55:54.158173"], ["id", 35]]
+  ↳ app/controllers/api/teachers_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/teachers_controller.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MSHbEDG6cGGTxP2Ae8jNlw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user13"], ["id", 35], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "MSHbEDG6cGGTxP2Ae8jNlw"], ["updated_at", "2020-04-08 15:55:54.165055"], ["id", 35]]
+  ↳ app/models/user.rb:46
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:46
+Completed 200 OK in 176ms (Views: 0.9ms | ActiveRecord: 106.4ms)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (26.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-04-08 12:17:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 641ms (Views: 633.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 12:17:45 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (14.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (22.5ms)
+Completed 200 OK in 43ms (Views: 27.6ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:00:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 600ms (Views: 592.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:00:24 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (27.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (33.7ms)
+Completed 200 OK in 52ms (Views: 23.5ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:04:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 397ms (Views: 392.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:04:29 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (127.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (134.0ms)
+Completed 200 OK in 164ms (Views: 35.9ms | ActiveRecord: 127.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:06:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 119ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:06:08 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (80.1ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (82.6ms)
+Completed 200 OK in 111ms (Views: 30.0ms | ActiveRecord: 80.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:07:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 116ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:07:10 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (10.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (17.5ms)
+Completed 200 OK in 36ms (Views: 25.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:07:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 136ms (Views: 131.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:07:21 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (1.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (4.9ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:07:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 160ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:07:57 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (11.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (14.8ms)
+Completed 200 OK in 49ms (Views: 37.0ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:11:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 881ms (Views: 874.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:11:55 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (122.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (125.1ms)
+Completed 200 OK in 143ms (Views: 19.9ms | ActiveRecord: 122.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:13:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 127ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:13:30 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (33.9ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (36.7ms)
+Completed 200 OK in 50ms (Views: 15.4ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:13:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 153ms (Views: 148.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:13:38 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (33.9ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (37.2ms)
+Completed 200 OK in 55ms (Views: 20.4ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:14:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 520ms (Views: 513.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:14:08 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (89.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (91.9ms)
+Completed 200 OK in 109ms (Views: 19.3ms | ActiveRecord: 89.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:14:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 150ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:15:00 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (5.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (7.4ms)
+Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:15:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 163ms (Views: 160.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:15:11 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (2.9ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:15:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 126ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:15:28 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (26.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (41.2ms)
+Completed 200 OK in 57ms (Views: 30.1ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:15:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:15:45 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (44.0ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (46.8ms)
+Completed 200 OK in 59ms (Views: 14.7ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:16:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 615ms (Views: 610.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:17:00 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (75.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (78.3ms)
+Completed 200 OK in 95ms (Views: 19.7ms | ActiveRecord: 75.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:17:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 116ms (Views: 111.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:17:18 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (176.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (179.5ms)
+Completed 200 OK in 193ms (Views: 15.9ms | ActiveRecord: 176.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:17:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:17:32 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (32.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (35.3ms)
+Completed 200 OK in 52ms (Views: 18.7ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:17:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 139ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:17:44 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (83.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (86.0ms)
+Completed 200 OK in 100ms (Views: 16.7ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-08 13:18:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/schools" for ::1 at 2020-04-08 13:18:10 -0400
+Processing by Api::SchoolsController#index as JSON
+  Rendering api/schools/index.json.jbuilder
+  [1m[36mSchool Load (176.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ app/views/api/schools/index.json.jbuilder:1
+  Rendered api/schools/index.json.jbuilder (179.0ms)
+Completed 200 OK in 199ms (Views: 22.0ms | ActiveRecord: 176.4ms)
+
+

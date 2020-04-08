@@ -6,12 +6,14 @@ import TeacherForm from './teacher_form';
 
 const mapStateToProps = (state) => ({
     userTeacher: {
-        email: '',
-        full_name: '',
-        honorific: '',
-        teacher_name: '',
-        school_id: '',
-    }
+      email: '',   
+      full_name: '',
+      honorific: '',
+      teacher_name: '',
+      school_id: '',
+    },
+    schools: state.schools
+
 });
 
 const mapDispatchToProps = dispatch => ({

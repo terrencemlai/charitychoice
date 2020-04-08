@@ -18,6 +18,22 @@ school_01 = School.create({ name: "Townsend Harris High School",
                             longitude: -73.821274,
                             grade_range: "9-12"})
 
+school_02 = School.create({ name: "Isaac Newton MS for Math and Science",
+                            city: "New York",
+                            state: "NY",
+                            zip: "10029",
+                            latitude: 40.794123,
+                            longitude: -73.93305,
+                            grade_range: "6-8"})
+
+school_03 = School.create({ name: "Grant Street Elementary",
+                            city: "Port Townsend",
+                            state: "WA",
+                            zip: "98368",
+                            latitude: 48.112157,
+                            longitude: -122.791922,
+                            grade_range: "PreK-8"})
+
 teacher_01 = Teacher.create({   full_name: "Jane Doe", 
                                 honorific: "Ms.", 
                                 teacher_name: "Doe", 
