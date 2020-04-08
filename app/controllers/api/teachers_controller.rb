@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Api::TeachersController <  ApplicationController
 
     def new
@@ -6,9 +8,11 @@ class Api::TeachersController <  ApplicationController
     end
 
     def create
+        debugger
         @user = User.new(user_params)
         @teacher = Teacher.new(teacher_params)
 
+        
         if  !@user.valid?
             @user.save
             render json: {user: @user.errors.full_messages}, status: 422
@@ -19,6 +23,7 @@ class Api::TeachersController <  ApplicationController
             @user.teacher_id = @teacher.id 
             @user.is_teacher = true
             @user.save
+            login(@user)
             render json: {user: @user, teacher: @teacher}
         else 
             render json: {user: @user.errors.full_messages, teacher: @teacher.errors.full_messages}, status: 422
@@ -28,11 +33,11 @@ class Api::TeachersController <  ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:email, :display_name)
+        params.require(:user).permit(:email, :display_name, :password)
     end
 
     def teacher_params
-        params.require(:teacher).permit(:teacher_name, :full_name, :school_id)
+        params.require(:teacher).permit(:teacher_name, :honorific, :full_name, :school_id)
     end
 
 end

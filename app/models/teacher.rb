@@ -8,10 +8,12 @@
 #  school_id    :integer          not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  honorific    :string           not null
 #
 class Teacher < ApplicationRecord
     validates :full_name, presence: true
     validates :teacher_name, presence: true
+    validates :honorific, presence: true
     validates :school_id, presence: true
 
     belongs_to :school,

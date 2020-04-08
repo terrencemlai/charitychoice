@@ -1,0 +1,5 @@
+class FullcredsController < ApplicationController
+
+    
+
+end
