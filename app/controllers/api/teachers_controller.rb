@@ -1,4 +1,4 @@
-# require 'byebug'
+
 
 class Api::TeachersController <  ApplicationController
 
