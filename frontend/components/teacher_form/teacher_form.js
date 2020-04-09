@@ -13,18 +13,22 @@ class TeacherForm extends React.Component {
 
     handleAutocompleteOptions(e) {
         e.preventDefault();
-        this.setState({ searchText: e.target.key })
-        this.props.autocompleteSchools({ searchText: e.target.value })
+        this.setState({ school_id: '',
+                        searchText: e.target.value,
+                        searchHidden: '' })
+        this.props.autocompleteSchools( { searchText: e.target.value })
     }
 
     handleAutocompleteSelect(e) {
-        debugger;
-        this.setState({ searchText: e.target.name })
-        this.setState({ school_id: e.target.value })
+        e.preventDefault();
+        this.setState({ school_id: e.target.value, 
+                        searchText: e.target.id,
+                        searchHidden: ' createAutoHidden' })
     }
 
     handleChange(field){
-        return e => this.setState({ [field]: e.target.value })
+        return e => this.setState({ [field]: e.target.value,
+                                    searchHidden: ' createAutoHidden' })
     }
 
     handleSubmit(e){
@@ -42,15 +46,15 @@ class TeacherForm extends React.Component {
   
         const schoolOptions = () => {
             if (typeof this.props.autocomplete.schools === 'undefined') {
-                return (<li>(Still finishing autocomplete -- type "townsend" to test)</li>)
+                return <li>No Matches</li>
             }
             else if (this.props.autocomplete.schools.length > 0 ) {
                 return this.props.autocomplete.schools.map( school => (
-                <li onClick={this.handleAutocompleteSelect} value={school.id} key={school.name} name={school.name}>
-                    {school.name}, {school.city}, {school.state}
+                <li onClick={this.handleAutocompleteSelect} value={school.id} id={school.name} key={school.name}>
+                    {school.name}
                 </li>))
             } else {
-                return <li>No Matches</li>
+                return <li id="createAutoNoMatches">No Matches</li>
             }
         }
             
@@ -85,7 +89,7 @@ class TeacherForm extends React.Component {
                             onChange={this.handleAutocompleteOptions}
                             value={this.state.searchText}
                             />
-                            <ul className="createAutoList">
+                            <ul className={`createAutoList${this.state.searchHidden}`}>
                                 {schoolOptions()}
                             </ul>
                         </div>

@@ -11,7 +11,8 @@ const mapStateToProps = (state) => ({
       honorific: '',
       teacher_name: '',
       school_id: '',
-      searchText: ''
+      searchText: '',
+      searchHidden: ' createAutoHidden'
     },
 
     autocomplete: state.autocomplete

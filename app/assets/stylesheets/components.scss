@@ -53,10 +53,26 @@
     border-radius: 0px;
 }
 
+.createAutoList {
+    border: 1px solid lightgray;
+}
+
 .createAutoList li {
     list-style-type: none;
-    padding: 0.5em;
+    padding: 1em 0.5em;
+    background: white;
     border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.createAutoList li:hover {
+    color: white;
+    background: $blue;
+    cursor: pointer;
+}
+
+.createAutoHidden {
+    display: none;
 }
 
 .createButton {
