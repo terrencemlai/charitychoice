@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 
 class TeacherForm extends React.Component {
     constructor(props) {
@@ -9,8 +10,23 @@ class TeacherForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleAutocompleteOptions = this.handleAutocompleteOptions.bind(this);
         this.handleAutocompleteSelect = this.handleAutocompleteSelect.bind(this);
+        this.autoListListener = this.autoListListener.bind(this);
     }
 
+    componentDidMount() {
+        document.addEventListener('mousedown', this.autoListListener)
+    }
+    
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.autoListListener)
+    }
+    
+    autoListListener(e) {
+        if (e.target.tagName !== 'LI') {
+            this.setState({ searchHidden: ' createAutoHidden'})
+        }
+    }
+    
     handleAutocompleteOptions(e) {
         e.preventDefault();
         this.setState({ school_id: '',
@@ -21,6 +37,7 @@ class TeacherForm extends React.Component {
 
     handleAutocompleteSelect(e) {
         e.preventDefault();
+        debugger;
         this.setState({ school_id: e.target.value, 
                         searchText: e.target.id,
                         searchHidden: ' createAutoHidden' })
@@ -28,7 +45,7 @@ class TeacherForm extends React.Component {
 
     handleChange(field){
         return e => this.setState({ [field]: e.target.value,
-                                    searchHidden: ' createAutoHidden' })
+                                    searchHidden: ' createAutoHidden'})
     }
 
     handleSubmit(e){
@@ -89,9 +106,11 @@ class TeacherForm extends React.Component {
                             onChange={this.handleAutocompleteOptions}
                             value={this.state.searchText}
                             />
-                            <ul className={`createAutoList${this.state.searchHidden}`}>
-                                {schoolOptions()}
-                            </ul>
+                            <div className={`createAutoListContainer${this.state.searchHidden}`}>
+                                <ul className="createAutoList">
+                                    {schoolOptions()}
+                                </ul>
+                            </div>
                         </div>
 
                         <div className="createInputDiv">

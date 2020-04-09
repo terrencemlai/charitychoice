@@ -53,7 +53,15 @@
     border-radius: 0px;
 }
 
+
+.createAutoListContainer {
+    position: relative;
+    // width: 100%;
+}
 .createAutoList {
+    position: absolute;
+    top: 0;
+    width: 100%;
     border: 1px solid lightgray;
 }
 
