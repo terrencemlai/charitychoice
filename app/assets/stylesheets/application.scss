@@ -13,10 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
  // CSS Reset
  @import "reset.scss";
+
  
  // Primary Pieces
  @import "layout.scss";
+ @import "navbar.scss";
  @import "components.scss";
+ @import "splash.scss";

@@ -1,9 +1,17 @@
 
 body {
-    font-family: 'Open Sans';
+    color: #212121;
+    font-size: 14px;
+    font-weight: 300;
     margin: 0 auto;
-    width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center
+    width 100%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 

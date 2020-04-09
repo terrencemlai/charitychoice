@@ -8,7 +8,6 @@ class Api::TeachersController <  ApplicationController
     end
 
     def create
-        # debugger
         @user = User.new(user_params)
         @teacher = Teacher.new(teacher_params)
 

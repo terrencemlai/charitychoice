@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-
+import NavBar from './navbar/navbar';
 import App from './app';
 
 const Root = ({ store }) => (

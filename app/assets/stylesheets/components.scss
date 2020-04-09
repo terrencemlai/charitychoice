@@ -1,7 +1,88 @@
-.createTeacherForm {
+@import 'colors.scss'; 
+
+.createMainContainer {
+    width: 650px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+
+.createMainContainer > h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.createSubContainer {
+    padding: 3em;
+    background: $gray;
+    border: 1px solid lightgray;
+}
+
+.createBlurb {
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.createForm {
     display: flex;
     flex-direction: column;
-    padding: 2em;
-    background-color: lime;
+}
+
+.createInputDiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.createInputDiv > label {
+    margin-bottom: 0.5em;
+}
+
+.createInputDiv input, select {
+    font-size: 1.4em;
+    letter-spacing: 0.02em;
+    padding: 0.5em;
+    background: white;
     border: 1px solid lightgray;
+    border-radius: 0px;
+}
+
+.createAutoList li {
+    list-style-type: none;
+    padding: 0.5em;
+    border-bottom: 1px solid lightgray;
+}
+
+.createButton {
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+    background: $blue;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+
+.createDisclaimer {
+    text-align: center;
+    margin-top: 1.5em;
+    color: $blue;
+}
+
+#teacherDisplayNameInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+#teacherDisplayNameInput > select {
+    width: 20%
+}
+
+#teacherDisplayNameInput > input {
+    width: 75%
 }
