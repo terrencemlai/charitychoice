@@ -1,0 +1,39 @@
+@import 'colors.scss'; 
+
+.splashContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    letter-spacing: 0.3em;
+}
+
+.splash01, .splash05 {
+    height: 500px;
+    background: $purple;
+    color: white;
+}
+
+.splash02 {
+    height: 100px;
+    // background: $gray;
+}
+
+.splash03 {
+    height: 100px;
+    background: $light-blue;
+    color: white;
+}
+
+.splash04, .splash06, .splash08 {
+    height: 500px;
+    background: $gray;
+    color: $blue;
+}
+
+.splash07 {
+    height: 500px;
+    background: $yellow;
+    color: $purple;
+}

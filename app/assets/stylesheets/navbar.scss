@@ -1,0 +1,47 @@
+@import 'colors.scss'; 
+ 
+.navBarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 980px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+#navBarLogo {
+    display: flex;
+    align-items: center;
+    background-color: $blue;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 0em 1em;
+}
+
+.navBarLeft, .navBarRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navBarButton {
+    display: flex;
+    color: inherit;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0em 1em;
+    margin: 0 2em;
+}
+
+.navBarLink {
+    text-decoration: none;
+    font-weight: 400;
+    color: inherit;
+    margin-right: 1.25em;
+}
