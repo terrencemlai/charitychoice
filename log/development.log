@@ -18852,3 +18852,411 @@ Processing by Api::Auto::SchoolsController#show as JSON
 Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for ::1 at 2020-04-09 14:26:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 535ms (Views: 529.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:27:09 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (29.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 92682ms (Views: 0.3ms | ActiveRecord: 133.6ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:28:56 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+Completed 422 Unprocessable Entity in 105ms (Views: 0.2ms | ActiveRecord: 69.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:30:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:30:29 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (24.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 136ms (Views: 0.3ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:30:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:30:47 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (24.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 141ms (Views: 0.3ms | ActiveRecord: 91.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:38:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 517ms (Views: 512.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/auto/schools?searchText=t" for ::1 at 2020-04-09 14:38:51 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"t"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (2.1ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%t%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (55.5ms)
+Completed 200 OK in 100ms (Views: 26.0ms | ActiveRecord: 54.5ms)
+
+
+Started GET "/api/auto/schools?searchText=to" for ::1 at 2020-04-09 14:38:51 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"to"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%to%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/auto/schools?searchText=tow" for ::1 at 2020-04-09 14:38:52 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"tow"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%tow%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/auto/schools?searchText=town" for ::1 at 2020-04-09 14:38:52 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"town"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%town%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.7ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/auto/schools?searchText=tow" for ::1 at 2020-04-09 14:38:53 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"tow"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%tow%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/auto/schools?searchText=to" for ::1 at 2020-04-09 14:38:54 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"to"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%to%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.6ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/auto/schools?searchText=t" for ::1 at 2020-04-09 14:38:54 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"t"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%t%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.6ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/auto/schools?searchText=" for ::1 at 2020-04-09 14:38:54 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>""}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.5ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:43:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 542ms (Views: 536.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:45:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 612ms (Views: 607.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/auto/schools?searchText=t" for ::1 at 2020-04-09 14:45:16 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"t"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (1.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%t%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (3.9ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/auto/schools?searchText=to" for ::1 at 2020-04-09 14:45:16 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"to"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%to%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (2.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/auto/schools?searchText=tow" for ::1 at 2020-04-09 14:45:17 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"tow"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (13.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%tow%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (15.4ms)
+Completed 200 OK in 26ms (Views: 11.5ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/auto/schools?searchText=town" for ::1 at 2020-04-09 14:45:17 -0400
+Processing by Api::Auto::SchoolsController#show as JSON
+  Parameters: {"searchText"=>"town"}
+  Rendering api/auto/schools.json.jbuilder
+  [1m[36mSchool Load (14.9ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE (LOWER(name)||', '||LOWER(city)||', '||LOWER(state) like '%town%') ORDER BY "schools"."name" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/api/auto/schools.json.jbuilder:1
+  Rendered api/auto/schools.json.jbuilder (16.7ms)
+Completed 200 OK in 28ms (Views: 12.2ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:48:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 537ms (Views: 530.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:49:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 521ms (Views: 515.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:49:09 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (28.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 140ms (Views: 0.3ms | ActiveRecord: 88.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:49:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 499ms (Views: 491.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:50:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:50:25 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 15ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:52:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 239ms (Views: 231.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:53:02 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 16ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:53:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 224ms (Views: 219.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:53:31 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 19ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:54:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 242ms (Views: 235.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:54:32 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 20ms (Views: 0.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-09 14:55:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 543ms (Views: 536.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:55:52 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>""}, "teacher"=>{"full_name"=>"", "school_id"=>"", "honorific"=>"", "teacher_name"=>""}}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (24.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 47ms (Views: 0.2ms | ActiveRecord: 26.0ms)
+
+
+Started POST "/api/teachers" for ::1 at 2020-04-09 14:56:10 -0400
+Processing by Api::TeachersController#create as JSON
+  Parameters: {"user"=>{"email"=>"user10"}, "teacher"=>{"full_name"=>"user10", "school_id"=>"", "honorific"=>"Coach", "teacher_name"=>"Smith"}}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user10"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user10"], ["LIMIT", 1]]
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/teachers_controller.rb:17
+Completed 422 Unprocessable Entity in 16ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+

@@ -28,6 +28,17 @@
     margin-bottom: 2em;
 }
 
+.createErrors {
+    line-height: 1.25em;
+    color: red;
+    margin-bottom: 1em;
+}
+
+.createErrors li {
+    list-style-type: none;
+}
+
+
 .createForm {
     display: flex;
     flex-direction: column;

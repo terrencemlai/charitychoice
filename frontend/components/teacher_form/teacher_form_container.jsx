@@ -15,6 +15,8 @@ const mapStateToProps = (state) => ({
       searchHidden: ' createAutoHidden'
     },
 
+    errors: state.errors.teachers,
+
     autocomplete: state.autocomplete
 
 });

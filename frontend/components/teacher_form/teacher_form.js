@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 
 class TeacherForm extends React.Component {
     constructor(props) {
@@ -26,7 +25,7 @@ class TeacherForm extends React.Component {
             this.setState({ searchHidden: ' createAutoHidden'})
         }
     }
-    
+
     handleAutocompleteOptions(e) {
         e.preventDefault();
         this.setState({ school_id: '',
@@ -58,22 +57,33 @@ class TeacherForm extends React.Component {
         this.props.createTeacher(user, teacher)
     }
 
+    renderAutocompleteList() {
+        if (typeof this.props.autocomplete.schools !== 'undefined' && this.props.autocomplete.schools.length > 0 ) {
+            return this.props.autocomplete.schools.map( school => (
+            <li onClick={this.handleAutocompleteSelect} value={school.id} id={school.name} key={school.name}>
+                {school.name}
+            </li>))
+        } else {
+            return <li id="createAutoNoMatches">No Matches</li>
+        }
+    }
+
+    renderErrors() {
+        if (typeof this.props.errors !== undefined) {
+            return (
+                <div className="createErrors">
+                    <ul>
+                    {this.props.errors.map( error => (
+                        <li key={error}>- {error}</li>
+                    ))}
+                    </ul>
+                </div>
+            )
+        }
+    }
+
     render () {
         const honorifics = ["Coach", "Dr.", "Mr.", "Mrs.", "Ms.", "Mx."];
-  
-        const schoolOptions = () => {
-            if (typeof this.props.autocomplete.schools === 'undefined') {
-                return <li>No Matches</li>
-            }
-            else if (this.props.autocomplete.schools.length > 0 ) {
-                return this.props.autocomplete.schools.map( school => (
-                <li onClick={this.handleAutocompleteSelect} value={school.id} id={school.name} key={school.name}>
-                    {school.name}
-                </li>))
-            } else {
-                return <li id="createAutoNoMatches">No Matches</li>
-            }
-        }
             
         return (
             <div className="createMainContainer">
@@ -81,6 +91,7 @@ class TeacherForm extends React.Component {
                 <div className="createSubContainer">
                     <p className="createBlurb">If you're a teacher or a full-time educator who works directly with students, CharityChoice is for you!</p>
                     <form className="createForm" onSubmit={this.handleSubmit}>
+                        {this.renderErrors()}
                         <div className="createInputDiv">
                             <label>Your personal email address</label>
                             <input 
@@ -89,7 +100,6 @@ class TeacherForm extends React.Component {
                             onChange={this.handleChange('email')}
                             />
                         </div>
-
                         <div className="createInputDiv">
                             <label>Full name</label>
                             <input 
@@ -108,7 +118,7 @@ class TeacherForm extends React.Component {
                             />
                             <div className={`createAutoListContainer${this.state.searchHidden}`}>
                                 <ul className="createAutoList">
-                                    {schoolOptions()}
+                                    {this.renderAutocompleteList()}
                                 </ul>
                             </div>
                         </div>
