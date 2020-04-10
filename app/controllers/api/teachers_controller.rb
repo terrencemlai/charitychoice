@@ -11,7 +11,6 @@ class Api::TeachersController <  ApplicationController
         @user = User.new(user_params)
         @teacher = Teacher.new(teacher_params)
 
-        
         if  !@user.valid? && !@teacher.valid?
             @user.save
             @teacher.save
@@ -25,9 +24,10 @@ class Api::TeachersController <  ApplicationController
         elsif @user.save && @teacher.save
             @user.teacher_id = @teacher.id 
             @user.is_teacher = true
+            @user.display_name = @teacher.honorific+" "+@teacher.teacher_name
             @user.save
             login(@user)
-            render json: {user: @user, teacher: @teacher}
+            render 'api/teachers/show'
         else 
             render json: @user.errors.full_messages + @teacher.errors.full_messages, status: 422
         end

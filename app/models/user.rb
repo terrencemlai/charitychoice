@@ -14,6 +14,12 @@
 #
 class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true
+    validates :password, length: {minimum: 6}, allow_nil: true
+    validates :display_name, presence: true
+
+    after_initialize :ensure_session_token
+    
+    attr_reader :password
 
     belongs_to :teacher_info,
     primary_key: :id,

@@ -7,6 +7,7 @@ import TeacherForm from './teacher_form';
 const mapStateToProps = (state) => ({
     userTeacher: {
       email: '',   
+      password: '',
       full_name: '',
       honorific: '',
       teacher_name: '',

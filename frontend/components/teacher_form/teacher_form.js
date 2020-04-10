@@ -36,7 +36,6 @@ class TeacherForm extends React.Component {
 
     handleAutocompleteSelect(e) {
         e.preventDefault();
-        debugger;
         this.setState({ school_id: e.target.value, 
                         searchText: e.target.id,
                         searchHidden: ' createAutoHidden' })
@@ -49,7 +48,8 @@ class TeacherForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const user = { email: this.state.email };
+        const user = {  email: this.state.email,
+                        password: this.state.password };
         const teacher = {   full_name: this.state.full_name,
                             school_id: this.state.school_id,
                             honorific: this.state.honorific,
@@ -98,6 +98,14 @@ class TeacherForm extends React.Component {
                             type="text"
                             value={this.state.email}
                             onChange={this.handleChange('email')}
+                            />
+                        </div>
+                        <div className="createInputDiv">
+                            <label>Password</label>
+                            <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.handleChange('password')}
                             />
                         </div>
                         <div className="createInputDiv">
