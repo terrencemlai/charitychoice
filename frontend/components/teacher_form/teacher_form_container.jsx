@@ -8,6 +8,7 @@ const mapStateToProps = (state) => ({
     userTeacher: {
       email: '',   
       password: '',
+      display_name: '',
       full_name: '',
       honorific: '',
       teacher_name: '',

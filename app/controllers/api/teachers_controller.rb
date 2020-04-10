@@ -24,7 +24,6 @@ class Api::TeachersController <  ApplicationController
         elsif @user.save && @teacher.save
             @user.teacher_id = @teacher.id 
             @user.is_teacher = true
-            @user.display_name = @teacher.honorific+" "+@teacher.teacher_name
             @user.save
             login(@user)
             render 'api/teachers/show'

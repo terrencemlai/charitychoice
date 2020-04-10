@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container';
+import { logout } from '../../actions/session_actions';
 
 class NavBar extends React.Component {
 
@@ -14,7 +16,7 @@ class NavBar extends React.Component {
                 <Link className="navBarLink" to='/'>Help</Link>
             </div>
             <div className="navBarRight">
-                <Link className="navBarLink" to='/teachers/new'>Sign Up</Link>
+                <GreetingContainer />
             </div>
         </div>
         )

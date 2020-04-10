@@ -3,17 +3,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import * as TeacherAPIUtil from './util/teacher_api_util';
-import * as AutocompleteAPIUtil from './actions/autocomplete_actions';
+import {logout} from './actions/session_actions';
+import { openModal, closeModal } from './actions/modal_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {
+      session: { id: window.currentUser.id,
+                 is_teacher: window.currentUser.is_teacher },
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser }
+      }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
 
   //TESTING
-  window.createTeacher = TeacherAPIUtil.createTeacher;
-  window.autocompleteSchools = AutocompleteAPIUtil.autocompleteSchools;
+  window.logout = logout;
   window.store = store;
+  window.openModal = openModal;
+  window.closeModal = closeModal;
   //TESTING
 
   const root = document.getElementById('root');

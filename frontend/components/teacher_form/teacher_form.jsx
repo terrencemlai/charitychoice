@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TeacherForm extends React.Component {
     constructor(props) {
@@ -49,7 +50,8 @@ class TeacherForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         const user = {  email: this.state.email,
-                        password: this.state.password };
+                        password: this.state.password,
+                        display_name: this.state.honorific + ' ' + this.state.teacher_name };
         const teacher = {   full_name: this.state.full_name,
                             school_id: this.state.school_id,
                             honorific: this.state.honorific,
@@ -90,6 +92,7 @@ class TeacherForm extends React.Component {
                 <h1>Teacher Sign Up</h1>
                 <div className="createSubContainer">
                     <p className="createBlurb">If you're a teacher or a full-time educator who works directly with students, CharityChoice is for you!</p>
+                    <p className="createSubBlurb">Not a teacher? <Link to='/users/new'>Register as a Donor</Link></p>
                     <form className="createForm" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
                         <div className="createInputDiv">

@@ -1,0 +1,19 @@
+@import 'colors.scss'; 
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $gray;
+    opacity: 0.9;
+    z-index: 5;
+}
+ 
+.modalChild {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

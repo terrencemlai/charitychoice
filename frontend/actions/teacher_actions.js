@@ -7,7 +7,7 @@ export const RECEIVE_TEACHER = "RECEIVE_TEACHER";
 const receiveCurrentTeacher = ({user, teacher}) => ({
     type: RECEIVE_CURRENT_TEACHER,
     user,
-    teacher
+    teacher,
 })
 
 const receiveTeacherErrors = (errors) => ({

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserForm extends React.Component {
     constructor(props) {
@@ -15,7 +16,6 @@ class UserForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        debugger;
         this.props.createUser({ user: this.state } );
     }
 
@@ -40,6 +40,7 @@ class UserForm extends React.Component {
                 <h1>Donor Sign Up</h1>
                 <div className="createSubContainer">
                     <p className="createBlurb">If you'd like to make a difference by following or supporting a charity of your choice, join CharityChoice to start giving!</p>
+                    <p className="createSubBlurb">Are you a teacher? <Link to='/teachers/new'>Register as a Teacher</Link> to create your first project!</p>                    
                     <form className="createForm" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
                         <div className="createInputDiv">
