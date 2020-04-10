@@ -19,8 +19,8 @@ export const receiveErrors = (errors) => ({
 });
 
 
-export const login = (user) => dispatch => (
-  SessionAPIUtil.login(user)
+export const signin = (user) => dispatch => (
+  SessionAPIUtil.signin(user)
   .then(user => (dispatch(receiveCurrentUser(user))), 
         errors => (dispatch(receiveErrors(errors.responseJSON))))
 );

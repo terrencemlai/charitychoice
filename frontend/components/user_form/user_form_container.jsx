@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import { createUser } from '../../actions/user_actions';
 import UserForm from './user_form';
 

@@ -15,5 +15,46 @@
     position: absolute;
     top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    background: white;
+    transform: translate(-50%, 0%);
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+.modalMainContainer {
+    position: relative;
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    background-color: white;
+    opacity: 1 !important;
+    border: 1px solid lightgray;
+    padding: 3em;
+}
+
+.modalMainContainer > h2 {
+    text-align: center;
+    color: $purple;
+    margin-bottom: 1em;
+}
+
+.modalBlurb {
+    text-align: center;
+    margin-top: 2em;
+    border-top: 1px solid lightgray;
+}
+
+.modalBlurb > h2 {
+    margin-top: 0.5em;
+}
+
+.modalSubBlurb {
+    margin-top: 1.25em;
+    font-weight: 400;
+}
+
+.modalLink {
+    text-decoration: none;
+    color: $blue;
+    line-height: 1.5em;
 }

@@ -4,14 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
 
-    debugger;
     const sessionLinks = () => (
         <div className="greetingMain">
             <div className="greetingLink" onClick={()=>openModal('signin')}>Sign in</div>
         </div>
     );
 
-  
     const teacherGreeting = () => (
         <div className="greetingMain">
             <h2>{currentUser.display_name}</h2>
