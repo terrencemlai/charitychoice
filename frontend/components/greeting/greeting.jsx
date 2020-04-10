@@ -12,17 +12,17 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
     const teacherGreeting = () => (
         <div className="greetingMain">
-            <h2>{currentUser.display_name}</h2>
-            <div>(teacher dropdown menu)</div>
-            <button onClick={logout}>Log Out</button>
+            <div className="greetingPhoto"></div>
+            <div>{currentUser.display_name}</div>
+            <div onClick={() => logout()} className="greetingArrow">V</div>
         </div>
     );
 
     const userGreeting = () => (
         <div className="greetingMain">
-            <h2>{currentUser.display_name}</h2>
-            <div>(donor dropdown menu)</div>
-            <button onClick={logout}>Log Out</button>
+            <div className="greetingPhoto"></div>
+            <div>{currentUser.display_name}</div>
+            <div onClick={()=> logout()} className="greetingArrow">V</div>
         </div>
     );
     
