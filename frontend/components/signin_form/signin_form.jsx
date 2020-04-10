@@ -17,7 +17,7 @@ class SigninForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.signin({ user: this.state } );
+        this.props.signin(this.state);
     }
 
     renderErrors() {

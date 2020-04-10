@@ -44,18 +44,18 @@ user_01 = User.create({ email: "user_01@gmail.com",
                         teacher_id: teacher_01.id, 
                         password_digest: BCrypt::Password.create("password"),
                         session_token: SecureRandom.urlsafe_base64, 
-                        display_name: nil})
+                        display_name: 'Ms. Doe'})
 
 user_02 = User.create({ email: "user_02@gmail.com", 
                         is_teacher: false, 
                         teacher_id: nil, 
                         password_digest: BCrypt::Password.create("password"),
                         session_token: SecureRandom.urlsafe_base64, 
-                        display_name: nil})
+                        display_name: 'Dana Donor'})
 
 user_03 = User.create({ email: "user_03@gmail.com", 
                         is_teacher: false, 
                         teacher_id: nil, 
-                        password_digest: nil,
+                        password_digest: BCrypt::Password.create("password"),
                         session_token: SecureRandom.urlsafe_base64, 
-                        display_name: nil})
+                        display_name: 'John Smith'})

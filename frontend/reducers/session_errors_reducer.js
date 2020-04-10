@@ -3,7 +3,7 @@ import { CLOSE_MODAL } from '../actions/modal_actions';
 
   export default (oldState = [], action) => {
     Object.freeze(oldState);
-    debugger;
+
     switch (action.type) {
       case RECEIVE_SESSION_ERRORS:
         return action.errors;
