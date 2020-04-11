@@ -29242,3 +29242,69 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 76ms (Views: 69.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-04-11 18:19:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 727ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `‘header' for #<#<Class:0x00007f84e9630e78>:0x00007f84ee9178d0>
+Did you mean?  headers:
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2452109631830973113_70104457444340'
+
+Started POST "/__better_errors/57a6df85c91a07f5/variables" for ::1 at 2020-04-11 18:19:02 -0400
+Started GET "/" for ::1 at 2020-04-11 18:19:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 822ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `‘header' for #<#<Class:0x00007f84e9630e78>:0x00007f84ef3b0c38>
+Did you mean?  headers:
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2452109631830973113_70104425810940'
+
+Started POST "/__better_errors/b463180b643f9c0d/variables" for ::1 at 2020-04-11 18:19:35 -0400
+Started GET "/" for ::1 at 2020-04-11 18:20:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 856ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `‘header' for #<#<Class:0x00007f84e9630e78>:0x00007f84ef09dff0>
+Did you mean?  headers:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2452109631830973113_70104461469440'
+
+Started POST "/__better_errors/3438b042bb767f2f/variables" for ::1 at 2020-04-11 18:20:11 -0400
+Started GET "/" for ::1 at 2020-04-11 18:20:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 636ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `header' for #<#<Class:0x00007f84e9630e78>:0x00007f84ef4e23e0>
+Did you mean?  headers:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2452109631830973113_70104463628080'
+
+Started POST "/__better_errors/f508aae7e4174700/variables" for ::1 at 2020-04-11 18:20:28 -0400
+Started GET "/" for ::1 at 2020-04-11 18:20:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 18:23:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
