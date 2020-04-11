@@ -18,17 +18,19 @@ const App = () => (
         <NavBar/>
       </header>
 
-
       <Switch>
-        <AuthRoute exact path="/teachers/new" component={TeacherFormContainer} />
-        <AuthRoute exact path="/users/new" component={UserFormContainer} />
-        <Route path="/teachers/new" component={TeacherFormContainer} />
-        <Route path="/users/new" component={UserFormContainer} />
+        <AuthRoute exact path="/teachers/signup" component={TeacherFormContainer} />
+        <AuthRoute exact path="/users/signup" component={UserFormContainer} />
+        <Route path="/teachers/signup" component={TeacherFormContainer} />
+        <Route path="/users/signup" component={UserFormContainer} />
         <Route path="/signin" component={SigninFormContainer} />
         <Route exact path="/" component={Splash} />
       </Switch>
 
-      <Footer/>
+
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
   

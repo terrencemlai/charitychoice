@@ -23,7 +23,7 @@ class SigninForm extends React.Component {
     renderErrors() {
         if (typeof this.props.errors !== undefined) {
             return (
-                <div className="createErrors">
+                <div className="errors">
                     <ul>
                     {this.props.errors.map( error => (
                         <li key={error}>- {error}</li>
@@ -37,12 +37,12 @@ class SigninForm extends React.Component {
     render () {
             
         return (
-            <div className="modalMainContainer">
+            <div className="modal-main">
                 <h2>Welcome back!</h2>
-                <div className="modalSubContainer">                  
-                    <form className="createForm" onSubmit={this.handleSubmit}>
+                <div className="subcontainer">                  
+                    <form className="create-form" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Email Address</label>
                             <input 
                             type="text"
@@ -50,7 +50,7 @@ class SigninForm extends React.Component {
                             onChange={this.handleChange('email')}
                             />
                         </div>
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Password</label>
                             <input 
                             type="password"
@@ -58,20 +58,20 @@ class SigninForm extends React.Component {
                             onChange={this.handleChange('password')}
                             />
                         </div>
-                        <button className="createButton">
+                        <button>
                             Sign In
                         </button>
                     </form>
                 </div>
-                <div className="modalBlurb">
+                <div className="blurb">
                     <h2>First-timer?</h2>
-                    <div className="modalSubBlurb">
+                    <div className="subblurb">
                         <div>If you're here to donate,</div>
-                        <Link className="modalLink" onClick={()=>this.props.closeModal()} to='/users/new'>register as a donor.</Link>
+                        <Link className="link" onClick={()=>this.props.closeModal()} to='/users/signup'>register as a donor.</Link>
                     </div>
-                    <div className="modalSubBlurb">
+                    <div className="subblurb">
                         <div>If you're a teacher in need of funding,</div>
-                        <Link className="modalLink" onClick={()=>this.props.closeModal()} to='/teachers/new'>register as a teacher.</Link>
+                        <Link className="link" onClick={()=>this.props.closeModal()} to='/teachers/signup'>register as a teacher.</Link>
                     </div>
                 </div>
             </div>

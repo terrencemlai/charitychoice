@@ -22,7 +22,7 @@ class UserForm extends React.Component {
     renderErrors() {
         if (typeof this.props.errors !== undefined) {
             return (
-                <div className="createErrors">
+                <div className="errors">
                     <ul>
                     {this.props.errors.map( error => (
                         <li key={error}>- {error}</li>
@@ -36,14 +36,14 @@ class UserForm extends React.Component {
     render () {
             
         return (
-            <div className="createMainContainer">
+            <section className="create-main">
                 <h1>Donor Sign Up</h1>
-                <div className="createSubContainer">
-                    <p className="createBlurb">If you'd like to make a difference by following or supporting a charity of your choice, join CharityChoice to start giving!</p>
-                    <p className="createSubBlurb">Are you a teacher? <Link to='/teachers/new'>Register as a Teacher</Link> to create your first project!</p>                    
-                    <form className="createForm" onSubmit={this.handleSubmit}>
+                <section className="subcontainer">
+                    <p className="blurb">If you'd like to make a difference by following or supporting a charity of your choice, join CharityChoice to start giving!</p>
+                    <p className="subblurb">Are you a teacher? <Link className="link" to='/teachers/signup'>Register as a Teacher</Link> to create your first project!</p>                    
+                    <form className="create-form" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Email Address</label>
                             <input 
                             type="text"
@@ -51,7 +51,7 @@ class UserForm extends React.Component {
                             onChange={this.handleChange('email')}
                             />
                         </div>
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Password</label>
                             <input 
                             type="password"
@@ -59,7 +59,7 @@ class UserForm extends React.Component {
                             onChange={this.handleChange('password')}
                             />
                         </div>
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Display Name (you may still make donations anonymously)</label>
                             <input 
                             type="text"
@@ -68,14 +68,14 @@ class UserForm extends React.Component {
                             />
                         </div>
 
-                        <p className="createDisclaimer">By registering, you agree to our Terms of Use and Privacy Policy</p>
-                        <button className="createButton">
+                        <p className="disclaimer">By registering, you agree to our Terms of Use and Privacy Policy</p>
+                        <button>
                             Register
                         </button>
                     </form>
                 
-                </div>
-            </div>
+                </section>
+            </section>
         )
     }
 }

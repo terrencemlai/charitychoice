@@ -1,31 +1,31 @@
 @import 'colors.scss'; 
 
-.createMainContainer {
+.create-main {
     width: 650px;
     margin: 0 auto;
     margin-bottom: 5em;
 }
 
-.createMainContainer > h1 {
+.create-main > h1 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.createSubContainer {
+.create-main .subcontainer {
     padding: 3em;
     background: $gray;
     border: 1px solid lightgray;
 }
 
-.createBlurb {
+.create-main .blurb {
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.5em;
     text-align: center;
 }
 
-.createSubBlurb {
+.create-main .subblurb {
     font-size: 1.1em;
     text-align: center;
     border-bottom: 1px solid lightgray;
@@ -34,34 +34,33 @@
     margin-bottom: 2em;
 }
 
-.createErrors {
+.create-main .errors {
     line-height: 1.25em;
     color: red;
     margin-bottom: 1em;
 }
 
-.createErrors li {
+.create-main .errors li {
     list-style-type: none;
 }
 
-
-.createForm {
+.create-form {
     display: flex;
     flex-direction: column;
 }
 
-.createInputDiv {
+.create-form .inputdiv {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
     width: 100%;
 }
 
-.createInputDiv > label {
+.create-form .inputdiv > label {
     margin-bottom: 0.5em;
 }
 
-.createInputDiv input, select {
+.create-form .inputdiv input, select {
     font-size: 1.4em;
     letter-spacing: 0.02em;
     padding: 0.5em;
@@ -70,19 +69,19 @@
     border-radius: 0px;
 }
 
-
-.createAutoListContainer {
+.create-form .autocomplete-list-container {
     position: relative;
     // width: 100%;
 }
-.createAutoList {
+
+.create-form .autocomplete-list {
     position: absolute;
     top: 0;
     width: 100%;
     border: 1px solid lightgray;
 }
 
-.createAutoList li {
+.create-form .autocomplete-list li {
     list-style-type: none;
     padding: 1em 0.5em;
     background: white;
@@ -90,41 +89,47 @@
     cursor: pointer;
 }
 
-.createAutoList li:hover {
+.create-form .autocomplete-list li:hover {
     color: white;
     background: $blue;
     cursor: pointer;
 }
 
-.createAutoHidden {
+.create-form .autocomplete-list-hidden {
     display: none;
 }
 
-.createButton {
+.create-main .link {
+    text-decoration: none;
+    color: $blue;
+}
+
+.create-form button {
     color: white;
     font-size: 1.25em;
     font-weight: 700;
     background: $blue;
+    width: 100%;
     padding: 0.8em;
     margin-top: 1em;
     cursor: pointer;
 }
 
-.createDisclaimer {
+.create-main .disclaimer {
     text-align: center;
     margin-top: 1.5em;
     color: $blue;
 }
 
-#teacherDisplayNameInput {
+#teacher-displayname-input {
     display: flex;
     justify-content: space-between;
 }
 
-#teacherDisplayNameInput > select {
+#teacher-displayname-input > select {
     width: 20%
 }
 
-#teacherDisplayNameInput > input {
+#teacher-displayname-input > input {
     width: 75%
 }

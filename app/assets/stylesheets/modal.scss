@@ -1,16 +1,16 @@
 @import 'colors.scss'; 
 
-.modalBackground {
+.modal-background {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 5;
 }
  
-.modalChild {
+.modal-child {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -18,45 +18,38 @@
     z-index: 10;
 }
 
-.modalMainContainer {
+.modal-main {
     position: relative;
-    width: 550px;
     margin: 0 auto;
     background-color: white;
     border: 1px solid lightgray;
     padding: 3em;
+    width: 500px;
 }
 
-.modalMainContainer > h2 {
+.modal-main > h2 {
     text-align: center;
     color: $purple;
     margin-bottom: 1em;
 }
 
-.modalBlurb {
+.modal-main .blurb {
     text-align: center;
     margin-top: 2em;
     border-top: 1px solid lightgray;
 }
 
-.modalBlurb > h2 {
+.modal-main .blurb > h2 {
     margin-top: 0.5em;
 }
 
-.modalSubBlurb {
+.modal-main .subblurb {
     margin-top: 1.25em;
     font-weight: 400;
 }
 
-.modalLink {
+.modal-main .link {
     text-decoration: none;
     color: $blue;
     line-height: 1.5em;
-}
-
-#modalChildTest {
-    height: 100px;
-    width: 100px;
-    border: 1px solid red;
-    background-color: $yellow;
 }

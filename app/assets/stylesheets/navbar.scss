@@ -1,78 +1,140 @@
 @import 'colors.scss'; 
  
-.navBarContainer {
+.navbar-main {
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
     width: 980px;
-    height: 90px;
+    height: 100px;
     margin: 0 auto;
 }
 
-#navBarLogo {
-    display: flex;
-    align-items: center;
-    background-color: $blue;
+#navbar-logo {
     height: 50px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    padding: 0em 1em;
+    width: 140px;
+    background-image: url(header-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
-.navBarLeft, .navBarRight {
+.navbar-container .subleft, .subright {
+    margin-top: 25px;
+    height: 50px;
+}
+
+.navbar-container .subleft {
     display: flex;
     flex-direction: row;
     align-items: center;
+    // width: 80%
 }
 
-.navBarButton {
+.navbar-container .subright {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-button {
     display: flex;
     color: inherit;
     align-items: center;
     border: 1px solid lightgray;
-    height: 50px;
+    height: 100%;
     font-weight: 700;
     text-decoration: none;
+    background-color: white;
     padding: 0em 1em;
     margin: 0 2em;
 }
 
-.navBarLink {
+.navbar-button:hover {
+    background-color: $gray;
+    border: 1px solid gray;
+}
+.navbar-container .link {
     text-decoration: none;
     font-weight: 400;
     color: inherit;
     margin-right: 1.25em;
 }
 
-.navBarLogOut {
-    cursor: pointer;
-    z-index: 10;
-}
-
-.greetingMain {
+.greeting {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    height: 50px;
     font-weight: 400;
     color: inherit;
     cursor: pointer;
 }
 
-.greetingMain div {
+.greeting .link {
+    margin: 0px;
+}
+
+.greeting span {
     margin-left: 1em;
 }
 
-.greetingPhoto {
+.greeting .account-photo {
     height: 25px;
     width: 25px;
     background-color: $orange;
     border-radius: 50%;
 }
 
-.greetingArrow {
-    height: 15px;
-    width: 15px;
-    font-weight: 700;
+.greeting .account-expand {
+    color: gray;
+    margin-left: 0.5em;
 }
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.account-dropdown {
+    position: relative;
+    border: 1px solid lightgray;
+    background: white;
+    width: 200px;
+    z-index: 1000;
+}
+
+.account-links li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 400;
+    padding: 1em;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.account-links li span {
+    color: lightgray;
+    margin-right: 0.5em;
+}
+
+.account-links li:hover {
+    background-color: $gray;
+}
+
+
+.account-links li:last-child {
+    border-bottom: none;
+}
+
+.account-dropdown-hidden {
+    display: none;
+}
+

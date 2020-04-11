@@ -14,6 +14,7 @@ class TeacherForm extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({ searchHidden: ' autocomplete-list-hidden'})
         document.addEventListener('mousedown', this.autoListListener)
     }
     
@@ -23,7 +24,7 @@ class TeacherForm extends React.Component {
     
     autoListListener(e) {
         if (e.target.tagName !== 'LI') {
-            this.setState({ searchHidden: ' createAutoHidden'})
+            this.setState({ searchHidden: ' autocomplete-list-hidden'})
         }
     }
 
@@ -39,12 +40,12 @@ class TeacherForm extends React.Component {
         e.preventDefault();
         this.setState({ school_id: e.target.value, 
                         searchText: e.target.id,
-                        searchHidden: ' createAutoHidden' })
+                        searchHidden: ' autocomplete-list-hidden' })
     }
 
     handleChange(field){
         return e => this.setState({ [field]: e.target.value,
-                                    searchHidden: ' createAutoHidden'})
+                                    searchHidden: ' autocomplete-list-hidden'})
     }
 
     handleSubmit(e){
@@ -66,14 +67,14 @@ class TeacherForm extends React.Component {
                 {school.name}
             </li>))
         } else {
-            return <li id="createAutoNoMatches">No Matches</li>
+            return <li id="autocomplete-list-no-matches">No Matches</li>
         }
     }
 
     renderErrors() {
         if (typeof this.props.errors !== undefined) {
             return (
-                <div className="createErrors">
+                <div className="errors">
                     <ul>
                     {this.props.errors.map( error => (
                         <li key={error}>- {error}</li>
@@ -88,14 +89,14 @@ class TeacherForm extends React.Component {
         const honorifics = ["Coach", "Dr.", "Mr.", "Mrs.", "Ms.", "Mx."];
             
         return (
-            <div className="createMainContainer">
+            <section className="create-main">
                 <h1>Teacher Sign Up</h1>
-                <div className="createSubContainer">
-                    <p className="createBlurb">If you're a teacher or a full-time educator who works directly with students, CharityChoice is for you!</p>
-                    <p className="createSubBlurb">Not a teacher? <Link to='/users/new'>Register as a Donor</Link></p>
-                    <form className="createForm" onSubmit={this.handleSubmit}>
+                <section className="subcontainer">
+                    <p className="blurb">If you're a teacher or a full-time educator who works directly with students, CharityChoice is for you!</p>
+                    <p className="subblurb">Not a teacher? <Link className="link" to='/users/signup'>Register as a Donor</Link></p>
+                    <form className="create-form" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Your personal email address</label>
                             <input 
                             type="text"
@@ -103,7 +104,7 @@ class TeacherForm extends React.Component {
                             onChange={this.handleChange('email')}
                             />
                         </div>
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Password</label>
                             <input 
                             type="password"
@@ -111,7 +112,7 @@ class TeacherForm extends React.Component {
                             onChange={this.handleChange('password')}
                             />
                         </div>
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Full name</label>
                             <input 
                             type="text"
@@ -120,23 +121,23 @@ class TeacherForm extends React.Component {
                             />
                         </div>
 
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>Find your school</label>
                             <input
                             type="text"
                             onChange={this.handleAutocompleteOptions}
                             value={this.state.searchText}
                             />
-                            <div className={`createAutoListContainer${this.state.searchHidden}`}>
-                                <ul className="createAutoList">
+                            <div className={`autocomplete-list-container${this.state.searchHidden}`}>
+                                <ul className="autocomplete-list">
                                     {this.renderAutocompleteList()}
                                 </ul>
                             </div>
                         </div>
 
-                        <div className="createInputDiv">
+                        <div className="inputdiv">
                             <label>What do your students call you?</label>
-                            <div id="teacherDisplayNameInput">
+                            <div id="teacher-displayname-input">
                                 <select onChange={this.handleChange('honorific')}>
                                     <option></option>
                                     {honorifics.map( honorific => (
@@ -150,14 +151,14 @@ class TeacherForm extends React.Component {
                                 />
                             </div>
                         </div>
-                        <p className="createDisclaimer">By registering, you agree to our Terms of Use and Privacy Policy</p>
-                        <button className="createButton">
+                        <p className="disclaimer">By registering, you agree to our Terms of Use and Privacy Policy</p>
+                        <button>
                             Register & start my first project!
                         </button>
                     </form>
                 
-                </div>
-            </div>
+                </section>
+            </section>
         )
     }
 }

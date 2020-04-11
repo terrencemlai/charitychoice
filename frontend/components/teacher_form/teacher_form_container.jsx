@@ -19,7 +19,7 @@ const mapStateToProps = (state) => ({
 
     errors: state.errors.teachers,
 
-    autocomplete: state.autocomplete
+    autocomplete: state.ui.autocomplete
 
 });
 

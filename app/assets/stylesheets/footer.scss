@@ -1,20 +1,24 @@
 @import 'colors.scss'; 
 
-.footMainContainer {
+.footer-main {
+    border-top: 1px solid lightgray;
+}
+
+.footer-container {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
+    width: 980px;
     margin: 0 auto;
-    border-top: 1px solid lightgray;
     padding: 2em 1em;
 }
 
-.footMainContainer  p {
+.footer-container p {
     line-height: 2em;
     font-weight: 700;
     color: $purple;
 }
 
-.footMainContainer li {
+.footer-container li {
     list-style-type: none;
     line-height: 1.5em;
 }
