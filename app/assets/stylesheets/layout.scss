@@ -24,3 +24,13 @@ h2 {
     font-weight: 700;
     font-size: 2rem;
 }
+
+li {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color: $black;
+}
+

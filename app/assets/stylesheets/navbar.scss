@@ -4,7 +4,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-.navbar-container {
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,19 +22,19 @@
     background-position: left;
 }
 
-.navbar-container .subleft, .subright {
+.navbar-main .subleft, .subright {
     margin-top: 25px;
     height: 50px;
 }
 
-.navbar-container .subleft {
+.navbar-main .subleft {
     display: flex;
     flex-direction: row;
     align-items: center;
     // width: 80%
 }
 
-.navbar-container .subright {
+.navbar-main .subright {
     display: flex;
     flex-direction: column;
 }
@@ -56,7 +56,7 @@
     background-color: $gray;
     border: 1px solid gray;
 }
-.navbar-container .link {
+.navbar-main .link {
     text-decoration: none;
     font-weight: 400;
     color: inherit;
@@ -72,6 +72,45 @@
     font-weight: 400;
     color: inherit;
     cursor: pointer;
+}
+
+.navbar-main .account-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.navbar-main .account-dropdown {
+    position: relative;
+    border: 1px solid lightgray;
+    background: white;
+    width: 200px;
+    z-index: 1000;
+}
+
+.navbar-main .account-links li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 400;
+    padding: 1em;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.navbar-main .account-links li:hover {
+    background-color: $gray;
+}
+
+.navbar-main .account-links li:last-child {
+    border-bottom: none;
+}
+
+.account-links li span {
+    color: lightgray;
+    margin-right: 0.5em;
 }
 
 .greeting .link {
@@ -94,47 +133,85 @@
     margin-left: 0.5em;
 }
 
-.account-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-.account-dropdown {
-    position: relative;
-    border: 1px solid lightgray;
-    background: white;
-    width: 200px;
-    z-index: 1000;
-}
-
-.account-links li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    font-weight: 400;
-    padding: 1em;
-    border-bottom: 1px solid lightgray;
-    cursor: pointer;
-}
-
-.account-links li span {
-    color: lightgray;
-    margin-right: 0.5em;
-}
-
-.account-links li:hover {
-    background-color: $gray;
-}
-
-
-.account-links li:last-child {
-    border-bottom: none;
-}
-
 .account-dropdown-hidden {
     display: none;
 }
 
+//MOBILE STYLING------------------------------
+
+.navbar-mobile {
+    display: none;
+}
+
+.mobile-menu-dropdown-hidden {
+    display: none;
+}
+
+
+.navbar-mobile .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-mobile #navbar-logo {
+    height: 40px;
+    width: 110px;
+    margin-left: 1em;
+}
+
+.mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid lightgray;
+    padding: 0em 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.mobile-menu-button:hover {
+    background-color: $blue;
+    color: white;
+}
+
+.mobile-menu-dropdown li, #mobile-signin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    padding-left: 1.25em;
+    height: 50px;
+    border-top: 1px solid lightgray;
+    cursor: pointer;  
+}
+
+.mobile-menu-dropdown li:hover, #mobile-signin:hover {
+    background-color: $gray;
+}
+
+.mobile-menu-dropdown .greeting {
+    height: 50px;
+    background-color: $gray;
+    justify-content: flex-start;
+    font-style: italic;
+    border-top: 1px solid lightgray;
+
+}
+
+//MOBILE RESPONSIVENESS------------------------------
+
+@media all and (max-width: 700px) {
+    .navbar-mobile {
+        display: initial;
+        font-weight: 400;
+    }
+
+    .navbar-main {
+        display: none;
+    }
+}

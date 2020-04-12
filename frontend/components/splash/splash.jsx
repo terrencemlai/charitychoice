@@ -6,30 +6,35 @@ class Splash extends React.Component {
     }
 
     render(){
+
         return (
-            <div className="splashMain">
-                <div className="splashContainer splash01">
-                    WELCOME MESSAGE
+            <div className="splash-main">
+                <div className="splash-row-01">
+                    <span className="splash-row-01-A">
+                        <span className="splash-row-01-B">WELCOME MESSAGE</span>
+                    </span>
                 </div>
-                <div className="splashContainer splash02">
+                <div className="splash-row-01-c">WELCOME MESSAGE</div>
+
+                <div className="splash-row splash02">
                     SEARCH BAR
                 </div>
-                <div className="splashContainer splash03">
+                <div className="splash-row splash03">
                     TEACHER GREETING
                 </div>
-                <div className="splashContainer splash04">
+                <div className="splash-row splash04">
                     NEARBY PROJECTS
                 </div>
-                <div className="splashContainer splash05">
+                <div className="splash-row splash05">
                     ABOUT US
                 </div>
-                <div className="splashContainer splash06">
+                <div className="splash-row splash06">
                     MORE INFO
                 </div>
-                <div className="splashContainer splash07">
+                <div className="splash-row splash07">
                     YET MORE INFO
                 </div>
-                <div className="splashContainer splash08">
+                <div className="splash-row splash08">
                     EVEN MORE INFO
                 </div>
             </div>

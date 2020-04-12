@@ -1,6 +1,6 @@
 @import 'colors.scss'; 
 
-.splashContainer {
+.splash-row {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +9,70 @@
     letter-spacing: 0.3em;
 }
 
+.splash-row:first-child {
+    border-top: none;
+}
+
+
+.splash-row-01 {
+    height: 500px;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr;
+}
+
+.splash-row-01-A {
+    background-image: url('/assets/splash-welcome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.splash-row-01-B {
+    width: 66%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: rgba(56,4,193,0.8);
+    color: white;
+    padding: 0em 2em;
+}
+
+.splash-row-01-c {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .splash-row-01 {
+        height: 200px;
+    }
+
+    .splash-row-01-B {
+        display: none;
+    }
+    
+    .splash-row-01-C {
+        display: flex;
+        height: 30px;
+        background: $purple;
+    }
+
+}
+
+
+
+
+
+
 .splash01, .splash05 {
     height: 500px;
     background: $purple;
+
     color: white;
 }
 

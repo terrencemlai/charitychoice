@@ -30,11 +30,6 @@ class Greeting extends React.Component {
         document.removeEventListener('mousedown', this.dropdownHide)
     }
 
-    // dropdownHideState(){
-    //     this.setState({ dropdown: ' account-dropdown-hidden'})
-    //     document.removeEventListener('mousedown', this.dropdownHide)
-    // }
-
     sessionLinks () {
         return (
         <span className="greeting">
@@ -95,13 +90,32 @@ class Greeting extends React.Component {
     )}
     
     render () {
-        if (!this.props.currentUser) {
-            return this.sessionLinks();
-        } else if (this.props.currentUser.is_teacher) {
-            return this.teacherGreeting();
-        } else {
-            return this.userGreeting();
-        }        
+        const greeting = () => {
+            if (!this.props.currentUser) {
+                return this.sessionLinks();
+            } else if (this.props.currentUser.is_teacher) {
+                return this.teacherGreeting();
+            } else {
+                return this.userGreeting();
+            }        
+        }
+
+        return (
+            <div className="navbar-main">
+            <div className="container">
+                <span className="subleft">
+                    <Link to="/"><div id="navbar-logo"></div></Link>
+                    <Link className="navbar-button" to='/'>Find a classroom to support</Link>
+                    <Link className="link" to='/'>About Us</Link>
+                    <Link className="link" to='/'>Help</Link>
+                </span>
+                <span className="subright">
+                    { greeting() } 
+                </span>
+            </div>
+        </div>
+        )
+
     }
 
 }
