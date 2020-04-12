@@ -10,21 +10,12 @@
     z-index: 5;
 }
  
-.modal-child {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 10;
-}
-
 .modal-main {
     position: relative;
     margin: 0 auto;
     background-color: white;
     border: 1px solid lightgray;
     padding: 3em;
-    width: 500px;
 }
 
 .modal-main > h2 {
@@ -52,4 +43,34 @@
     text-decoration: none;
     color: $blue;
     line-height: 1.5em;
+}
+
+@media all and (min-width: 600px) {
+    .modal-child {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-59%, 0%);
+        z-index: 10;
+        width: 500px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    }
+}
+
+@media all and (max-width: 599px) {
+    .modal-child {
+        width: 100%;
+        position: absolute;
+        top: 10%;
+    }
+
+    .modal-main {
+        width: 100%;
+        padding: 3em 0px 3em 0px;
+    }
+
+    .modal-main .create-form {
+        width: auto;
+        padding: 1em;
+    }
 }

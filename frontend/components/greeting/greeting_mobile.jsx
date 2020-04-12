@@ -8,7 +8,7 @@ class GreetingMobile extends React.Component {
 
         this.state = {
             accountDropdown: '',
-            mobileDropdown: ''
+            mobileDropdown: '',
         }
 
         this.sessionMenu = this.sessionMenu.bind(this);
@@ -104,7 +104,7 @@ class GreetingMobile extends React.Component {
             <div className="navbar-mobile">
                 <div className="container">
                     <Link to="/"><div id="navbar-logo"></div></Link>
-                    <span className="mobile-menu-button" onClick={()=>this.toggleMenu()}>
+                    <span id="mobile-menu-button" onClick={()=>this.toggleMenu()}>
                                 Menu
                     </span>
                 </div>

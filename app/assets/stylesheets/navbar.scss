@@ -1,10 +1,13 @@
 @import 'colors.scss'; 
  
+
+//MAIN NAVBAR STYLING-------------------------
+
 .navbar-main {
     border-bottom: 1px solid lightgray;
 }
 
-.container {
+.navbar-main .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +34,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    // width: 80%
 }
 
 .navbar-main .subright {
@@ -162,7 +164,7 @@
     margin-left: 1em;
 }
 
-.mobile-menu-button {
+#mobile-menu-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,10 +173,9 @@
     padding: 0em 1em;
     margin-right: 1em;
     cursor: pointer;
-    z-index: 10;
 }
 
-.mobile-menu-button:hover {
+#mobile-menu-button:hover {
     background-color: $blue;
     color: white;
 }
@@ -205,10 +206,11 @@
 
 //MOBILE RESPONSIVENESS------------------------------
 
-@media all and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .navbar-mobile {
         display: initial;
         font-weight: 400;
+        border-bottom: 3px solid lightgray;
     }
 
     .navbar-main {
