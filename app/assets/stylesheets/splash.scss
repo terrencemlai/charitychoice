@@ -1,23 +1,17 @@
 @import 'colors.scss'; 
 
 .splash-row {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     border-top: 1px solid lightgray;
     width: 100%;
-    letter-spacing: 0.3em;
 }
 
+//FIRST ROW----------------------------------
 .splash-row:first-child {
     border-top: none;
 }
 
-
 .splash-row-01 {
     height: 500px;
-    // display: grid;
-    // grid-template-columns: 1fr 2fr;
 }
 
 .splash-row-01-A {
@@ -39,62 +33,175 @@
     align-items: center;
     height: 100%;
     background: rgba(56,4,193,0.8);
-    color: white;
-    padding: 0em 2em;
 }
 
-.splash-row-01-c {
+.splash-row-01-C {
     display: none;
 }
 
-@media (max-width: 720px) {
+#welcome-message {
+    color: white;
+    padding-left: 3em;
+    width: 550px;
+}
+
+#welcome-message h1 {
+    line-height: 1.25em;
+}
+
+#welcome-message .subheader {
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin: 1em 0 1.5em 0;
+}
+
+#welcome-message div {
+    color: white;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    background-color: $blue;
+    padding: 1em 2em 1em 2em;
+    width: 250px;
+    margin: 0 0 1.5em 0;
+}
+
+#welcome-message .subblurb {
+    line-height: 1.25em;
+    width: 400px;
+}
+
+//SECOND ROW----------------------------------
+
+
+
+
+//THIRD ROW----------------------------------
+
+.splash-row-03 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    background-color: $light-blue;
+    text-align: center;
+    height: 100px;
+}
+
+.splash-row-03 span {
+    text-align: right;
+}
+
+.splash-row-03 .link {
+    float: left;
+    color: white;
+    border: 1px solid $gray;
+    width: 250px;
+    padding: 1em;
+}
+
+.splash-row-03 .link:hover {
+    background-color: $blue;
+}
+
+
+
+
+
+//--------------
+
+.splash-row-05 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: $purple;
+    color: white;
+}
+
+.splash-row-02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: $gray;
+}
+
+
+.splash-row-04, .splash-row-06, .splash-row-08 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: $gray;
+    color: $blue;
+}
+
+.splash-row-07 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: $yellow;
+    color: $purple;
+}
+
+
+
+
+@media (max-width: 700px) {
     .splash-row-01 {
+        height: auto;
+    }
+    
+    .splash-row-01-A {
         height: 200px;
     }
-
+    
     .splash-row-01-B {
         display: none;
     }
     
     .splash-row-01-C {
         display: flex;
-        height: 30px;
+        height: auto;
         background: $purple;
     }
 
-}
+    #welcome-message {
+        padding: 2em 1em 2em 1em;
+        width: 100%
+    }
 
+    #welcome-message h1 {
+        line-height: 1em;
+        font-size: 32px;
+    }
 
+    #welcome-message div {
+        width: auto;
+    }
 
+    #welcome-message .subblurb {
+        width: auto;
+        text-align: center;
+    }
 
+    .splash-row-03 {
+        grid-template-columns: 1fr;
+        width: auto;
+        padding: 1em;
+    }
 
+    .splash-row-03 span {
+        text-align: center;
+    }
 
-.splash01, .splash05 {
-    height: 500px;
-    background: $purple;
+    .splash-row-03 .link {
+        width: auto;
+    }
 
-    color: white;
-}
-
-.splash02 {
-    height: 100px;
-    // background: $gray;
-}
-
-.splash03 {
-    height: 100px;
-    background: $light-blue;
-    color: white;
-}
-
-.splash04, .splash06, .splash08 {
-    height: 500px;
-    background: $gray;
-    color: $blue;
-}
-
-.splash07 {
-    height: 500px;
-    background: $yellow;
-    color: $purple;
 }

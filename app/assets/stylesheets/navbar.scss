@@ -176,8 +176,8 @@
 }
 
 #mobile-menu-button:hover {
-    background-color: $blue;
-    color: white;
+    background-color: $gray;
+    border: 1px solid gray;
 }
 
 .mobile-menu-dropdown li, #mobile-signin {
@@ -206,7 +206,7 @@
 
 //MOBILE RESPONSIVENESS------------------------------
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .navbar-mobile {
         display: initial;
         font-weight: 400;
