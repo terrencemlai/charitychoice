@@ -107,21 +107,46 @@
     background-color: $blue;
 }
 
-
-
-
-
-//--------------
-
 .splash-row-05 {
+    background-image: url('/assets/default-background.jpg');
+    background-repeat: repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 500px;
-    background: $purple;
     color: white;
 }
 
+.splash-row-05 h2 {
+    color: $yellow;
+}
+
+.splash-row-05 .subheader {
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin: 1em 0 1.5em 0;
+    width: 600px;
+    text-align: center;
+}
+
+.splash-row-05 a {
+    font-weight: 700;
+    font-size: 1.25em;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 1px solid lightgray;
+    padding: 1em 2em 1em 2em;
+    width: 150px;
+}
+
+.splash-row-05 a:hover {
+    border: 1px solid white;
+}
+
+// TO BE STYLED----------------------------
 .splash-row-02 {
     display: flex;
     justify-content: center;
@@ -129,7 +154,6 @@
     height: 100px;
     background-color: $gray;
 }
-
 
 .splash-row-04, .splash-row-06, .splash-row-08 {
     display: flex;
@@ -150,7 +174,7 @@
 }
 
 
-
+//MEDIA QUERIES-------------------------------
 
 @media (max-width: 700px) {
     .splash-row-01 {
@@ -203,5 +227,24 @@
     .splash-row-03 .link {
         width: auto;
     }
+
+    .splash-row-05 {
+      justify-content: space-evenly;
+      height: auto;
+      padding: 1em 0 1em 0;
+    }
+
+    .splash-row-05 .subheader {
+        width: auto;
+        margin: 1em;
+    }
+
+    .splash-row-05 a {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 1em 0 1em 0;
+    }
+
 
 }

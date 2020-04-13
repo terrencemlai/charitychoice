@@ -76,16 +76,25 @@ class Greeting extends React.Component {
             <span className="greeting" onClick={this.dropdownShow}>
                 <span className="account-photo"></span>
                 <span className="account-name">{this.props.currentUser.display_name}</span>
-                <span className="account-arrow">V</span>
+                <span class="material-icons account-expand">expand_more</span>
             </span>
-            <span className={`account-dropdown${this.state.dropdown}`}>
+            <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
-                    <li className="dropdown-option">My Profile</li>
-                    <li className="dropdown-option">Favorites</li>
-                    <li className="dropdown-option" onClick={ () => this.props.logout()}>Sign Out</li>
+                    <li className="dropdown-option">
+                        <span class="material-icons">person_outline</span>
+                        My Profile
+                    </li>
+                    <li className="dropdown-option">
+                        <span class="material-icons">favorite_border</span>
+                        Favorites
+                    </li>
+                    <li className="dropdown-option" onClick={ () => this.props.logout()}>
+                        <span class="material-icons">close</span>
+                        Sign Out
+                    </li>
                 </ul>
                 <span className="dropdownBackground" onClick={this.dropdownHide}></span>
-            </span>
+            </div>
         </span>
     )}
     

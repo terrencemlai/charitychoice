@@ -8,7 +8,7 @@ class GreetingMobile extends React.Component {
 
         this.state = {
             accountDropdown: '',
-            mobileDropdown: '',
+            mobileDropdown: ' mobile-menu-dropdown-hidden',
         }
 
         this.sessionMenu = this.sessionMenu.bind(this);
