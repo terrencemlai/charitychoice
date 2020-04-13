@@ -1,0 +1,31 @@
+<form action="<%= api_projects_url %>" method='POST'>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label>Title
+        <input type="text" name="project[title]" value="">
+    </label>
+    <label>Short Description
+        <input type="text" name="project[blurb]" value="">
+    </label>
+    <label>About My Students
+        <input type="textarea" name="project[about_students]" value="">
+    </label>
+    <label>About My Project
+        <input type="textarea" name="project[description]" value="">
+    </label>
+    <label>Goal
+        <input type="text" name="project[goal]" value="">
+    </label>
+
+    <label>Test A
+        <input type="checkbox" name="categories" value="Test A">
+    </label>
+    <label>Test B
+        <input type="checkbox" name="categories" value="Test B">
+    </label>
+    <label>Test C
+        <input type="checkbox" name="categories" value="Test C">
+    </label>
+
+    <button>Create</button>
+</form>

@@ -10,8 +10,10 @@
 #  goal           :float            not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  blurb          :string           not null
 #
 class Project < ApplicationRecord
+    validates :title, :blurb, :description, :about_students, :teacher_id, :goal, presence: true
 
     belongs_to :teacher,
     primary_key: :id,
@@ -30,5 +32,9 @@ class Project < ApplicationRecord
     has_many :categories,
     through: :category_associations,
     source: :categories
+
+    has_many :donations,
+    foreign_key: :project_id,
+    class_name: 'Donation'
 
 end

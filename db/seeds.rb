@@ -6,9 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Donation.destroy_all
+CategoryAssociation.destroy_all
+Project.destroy_all
+Category.destroy_all
 User.destroy_all
 Teacher.destroy_all
 School.destroy_all
+
+ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 school_01 = School.create({ name: "Townsend Harris High School",
                             city: "Flushing",
@@ -59,3 +65,53 @@ user_03 = User.create({ email: "user_03@gmail.com",
                         password_digest: BCrypt::Password.create("password"),
                         session_token: SecureRandom.urlsafe_base64, 
                         display_name: 'John Smith'})
+
+cat_01 = Category.create({ category: 'Health & Sports'})
+cat_02 = Category.create({ category: 'History & Civics'})
+cat_03 = Category.create({ category: 'Literacy & Language'})
+cat_04 = Category.create({ category: 'Math & Science'})
+cat_05 = Category.create({ category: 'Music & The Arts'})
+cat_06 = Category.create({ category: 'Special Needs'})
+cat_07 = Category.create({ category: 'Warmth, Care & Hunger'})
+cat_08 = Category.create({ category: 'Art Supplies'})
+cat_09 = Category.create({ category: 'Books'})
+cat_10 = Category.create({ category: 'Computers & Tablets'})
+cat_11 = Category.create({ category: 'Educational Games'})
+cat_12 = Category.create({ category: 'Instructional Technology'})
+cat_13 = Category.create({ category: 'Lab Equipment'})
+cat_14 = Category.create({ category: 'Reading Nooks, Desks & Storage'})
+cat_15 = Category.create({ category: 'Sports & Exercise Equipment'})
+cat_16 = Category.create({ category: 'Trips'})
+cat_17 = Category.create({ category: 'Visitors'})
+
+project_01 = Project.create( {  title: 'Curious Kids in the Classroom!',
+                                blurb: 'Help me give my students tablets to make learning math fun.',
+                                description: ipsum,
+                                about_students: ipsum,
+                                goal: 500.00,
+                                teacher_id: user_01.teacher_id })
+
+project_02 = Project.create( {  title: 'Arts Program Replenishment',
+                                blurb: 'Help me give my students new painting and drawing supplies',
+                                description: ipsum,
+                                about_students: ipsum,
+                                goal: 250.00,
+                                teacher_id: user_01.teacher_id })
+
+CategoryAssociation.create({ project_id: project_01.id, category_id: cat_04.id })
+CategoryAssociation.create({ project_id: project_01.id, category_id: cat_10.id })
+CategoryAssociation.create({ project_id: project_01.id, category_id: cat_12.id })
+CategoryAssociation.create({ project_id: project_02.id, category_id: cat_05.id })
+CategoryAssociation.create({ project_id: project_02.id, category_id: cat_08.id })
+
+Donation.create({   user_id: user_02.id,
+                    display_name: 'Anonymous',
+                    comment: 'Great cause!',
+                    project_id: project_01.id,
+                    donation_amount: 75.00 })
+
+Donation.create({   user_id: user_03.id,
+                    display_name: 'J. Smith',
+                    comment: '',
+                    project_id: project_01.id,
+                    donation_amount: 50.00 })

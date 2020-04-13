@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_201138) do
+ActiveRecord::Schema.define(version: 2020_04_13_143837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 2020_04_07_201138) do
     t.index ["project_id"], name: "index_category_associations_on_project_id"
   end
 
+  create_table "donations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "display_name", null: false
+    t.boolean "anonynmous", default: false, null: false
+    t.string "comment"
+    t.integer "project_id", null: false
+    t.float "donation_amount", null: false
+    t.index ["project_id"], name: "index_donations_on_project_id"
+    t.index ["user_id"], name: "index_donations_on_user_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
@@ -34,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_201138) do
     t.float "goal", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "blurb", null: false
     t.index ["teacher_id"], name: "index_projects_on_teacher_id"
   end
 
