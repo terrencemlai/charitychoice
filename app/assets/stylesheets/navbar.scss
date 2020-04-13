@@ -52,12 +52,13 @@
     background-color: white;
     padding: 0em 1em;
     margin: 0 2em;
+
+    &:hover {
+        background-color: $gray;
+        border: 1px solid gray;
+    }
 }
 
-.navbar-button:hover {
-    background-color: $gray;
-    border: 1px solid gray;
-}
 .navbar-main .link {
     text-decoration: none;
     font-weight: 400;
@@ -100,14 +101,14 @@
     padding: 1em;
     border-bottom: 1px solid lightgray;
     cursor: pointer;
-}
 
-.navbar-main .account-links li:hover {
-    background-color: $gray;
-}
+    &:hover {
+        background-color: $gray;
+    }
 
-.navbar-main .account-links li:last-child {
-    border-bottom: none;
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 .account-links li span {
@@ -173,11 +174,11 @@
     padding: 0em 1em;
     margin-right: 1em;
     cursor: pointer;
-}
 
-#mobile-menu-button:hover {
-    background-color: $gray;
-    border: 1px solid gray;
+    &:hover {
+        background-color: $gray;
+        border: 1px solid gray;
+        }
 }
 
 .mobile-menu-dropdown li, #mobile-signin {
