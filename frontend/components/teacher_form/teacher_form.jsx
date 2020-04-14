@@ -14,6 +14,7 @@ class TeacherForm extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         this.setState({ searchHidden: ' autocomplete-list-hidden'})
         document.addEventListener('mousedown', this.autoListListener)
     }

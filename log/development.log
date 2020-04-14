@@ -45165,3 +45165,34 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 488ms (Views: 481.6ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2020-04-13 23:25:10 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2jhnTgzJaToCZ43bjDbwHw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 1980ms (Views: 1944.8ms | ActiveRecord: 31.9ms)
+
+
+Started DELETE "/api/sessions" for ::1 at 2020-04-13 23:25:16 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2jhnTgzJaToCZ43bjDbwHw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Nu0nz70x3V-JOwxl0cv-bw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user_02@gmail.com"], ["id", 115], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (4.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Nu0nz70x3V-JOwxl0cv-bw"], ["updated_at", "2020-04-14 03:25:16.482079"], ["id", 115]]
+  ↳ app/models/user.rb:52
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 60ms (Views: 11.3ms | ActiveRecord: 38.0ms)
+
+

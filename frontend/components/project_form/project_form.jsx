@@ -13,7 +13,8 @@ class ProjectForm extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchCategories();
+        window.scrollTo(0, 0)
+        this.props.fetchCategories()
     }
 
     handleCheckbox(e){
