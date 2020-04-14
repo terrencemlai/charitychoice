@@ -3,9 +3,13 @@ import * as ProjectAPIUtil from '../util/projects_api_util';
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const RECEIVE_PROJECT_ERRORS = "RECEIVE_PROJECT_ERRORS";
 
-const receiveProject = (project) => ({
+const receiveProject = ({project, teacher, school, donations, categories }) => ({
     type: RECEIVE_PROJECT,
-    project
+    project,
+    teacher,
+    school,
+    donations,
+    categories,
 })
 
 const receiveProjectErrors = (errors) => ({
@@ -19,3 +23,7 @@ export const createProject = (project, categories) => dispatch => (
     ), errors => dispatch(receiveProjectErrors(errors.responseJSON)))    
 )
 
+export const fetchProject = (id) => dispatch => (
+    ProjectAPIUtil.fetchProject(id)
+    .then(payload => (dispatch(receiveProject(payload)) 
+)))

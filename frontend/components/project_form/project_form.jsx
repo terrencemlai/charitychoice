@@ -82,7 +82,6 @@ class ProjectForm extends React.Component {
                 <h1>Create a New Project</h1>
                 <section className="subcontainer">                 
                     <form className="create-form" onSubmit={this.handleSubmit}>
-                        {this.renderErrors()}
                         
                         <div className="inputdiv">
                             <h2>Project Title</h2>
@@ -157,6 +156,8 @@ class ProjectForm extends React.Component {
                                 </div>
                             </section>
                         </div>
+
+                        {this.renderErrors()}
 
                         <p className="disclaimer">By submitting this project, you agree to our Terms of Use and Privacy Policy</p>
                         <button>

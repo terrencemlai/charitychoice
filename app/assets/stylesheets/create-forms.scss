@@ -19,14 +19,14 @@
 }
 
 .create-main .blurb {
-    font-size: 1.4em;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5em;
     text-align: center;
 }
 
 .create-main .subblurb {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     text-align: center;
     border-bottom: 1px solid lightgray;
     padding-bottom: 2em;
@@ -36,6 +36,7 @@
 
 .create-main .errors {
     line-height: 1.25em;
+    font-weight: 400;
     color: red;
     margin-bottom: 1em;
 }
@@ -61,7 +62,7 @@
 }
 
 .create-form .inputdiv input, select {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     letter-spacing: 0.02em;
     padding: 0.5em;
     background: white;
@@ -106,7 +107,7 @@
 
 .create-form button {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 700;
     background: $blue;
     width: 100%;
@@ -176,7 +177,7 @@
 .create-new-project .input-largertext {
     height: 300px;
     border: 1px solid lightgray;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 0.5em;
 }
 
@@ -189,7 +190,7 @@
         &::before {
                 content: '$';
                 color: $black;
-                font-size: 2em;
+                font-size: 2rem;
                 font-weight: 400;
         }
 }
@@ -218,4 +219,9 @@
 
 .create-new-project .input-categories label {
     margin-left: 5px;
+}
+
+.create-new-project .errors {
+    text-align: left;
+    margin-bottom: 0px;
 }

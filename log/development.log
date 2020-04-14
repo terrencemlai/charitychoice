@@ -45196,3 +45196,1575 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 60ms (Views: 11.3ms | ActiveRecord: 38.0ms)
 
 
+Started GET "/" for ::1 at 2020-04-14 08:56:17 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 2381ms (Views: 2377.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 08:57:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 298ms (Views: 293.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 08:59:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 249ms (Views: 244.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 08:59:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:00:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 333ms (Views: 323.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:00:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 245ms (Views: 229.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/sessions" for ::1 at 2020-04-14 09:11:43 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"user_01@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_01@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user_01@gmail.com"], ["id", 114], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["updated_at", "2020-04-14 13:11:43.830312"], ["id", 114]]
+  ↳ app/models/user.rb:52
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 330ms (Views: 15.1ms | ActiveRecord: 45.5ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:11:55 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (11.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (29.6ms)
+Completed 200 OK in 52ms (Views: 21.4ms | ActiveRecord: 22.7ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:14:13 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 81ms (Views: 0.2ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:15:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 682ms (Views: 677.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:15:50 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (6.0ms)
+Completed 200 OK in 41ms (Views: 30.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:15:54 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 13ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:16:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 394ms (Views: 372.8ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:16:43 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (23.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (30.7ms)
+Completed 200 OK in 45ms (Views: 21.5ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:16:44 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 13ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:17:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 337ms (Views: 325.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:17:09 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (42.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (47.9ms)
+Completed 200 OK in 74ms (Views: 31.5ms | ActiveRecord: 42.0ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:17:11 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 13ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:18:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 326ms (Views: 321.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:18:21 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (108.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (111.9ms)
+Completed 200 OK in 152ms (Views: 43.1ms | ActiveRecord: 108.3ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:18:22 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:19:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 508ms (Views: 502.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:19:16 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (19.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (65.2ms)
+Completed 200 OK in 143ms (Views: 123.3ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:19:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 88ms (Views: 57.3ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 09:19:58 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (39.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (53.0ms)
+Completed 200 OK in 71ms (Views: 31.5ms | ActiveRecord: 39.4ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-04-14 09:20:00 -0400
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"project"=>{"title"=>"", "blurb"=>"", "about_students"=>"", "description"=>"", "goal"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/projects_controller.rb:10
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/api/sessions" for ::1 at 2020-04-14 09:21:45 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1yp5qKlHoZSkAVkhyDRTDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uVveJSYXyas8uN3_Mt2dnw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "user_01@gmail.com"], ["id", 114], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uVveJSYXyas8uN3_Mt2dnw"], ["updated_at", "2020-04-14 13:21:45.838183"], ["id", 114]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 24ms (Views: 11.1ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/sessions" for ::1 at 2020-04-14 09:21:48 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:23:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 303ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/sessions" for ::1 at 2020-04-14 09:23:14 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:23:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 278ms (Views: 271.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/sessions" for ::1 at 2020-04-14 09:23:26 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:25:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ition: absolute": expected ";", was ":":
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__3181892629212481308_70363720806740'
+
+Started POST "/__better_errors/3d3e0068fbe65a23/variables" for ::1 at 2020-04-14 09:25:59 -0400
+Started GET "/" for ::1 at 2020-04-14 09:26:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 503ms (Views: 493.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:26:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 345ms (Views: 336.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:27:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 262ms (Views: 258.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:27:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 277ms (Views: 272.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:27:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 307ms (Views: 300.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 09:28:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mProject Load (3.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (13.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSchool Load (5.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" INNER JOIN "teachers" ON "schools"."id" = "teachers"."school_id" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-04-14 10:27:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 516ms (Views: 512.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:27:21 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 41.5ms)
+
+
+
+NoMethodError - undefined method `includes' for #<Project:0x00007ffda85f5728>:
+  app/controllers/api/projects_controller.rb:23:in `show'
+
+Started POST "/__better_errors/54bafd0fa2be29ba/variables" for ::1 at 2020-04-14 10:27:21 -0400
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:28:03 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (0.4ms)
+Completed 200 OK in 60320ms (Views: 12.7ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:29:31 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (0.4ms)
+Completed 200 OK in 3238ms (Views: 14.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:30:20 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 2616ms (Views: 2.3ms | ActiveRecord: 51.1ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:31:22 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 177718ms (Views: 1.2ms | ActiveRecord: 79.6ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 10:36:49 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (24.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 164ms (Views: 0.6ms | ActiveRecord: 79.3ms)
+
+
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.8ms)[0m  [1m[34mSELECT  "donations".* FROM "donations" WHERE "donations"."project_id" = $1 LIMIT $2[0m  [["project_id", 44], ["LIMIT", 11]]
+  [1m[36mDonation Load (0.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mProject Load (10.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 45]]
+  [1m[36mProject Load (9.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 45]]
+  [1m[36mProject Load (12.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 45]]
+  [1m[36mProject Load (22.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (7.8ms)[0m  [1m[34mSELECT count(distinct user_id) FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (19.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (4.7ms)[0m  [1m[34mSELECT sum(donation_amount))
+)
+
+ FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mDonation Load (1.9ms)[0m  [1m[34mSELECT  sum(donation_amount))
+)
+
+ FROM "donations" WHERE "donations"."project_id" = $1 LIMIT $2[0m  [["project_id", 44], ["LIMIT", 11]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (29.0ms)[0m  [1m[34mSELECT sum(donation_amount) FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.6ms)[0m  [1m[34mSELECT sum(donations.donation_amount) FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (14.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (5.7ms)[0m  [1m[34mSELECT sum(donations.donation_amount) FROM "projects" INNER JOIN "donations" ON "donations"."project_id" = "projects"."id"[0m
+  [1m[36mProject Load (10.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT  "donations".* FROM "donations" WHERE "donations"."project_id" = $1 LIMIT $2[0m  [["project_id", 44], ["LIMIT", 11]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 45]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 45]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (4.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "category_associations" ON "categories"."id" = "category_associations"."category_id" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:08:23 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+
+SyntaxError - syntax error, unexpected ',', expecting =>
+        render json: {@project, @project.school, @project.do...
+                              ^
+/Users/terrencelai/Desktop/CharityChoice/app/controllers/api/projects_controller.rb:24: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
+...donations, @project.categories}
+...                              ^
+/Users/terrencelai/Desktop/CharityChoice/app/controllers/api/projects_controller.rb:34: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/projects_controller.rb:24:in `'
+
+Started POST "/__better_errors/50ce1482e61c99d5/variables" for ::1 at 2020-04-14 11:08:23 -0400
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:08:53 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.9ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 387ms (Views: 1.0ms | ActiveRecord: 159.4ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:10:13 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.1ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.5ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 289ms (Views: 1.7ms | ActiveRecord: 156.8ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:10:23 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.6ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.6ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 200 OK in 302ms (Views: 0.7ms | ActiveRecord: 152.5ms)
+
+
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:18:07 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (1.1ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (27.3ms)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 119.2ms)
+
+
+
+NoMethodError - undefined method `about_studebts' for #<Project:0x00007fba4a89fc90>
+Did you mean?  about_students
+               about_students=
+               about_students?:
+  app/views/api/projects/show.json.jbuilder:2:in `block in _app_views_api_projects_show_json_jbuilder__3569720049927785885_70219029867480'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__3569720049927785885_70219029867480'
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started POST "/__better_errors/8a80baa90330bfbb/variables" for ::1 at 2020-04-14 11:18:07 -0400
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:18:27 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.6ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (1.0ms)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:19:37 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (24.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.9ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (1.4ms)
+Completed 200 OK in 62ms (Views: 16.8ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:21:15 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (39.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (2.0ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (8.0ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (20.9ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 51.7ms)
+
+
+
+NoMethodError - undefined method `categoryIds' for #<Project:0x00007fba4aa9c750>
+Did you mean?  category_ids
+               category_ids=
+               categories
+               categories=:
+  app/views/api/projects/show.json.jbuilder:6:in `block in _app_views_api_projects_show_json_jbuilder__3569720049927785885_70219029539320'
+  app/views/api/projects/show.json.jbuilder:1:in `_app_views_api_projects_show_json_jbuilder__3569720049927785885_70219029539320'
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started POST "/__better_errors/06ec9f2df141777f/variables" for ::1 at 2020-04-14 11:21:15 -0400
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:21:31 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (9.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (23.5ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (3.0ms)
+Completed 200 OK in 67ms (Views: 16.3ms | ActiveRecord: 36.8ms)
+
+
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSchool Load (3.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" INNER JOIN "teachers" ON "schools"."id" = "teachers"."school_id" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:23:08 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (23.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (1.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (5.0ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (1.7ms)
+Completed 200 OK in 61ms (Views: 12.5ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:23:16 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.3ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (27.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (1.7ms)
+Completed 200 OK in 61ms (Views: 17.7ms | ActiveRecord: 30.4ms)
+
+
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" INNER JOIN "teachers" ON "schools"."id" = "teachers"."school_id" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  [1m[36mProject Load (14.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" INNER JOIN "teachers" ON "schools"."id" = "teachers"."school_id" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:25:24 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (24.7ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:11
+  Rendered api/projects/show.json.jbuilder (31.4ms)
+Completed 200 OK in 91ms (Views: 48.6ms | ActiveRecord: 27.4ms)
+
+
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:28:34 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (31.0ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (5.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:11
+  Rendered api/projects/show.json.jbuilder (23.8ms)
+Completed 200 OK in 97ms (Views: 20.3ms | ActiveRecord: 58.8ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:29:23 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.3ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/show.json.jbuilder (15.7ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 2.9ms)
+
+
+
+NoMethodError - undefined method `map' for #<School:0x00007fba4760dbb0>
+Did you mean?  tap:
+  app/views/api/projects/show.json.jbuilder:10:in `block in _app_views_api_projects_show_json_jbuilder__3569720049927785885_70219047517040'
+  app/views/api/projects/show.json.jbuilder:9:in `_app_views_api_projects_show_json_jbuilder__3569720049927785885_70219047517040'
+  app/controllers/api/projects_controller.rb:24:in `show'
+
+Started POST "/__better_errors/04fa79bf4fe9b898/variables" for ::1 at 2020-04-14 11:29:24 -0400
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:29:32 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (9.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (25.8ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:11
+  Rendered api/projects/show.json.jbuilder (25.6ms)
+Completed 200 OK in 99ms (Views: 23.3ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:30:00 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (26.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.6ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (22.1ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:11
+  Rendered api/projects/show.json.jbuilder (26.7ms)
+Completed 200 OK in 87ms (Views: 22.4ms | ActiveRecord: 51.3ms)
+
+
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:42:25 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (1.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (1.0ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.7ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (9.9ms)
+Completed 200 OK in 340ms (Views: 19.5ms | ActiveRecord: 145.7ms)
+
+
+Started GET "/api/projects/44" for ::1 at 2020-04-14 11:42:42 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"44"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (1.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (2.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.7ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 44]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (30.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 157], ["id", 163], ["id", 165]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (25.6ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 51]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (30.9ms)
+Completed 200 OK in 100ms (Views: 21.6ms | ActiveRecord: 62.3ms)
+
+
+  [1m[36mDonation Load (1.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Destroy (24.9ms)[0m  [1m[31mDELETE FROM "donations" WHERE "donations"."id" = $1[0m  [["id", 11]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "donations" WHERE "donations"."id" = $1[0m  [["id", 12]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4763730481349702205)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTimestampsToDonations (20200414154643)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.3ms)[0m  [1m[35mALTER TABLE "donations" ADD "created_at" timestamp NOT NULL[0m
+  ↳ db/migrate/20200414154643_add_timestamps_to_donations.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "donations" ADD "updated_at" timestamp NOT NULL[0m
+  ↳ db/migrate/20200414154643_add_timestamps_to_donations.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200414154643"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (23.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4763730481349702205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4763730481349702205)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4763730481349702205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mDonation Load (24.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategoryAssociation Load (1.2ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 69]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.3ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (25.7ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 72]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCategoryAssociation Destroy (0.9ms)[0m  [1m[31mDELETE FROM "category_associations" WHERE "category_associations"."id" = $1[0m  [["id", 73]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 45]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProject Destroy (0.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProject Destroy (0.7ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 48]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 154]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (25.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 155]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 156]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 157]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 158]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 159]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 160]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 161]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 162]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 163]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 164]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (1.1ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 165]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 166]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 167]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (23.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 116]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 115]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 114]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTeacher Destroy (0.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 65]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSchool Load (26.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSchool Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSchool Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSchool Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSchool Create (1.4ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Townsend Harris High School"], ["city", "Flushing"], ["state", "NY"], ["zip", "11367"], ["latitude", 40.73498], ["longitude", -73.821274], ["grade_range", "9-12"], ["created_at", "2020-04-14 15:51:30.708877"], ["updated_at", "2020-04-14 15:51:30.708877"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSchool Create (0.7ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Isaac Newton MS for Math and Science"], ["city", "New York"], ["state", "NY"], ["zip", "10029"], ["latitude", 40.794123], ["longitude", -73.93305], ["grade_range", "6-8"], ["created_at", "2020-04-14 15:51:30.715114"], ["updated_at", "2020-04-14 15:51:30.715114"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mSchool Create (0.5ms)[0m  [1m[32mINSERT INTO "schools" ("name", "city", "state", "zip", "latitude", "longitude", "grade_range", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Grant Street Elementary"], ["city", "Port Townsend"], ["state", "WA"], ["zip", "98368"], ["latitude", 48.112157], ["longitude", -122.791922], ["grade_range", "PreK-8"], ["created_at", "2020-04-14 15:51:30.718674"], ["updated_at", "2020-04-14 15:51:30.718674"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mTeacher Create (0.8ms)[0m  [1m[32mINSERT INTO "teachers" ("full_name", "teacher_name", "school_id", "created_at", "updated_at", "honorific") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["full_name", "Jane Doe"], ["teacher_name", "Doe"], ["school_id", 54], ["created_at", "2020-04-14 15:51:30.751920"], ["updated_at", "2020-04-14 15:51:30.751920"], ["honorific", "Ms."]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_01@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_teacher", "teacher_id", "password_digest", "session_token", "display_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "user_01@gmail.com"], ["is_teacher", true], ["teacher_id", 66], ["password_digest", "$2a$12$sW.xLOL9KcyThJOhhexlwO98AbuizPPV/n0OfcZEcZ7v1j1JP2GNu"], ["session_token", "I0lA-Q_A5o-bHzBLuOWHgQ"], ["display_name", "Ms. Doe"], ["created_at", "2020-04-14 15:51:31.001020"], ["updated_at", "2020-04-14 15:51:31.001020"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_02@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "display_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user_02@gmail.com"], ["password_digest", "$2a$12$VGAS1.FVRRh6rgTk9KdmcuCAZybwJE74Vsrs26wa.vGYxsxJW6H0C"], ["session_token", "ZbPJx6jbkMSNkUlzoEIcvA"], ["display_name", "Dana Donor"], ["created_at", "2020-04-14 15:51:31.250495"], ["updated_at", "2020-04-14 15:51:31.250495"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (14.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user_03@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:62
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "display_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user_03@gmail.com"], ["password_digest", "$2a$12$GuX/uY4eJZAAOSWRrKaDuO4hIGyiLL/m6O6KtK9LFxS93HUzeiGYq"], ["session_token", "j_EJezSFRo-olxo88n3Rdg"], ["display_name", "John Smith"], ["created_at", "2020-04-14 15:51:31.501164"], ["updated_at", "2020-04-14 15:51:31.501164"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Health & Sports"], ["group", "subject"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "History & Civics"], ["group", "subject"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Literacy & Language"], ["group", "subject"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Math & Science"], ["group", "subject"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Music & The Arts"], ["group", "subject"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Special Needs"], ["group", "subject"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Warmth, Care & Hunger"], ["group", "subject"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:76
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Art Supplies"], ["group", "need"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:76
+  [1m[35m (24.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:77
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Books"], ["group", "need"]]
+  ↳ db/seeds.rb:77
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Computers & Tablets"], ["group", "need"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:79
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Instructional Technology"], ["group", "need"]]
+  ↳ db/seeds.rb:79
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Reading Nooks, Desks & Storage"], ["group", "need"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:81
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Sports & Exercise Equipment"], ["group", "need"]]
+  ↳ db/seeds.rb:81
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:81
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("category", "group") VALUES ($1, $2) RETURNING "id"[0m  [["category", "Trips"], ["group", "need"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ db/seeds.rb:84
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "about_students", "teacher_id", "goal", "created_at", "updated_at", "blurb") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Curious Kids in the Classroom!"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["about_students", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["teacher_id", 66], ["goal", 500.0], ["created_at", "2020-04-14 15:51:31.569357"], ["updated_at", "2020-04-14 15:51:31.569357"], ["blurb", "Help me give my students tablets to make learning math fun."]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mProject Create (25.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "about_students", "teacher_id", "goal", "created_at", "updated_at", "blurb") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Arts Program Replenishment"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["about_students", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["teacher_id", 66], ["goal", 250.0], ["created_at", "2020-04-14 15:51:31.573481"], ["updated_at", "2020-04-14 15:51:31.573481"], ["blurb", "Help me give my students new painting and drawing supplies"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:98
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 171], ["LIMIT", 1]]
+  ↳ db/seeds.rb:98
+  [1m[36mCategoryAssociation Create (0.6ms)[0m  [1m[32mINSERT INTO "category_associations" ("project_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["project_id", 49], ["category_id", 171]]
+  ↳ db/seeds.rb:98
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 177], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mCategoryAssociation Create (0.4ms)[0m  [1m[32mINSERT INTO "category_associations" ("project_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["project_id", 49], ["category_id", 177]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 179], ["LIMIT", 1]]
+  ↳ db/seeds.rb:100
+  [1m[36mCategoryAssociation Create (0.4ms)[0m  [1m[32mINSERT INTO "category_associations" ("project_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["project_id", 49], ["category_id", 179]]
+  ↳ db/seeds.rb:100
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mCategoryAssociation Create (0.4ms)[0m  [1m[32mINSERT INTO "category_associations" ("project_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["project_id", 50], ["category_id", 172]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:102
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 175], ["LIMIT", 1]]
+  ↳ db/seeds.rb:102
+  [1m[36mCategoryAssociation Create (0.7ms)[0m  [1m[32mINSERT INTO "category_associations" ("project_id", "category_id") VALUES ($1, $2) RETURNING "id"[0m  [["project_id", 50], ["category_id", 175]]
+  ↳ db/seeds.rb:102
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:102
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mDonation Create (1.1ms)[0m  [1m[32mINSERT INTO "donations" ("user_id", "display_name", "comment", "project_id", "donation_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 118], ["display_name", "Anonymous"], ["comment", "Great cause!"], ["project_id", 49], ["donation_amount", 75.0], ["created_at", "2020-04-14 15:51:31.701180"], ["updated_at", "2020-04-14 15:51:31.701180"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ db/seeds.rb:110
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ db/seeds.rb:110
+  [1m[36mDonation Create (3.3ms)[0m  [1m[32mINSERT INTO "donations" ("user_id", "display_name", "comment", "project_id", "donation_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 119], ["display_name", "J. Smith"], ["comment", ""], ["project_id", 49], ["donation_amount", 50.0], ["created_at", "2020-04-14 15:51:31.710869"], ["updated_at", "2020-04-14 15:51:31.710869"]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/projects/66" for ::1 at 2020-04-14 11:51:57 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"66"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+Completed 404 Not Found in 66ms (ActiveRecord: 35.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Project with 'id'=66:
+  app/controllers/api/projects_controller.rb:23:in `show'
+
+Started POST "/__better_errors/fe4fa38da1f94996/variables" for ::1 at 2020-04-14 11:51:57 -0400
+Started GET "/api/projects/49" for ::1 at 2020-04-14 11:52:13 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (26.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.8ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 171], ["id", 177], ["id", 179]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (33.0ms)
+Completed 200 OK in 352ms (Views: 49.5ms | ActiveRecord: 147.2ms)
+
+
+Started GET "/api/projects/49" for ::1 at 2020-04-14 13:05:50 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/terrencelai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (1.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.0ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (1.1ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.8ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 171], ["id", 177], ["id", 179]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (7.5ms)
+Completed 200 OK in 100ms (Views: 18.7ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 13:05:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 2400ms (Views: 2389.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/49" for ::1 at 2020-04-14 13:06:30 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.7ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 171], ["id", 177], ["id", 179]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (22.2ms)
+Completed 200 OK in 52ms (Views: 32.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/projects/50" for ::1 at 2020-04-14 13:07:24 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"50"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.7ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 50]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.4ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 50]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 172], ["id", 175]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (20.9ms)
+Completed 200 OK in 51ms (Views: 14.7ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-14 13:08:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 550ms (Views: 544.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects/49" for ::1 at 2020-04-14 13:08:24 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"49"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.4ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 49]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2, $3)[0m  [["id", 171], ["id", 177], ["id", 179]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (22.1ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (25.8ms)
+Completed 200 OK in 58ms (Views: 22.1ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/api/categories" for ::1 at 2020-04-14 13:10:22 -0400
+Processing by Api::CategoriesController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/index.json.jbuilder (3.6ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects/50" for ::1 at 2020-04-14 13:10:45 -0400
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"50"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mTeacher Load (1.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mSchool Load (1.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mDonation Load (0.6ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."project_id" = $1[0m  [["project_id", 50]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategoryAssociation Load (0.4ms)[0m  [1m[34mSELECT "category_associations".* FROM "category_associations" WHERE "category_associations"."project_id" = $1[0m  [["project_id", 50]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 172], ["id", 175]]
+  ↳ app/controllers/api/projects_controller.rb:23
+  Rendering api/projects/show.json.jbuilder
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "teachers"."id" FROM "teachers" WHERE "teachers"."school_id" = $1[0m  [["school_id", 54]]
+  ↳ app/views/api/projects/show.json.jbuilder:17
+  Rendered api/projects/show.json.jbuilder (7.5ms)
+Completed 200 OK in 45ms (Views: 22.5ms | ActiveRecord: 8.7ms)
+
+

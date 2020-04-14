@@ -6,3 +6,9 @@ export const createProject = (project, categories) => (
     })
 )
 
+export const fetchProject = id => (
+    $.ajax({
+      method: 'GET',
+      url: `api/projects/${id}`
+    })
+  );

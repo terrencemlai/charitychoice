@@ -12,6 +12,9 @@
 #  updated_at     :datetime         not null
 #  blurb          :string           not null
 #
+
+require "byebug"
+
 class Project < ApplicationRecord
     validates :title, :blurb, :description, :about_students, :teacher_id, :goal, presence: true
 
@@ -36,5 +39,17 @@ class Project < ApplicationRecord
     has_many :donations,
     foreign_key: :project_id,
     class_name: 'Donation'
+
+    def progress
+        sum = 0
+        self.donations.each do |donation|
+            sum += donation.donation_amount
+        end
+        return sum
+    end
+
+    def donors
+        self.donations.length
+    end
 
 end
