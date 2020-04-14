@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     resources :schools, only: [:index, :show]
     resources :projects, only: [:new, :create]
+    resources :categories, only: [:index]
 
     namespace :auto do
       resource :schools, only: [:show]

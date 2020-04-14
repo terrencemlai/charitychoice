@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { logout } from './actions/session_actions';
-import { createProject } from './actions/project_actions';
+import { fetchCategories } from './actions/category_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //TESTING
   window.store = store;
   window.logout = logout;
-  window.createProject = createProject;
+  window.fetchCategories = fetchCategories;
   //TESTING
 
   const root = document.getElementById('root');
