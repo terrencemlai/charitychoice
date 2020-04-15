@@ -13,7 +13,6 @@
 #  blurb          :string           not null
 #
 
-require "byebug"
 
 class Project < ApplicationRecord
     validates :title, :blurb, :description, :about_students, :teacher_id, :goal, presence: true
