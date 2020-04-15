@@ -105,10 +105,10 @@ Donation.create({   user_id: user_02.id,
                     display_name: 'Anonymous',
                     comment: 'Great cause!',
                     project_id: project_01.id,
-                    donation_amount: 75.00 })
+                    donation_amount: 75.25 })
 
 Donation.create({   user_id: user_03.id,
                     display_name: 'J. Smith',
                     comment: '',
                     project_id: project_01.id,
-                    donation_amount: 50.00 })
+                    donation_amount: 50.25 })

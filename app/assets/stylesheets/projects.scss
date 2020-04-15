@@ -1,0 +1,281 @@
+@import 'colors.scss'; 
+
+.project-show {
+    padding-bottom: 2em;
+    background-color: $gray;
+}
+.progressbar-main {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+}
+
+.progressbar-main .grid-container {
+    position: relative;
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    width: 980px;
+    height: 70px;
+    // border: 1px solid red;
+}
+
+.progressbar-main .col-1-2 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+.progressbar-main .col-1-2 strong {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.progressbar-main .meter-frame {
+    height: 15px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+.progressbar-main .meter {
+    height: 100%;
+    border-radius: 50px;
+    background-color: $orange;
+}
+
+.progressbar-main .col-2-2 form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.progressbar-main .inputdiv {
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    
+    &:hover {
+        border: 1px solid $blue;
+    }
+}
+
+.progressbar-main form .inputfield {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    height: 100%;
+    
+    &::before {
+        content: '$';
+        font-weight: 400;
+        color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+}
+
+.progressbar-main form input {
+    font-size: 1.2rem;
+    text-align: right;
+    height: 100%;
+    width: 80%;
+    padding-right: 0.5em;
+    border: none;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.progressbar-main form button {
+    color: white;
+    font-weight: 400;
+    background-color: $blue;
+    margin-left: 1em;
+
+    &:hover {
+        background-color: $hover-blue;
+    }
+}
+
+.projectinfo-main {
+    display: flex;
+    justify-content: center;
+}
+
+.projectinfo-main::before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 480px;
+    background-image: url('/assets/default-background.jpg');
+    background-repeat: repeat;
+}
+
+.projectinfo-main .grid-container {
+    position: relative;
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: 2fr 1fr;
+    width: 980px;
+    margin-top: 30px;
+}
+
+.projectinfo-main .project-details {
+    background-color: white;
+    width: auto;
+    padding: 2rem;
+    border: 1px solid lightgray;
+    
+    & blockquote {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: $purple;
+        padding-left: 0.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-left: 3px solid $purple;
+    }
+
+    & h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & p {
+        line-height: 1.25rem;
+        margin-bottom: 1.5em;
+        margin-right: 20%;
+    }
+
+}
+
+
+.projectinfo-main .classroom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    height: 450px;
+    line-height: 1.4rem;
+
+    & > h4 {
+        font-size: 1.25rem;
+        margin: -10px 0 0.5rem 0;
+    }
+
+    & .classroom-photo {
+        background-image: url('/assets/default-classroom-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 275px;
+        height: 275px;
+        border: 1px solid $black;
+    }
+
+    & .teacher-photo {
+        position: relative;
+        background-image: url('/assets/default-profile-teacher.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid $black;
+
+    }
+}
+
+.projectinfo-main .project-timeline {
+    width: auto;
+    padding: 2rem;
+
+    & h2 {
+        color: $purple;
+        margin-bottom: 1.5em;
+    }
+
+}
+
+.project-timeline li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+.project-timeline .timeline-list {
+    margin-left: 20px;
+    border-left: 1px solid lightgray;
+}
+
+.project-timeline .timeline-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 70px;
+    height: 30px;
+    margin-left: -35px;
+    background: $gray;
+}
+
+.project-timeline .timeline-photo-donor {
+    background-image: url('/assets/default-profile-user.jpg');
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 15px 0 15px;
+}
+
+.project-timeline .timeline-photo-teacher {
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 15px 0 15px;
+    background-image: url('/assets/default-profile-teacher.jpg');
+}
+
+.project-timeline .timeline-name {
+    font-size: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+    width: auto;
+}
+
+.project-tags span {
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid lightgray;
+
+    &:hover {
+        background-color: lightgray;
+        border: 1px solid gray;
+        cursor: pointer;
+    }
+}

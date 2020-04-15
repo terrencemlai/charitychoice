@@ -25,6 +25,15 @@ h2 {
     font-size: 2rem;
 }
 
+button {
+    background-color: $blue;
+    cursor:pointer;
+
+    &:hover {
+        background-color: $hover-blue;
+    }
+}
+
 li {
     list-style-type: none;
 }

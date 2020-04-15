@@ -1,5 +1,6 @@
 json.project do 
     json.extract! @project, :id, :title, :blurb, :description, :about_students, :teacher_id, :goal, :created_at
+    json.school_id @project.school.id
     json.progress @project.progress
     json.donors @project.donors
     json.donationIds @project.donations.pluck(:id)

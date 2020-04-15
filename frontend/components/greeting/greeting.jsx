@@ -41,7 +41,7 @@ class Greeting extends React.Component {
         return (
         <span className="account-main">
             <span className="greeting" onClick={this.dropdownShow}>
-                <span className="account-photo"></span>
+                <span className="account-photo-teacher"></span>
                 <span className="account-name">{this.props.currentUser.display_name}</span>
                 <span className="material-icons account-expand">expand_more</span>
             </span>
@@ -74,7 +74,7 @@ class Greeting extends React.Component {
         return (
         <span className="account-main">
             <span className="greeting" onClick={this.dropdownShow}>
-                <span className="account-photo"></span>
+                <span className="account-photo-user"></span>
                 <span className="account-name">{this.props.currentUser.display_name}</span>
                 <span className="material-icons account-expand">expand_more</span>
             </span>

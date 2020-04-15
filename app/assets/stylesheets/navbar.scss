@@ -124,10 +124,23 @@
     margin-left: 1em;
 }
 
-.greeting .account-photo {
+.greeting .account-photo-teacher {
     height: 25px;
     width: 25px;
-    background-color: $orange;
+    background-image: url('/assets/default-profile-teacher.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.greeting .account-photo-user {
+    height: 25px;
+    width: 25px;
+    background-image: url('/assets/default-profile-user.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
 }
 
