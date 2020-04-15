@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_154643) do
+ActiveRecord::Schema.define(version: 2020_04_15_060147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,12 +30,12 @@ ActiveRecord::Schema.define(version: 2020_04_14_154643) do
   create_table "donations", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "display_name", null: false
-    t.boolean "anonynmous", default: false, null: false
     t.string "comment"
     t.integer "project_id", null: false
     t.float "donation_amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "anonymous", default: false, null: false
     t.index ["project_id"], name: "index_donations_on_project_id"
     t.index ["user_id"], name: "index_donations_on_user_id"
   end

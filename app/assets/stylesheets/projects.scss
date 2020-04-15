@@ -4,11 +4,16 @@
     padding-bottom: 2em;
     background-color: $gray;
 }
+
 .progressbar-main {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid lightgray;
     background-color: white;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 4;
 }
 
 .progressbar-main .grid-container {
@@ -133,6 +138,9 @@
     padding: 2rem;
     border: 1px solid lightgray;
     
+    & h1 {
+        line-height: 1.2em;
+    }
     & blockquote {
         font-size: 1.5rem;
         font-weight: 400;
