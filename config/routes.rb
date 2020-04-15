@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     resources :teachers, only: [:new, :create]
     resources :users, only: [:new, :create]
 
-    resources :schools, only: [:index, :show] do
-    end
+    resources :schools, only: [:index, :show]
+    resources :projects, only: [:new, :create, :show]
+    resources :categories, only: [:index]
 
     namespace :auto do
       resource :schools, only: [:show]

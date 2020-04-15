@@ -49,7 +49,7 @@ class Splash extends React.Component {
                         About Us
                     </h2>
                     <p className="subheader">
-                        Founded in 2020, CharityChoice was created by a data scientist learning software engineering at one of New York's most selective bootcamps. The objective upon graduation is to further develop creative and dynamic analytics solutions for real business challenges.
+                        Founded in 2020, CharityChoice was created by a data scientist studying software engineering at one of New York's most selective bootcamps. The objective upon graduation is to further develop creative and dynamic analytics solutions for real business challenges.
                     </p>
                     
                     <a className="link" href="https://www.linkedin.com/in/terrencelai/">LinkedIn</a>

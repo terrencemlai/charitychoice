@@ -27,6 +27,10 @@ class User < ApplicationRecord
     class_name: 'Teacher',
     optional: true
 
+    has_many :donations,
+    foreign_key: :user_id,
+    class_name: 'Donation'
+
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

@@ -42,19 +42,19 @@ class GreetingMobile extends React.Component {
                 </div>
                     <ul className={`account-links${this.state.accountDropdown}`}>
                         <li>
-                            <span class="material-icons">person_outline</span>
+                            <span className="material-icons">person_outline</span>
                             My Profile
                         </li>
                         <li>
-                            <span class="material-icons">view_list</span>
+                            <span className="material-icons">view_list</span>
                             My Projects
                         </li>
                         <li>
-                            <span class="material-icons">favorite_border</span>
+                            <span className="material-icons">favorite_border</span>
                             Favorites
                         </li>
                         <li onClick={ () => this.props.logout()}>
-                            <span class="material-icons">close</span>
+                            <span className="material-icons">close</span>
                             Sign Out
                         </li>
                     </ul>
@@ -71,15 +71,15 @@ class GreetingMobile extends React.Component {
                 </div>
                 <ul className={`account-links${this.state.accountDropdown}`}>
                         <li>
-                            <span class="material-icons">person_outline</span>
+                            <span className="material-icons">person_outline</span>
                             My Profile
                         </li>
                         <li>
-                            <span class="material-icons">favorite_border</span>
+                            <span className="material-icons">favorite_border</span>
                             Favorites
                         </li>
                         <li onClick={ () => this.props.logout()}>
-                            <span class="material-icons">close</span>
+                            <span className="material-icons">close</span>
                             Sign Out
                         </li>
                     </ul>

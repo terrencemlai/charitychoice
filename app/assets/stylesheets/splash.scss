@@ -15,7 +15,7 @@
 }
 
 .splash-row-01-A {
-    background-image: url('/assets/splash-welcome.jpg');
+    background-image: url('/assets/splash-welcome-3a.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -43,34 +43,36 @@
     color: white;
     padding-left: 3em;
     width: 550px;
+
+    & h1 {
+        line-height: 1.25em;
+    }
+    
+    & .subheader {
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.5em;
+        margin: 1em 0 1.5em 0;
+    }
+    
+    & div {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        background-color: $blue;
+        padding: 1em 2em 1em 2em;
+        width: 250px;
+        margin: 0 0 1.5em 0;
+    }
+    
+    & .subblurb {
+        line-height: 1.25rem;
+        width: 400px;
+    }
+
 }
 
-#welcome-message h1 {
-    line-height: 1.25em;
-}
-
-#welcome-message .subheader {
-    font-weight: 400;
-    font-size: 1.3em;
-    line-height: 1.5em;
-    margin: 1em 0 1.5em 0;
-}
-
-#welcome-message div {
-    color: white;
-    font-size: 1.25em;
-    font-weight: 700;
-    text-align: center;
-    background-color: $blue;
-    padding: 1em 2em 1em 2em;
-    width: 250px;
-    margin: 0 0 1.5em 0;
-}
-
-#welcome-message .subblurb {
-    line-height: 1.25em;
-    width: 400px;
-}
 
 //SECOND ROW----------------------------------
 
@@ -124,7 +126,7 @@
 
 .splash-row-05 .subheader {
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     line-height: 1.5em;
     margin: 1em 0 1.5em 0;
     width: 600px;
@@ -133,7 +135,7 @@
 
 .splash-row-05 a {
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     text-decoration: none;
     text-align: center;
     color: white;

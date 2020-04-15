@@ -41,26 +41,26 @@ class Greeting extends React.Component {
         return (
         <span className="account-main">
             <span className="greeting" onClick={this.dropdownShow}>
-                <span className="account-photo"></span>
+                <span className="account-photo-teacher"></span>
                 <span className="account-name">{this.props.currentUser.display_name}</span>
-                <span class="material-icons account-expand">expand_more</span>
+                <span className="material-icons account-expand">expand_more</span>
             </span>
             <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
                     <li className="dropdown-option">
-                        <span class="material-icons">person_outline</span>
+                        <span className="material-icons">person_outline</span>
                         My Profile
                     </li>
                     <li className="dropdown-option">
-                        <span class="material-icons">view_list</span>
+                        <span className="material-icons">view_list</span>
                         My Projects
                     </li>
                     <li className="dropdown-option">
-                        <span class="material-icons">favorite_border</span>
+                        <span className="material-icons">favorite_border</span>
                         Favorites
                     </li>
                     <li className="dropdown-option" onClick={ () => this.props.logout()}>
-                        <span class="material-icons">close</span>
+                        <span className="material-icons">close</span>
                         Sign Out
                     </li>
                 </ul>
@@ -74,22 +74,22 @@ class Greeting extends React.Component {
         return (
         <span className="account-main">
             <span className="greeting" onClick={this.dropdownShow}>
-                <span className="account-photo"></span>
+                <span className="account-photo-user"></span>
                 <span className="account-name">{this.props.currentUser.display_name}</span>
-                <span class="material-icons account-expand">expand_more</span>
+                <span className="material-icons account-expand">expand_more</span>
             </span>
             <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
                     <li className="dropdown-option">
-                        <span class="material-icons">person_outline</span>
+                        <span className="material-icons">person_outline</span>
                         My Profile
                     </li>
                     <li className="dropdown-option">
-                        <span class="material-icons">favorite_border</span>
+                        <span className="material-icons">favorite_border</span>
                         Favorites
                     </li>
                     <li className="dropdown-option" onClick={ () => this.props.logout()}>
-                        <span class="material-icons">close</span>
+                        <span className="material-icons">close</span>
                         Sign Out
                     </li>
                 </ul>
