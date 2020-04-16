@@ -16,6 +16,7 @@ class Splash extends React.Component {
         this.handleProjectClick = this.handleProjectClick.bind(this);
         this.handleSearchChange = this.handleSearchChange.bind(this);
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+        this.renderProjectTiles = this.renderProjectTiles.bind(this);
     }
 
     componentDidMount(){
@@ -35,6 +36,43 @@ class Splash extends React.Component {
         e.preventDefault();
         this.props.history.push(`projects/search?keyword=${this.state.keyword}`);
         this.setState({keyword: ''})
+    }
+
+    renderProjectTiles(tiles){
+        let j;
+        this.props.projectsArray.length >= tiles ? j = tiles : j = this.props.projectsArray.length;
+        const subArray = [];
+
+        for (let i = 0; i < j; i++) {
+            subArray.push(this.props.projectsArray[i])
+        }
+
+        return (
+        subArray.map(project => {
+            const meterPct = project.progressPct+'%';
+            const meterWidthStyle = { width: meterPct, };
+
+            return (
+            <Link to={`/projects/${project.id}`} className="link" key={project.id}>
+                <div className="project-vertical-tile">
+                    <div className="project-photo-title">
+                        {project.title}
+                    </div>
+                    <div className="blurb">
+                        {project.blurb}
+                    </div>
+                    <div className="project-progress">
+                            <div className="teacher-name"><p>{this.props.teachers[project.teacher_id].display_name}</p></div>
+                            <div className="school-name"><p>{this.props.schools[project.school_id].name}</p></div>
+                            <div className="meter-frame">
+                                <div className="meter" style={meterWidthStyle}></div>
+                            </div>
+                            <div className="still-needed">${project.needed} still needed</div>
+                    </div>
+                </div>
+            </Link>
+        )}))
+        
     }
 
     renderWelcome(){
@@ -78,7 +116,11 @@ class Splash extends React.Component {
                         <Link className="link" to="/teachers/signup"><div>Register to create projects</div></Link>
                 </div>
                 <div className="splash-row splash-row-04">
-                    NEARBY PROJECTS
+                    <h2>Suggested Projects</h2>
+                    <div className="project-suggest-container">
+                        {this.renderProjectTiles(3)}
+                    </div>
+                    <Link to="/projects/search" className="link"><div className="responsive-button">See more projects</div></Link>
                 </div>
                 <div className="splash-row splash-row-05">
                     <h2>
@@ -106,7 +148,10 @@ class Splash extends React.Component {
 }
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = ({entities}) => ({
+    projectsArray: Object.values(entities.projects),
+    schools: entities.schools,
+    teachers: entities.teachers,
 });
 
 const mapDispatchToProps = dispatch => ({

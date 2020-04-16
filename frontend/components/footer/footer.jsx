@@ -7,36 +7,38 @@ class Footer extends React.Component {
             <div className="footer-main"> 
                 <div className="footer-container">
                     <div className="col col-1-4">
-                        <p>Footer Subheader</p>
-                        <li>Link</li>
-                        <li>Link</li>
-                        <li>Link</li>
-                        <li>Link</li>
-                        <li>Link</li>
+                        <label>DonorsChoose.org</label>
+                        <p>Teachers and students need your help to transform their classrooms and maximize their educational enrichment. Fund supplies, equipment, class trips, and more for a real classroom project of your choice today at DonorsChoose.org.</p>
                     </div>
                     <div className="col col-2-4">
-                        <p>About Us</p>
-                        <li>Our Story</li>
-                        <li>Founders</li>
-                        <li>Donors</li>
-                        <li>Careers</li>
-                        <li>Board</li>
+                        <label>About Us</label>
+                        <ul>
+                            <li>Our Story</li>
+                            <li>Founders</li>
+                            <li>Donors</li>
+                            <li>Careers</li>
+                            <li>Board</li>
+                        </ul>
                     </div>
                     <div className="col col-3-4">
-                        <p>Privacy</p>
-                        <li>Security</li>
-                        <li>Safety</li>
-                        <li>GDPR</li>
-                        <li>CCPA</li>
-                        <li>Legal</li>
+                        <label>Privacy</label>
+                        <ul>
+                            <li>Security</li>
+                            <li>Safety</li>
+                            <li>GDPR</li>
+                            <li>CCPA</li>
+                            <li>Legal</li>
+                        </ul>
                     </div>
                     <div className="col col-4-4">
-                        <p>Contact Us</p>
-                        <li>Offices</li>
-                        <li>FAQs</li>
-                        <li>Support</li>
-                        <li>Events</li>
-                        <li>Network</li>
+                        <label>Contact Us</label>
+                        <ul>
+                            <li>Offices</li>
+                            <li>FAQs</li>
+                            <li>Support</li>
+                            <li>Events</li>
+                            <li>Network</li>
+                        </ul>
                     </div>
                 </div>
             </div>

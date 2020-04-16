@@ -19,14 +19,18 @@ class Greeting extends React.Component {
 
     dropdownShow() {
         this.setState({ dropdown: ''})
-        document.addEventListener('mousedown', this.dropdownHide)
+        document.getElementById('root').addEventListener('mousedown', this.dropdownHide)
     }
 
     dropdownHide(e) {
         if (e.target.className !== 'dropdown-option') {
             this.setState({ dropdown: ' account-dropdown-hidden'})
+            document.getElementById('root').removeEventListener('mousedown', this.dropdownHide)
         }
-        document.removeEventListener('mousedown', this.dropdownHide)
+    }
+
+    componentDidMount(){
+        this.setState({ dropdown: ' account-dropdown-hidden' })
     }
 
     sessionLinks () {
@@ -46,16 +50,18 @@ class Greeting extends React.Component {
             </span>
             <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
+                    <div className="link-holder">
+                        <Link className="link" to="/projects/create">
+                            <li className="dropdown-option">
+                                    <span className="material-icons">create</span>
+                                    New Project
+                            </li>
+                        </Link>
+                    </div>
                     <li className="dropdown-option">
                         <span className="material-icons">view_list</span>
                         My Projects
                     </li>
-                    <Link className="link" to="/projects/create">
-                        <li className="dropdown-option">
-                                <span className="material-icons">create</span>
-                                New Project
-                        </li>
-                    </Link>
                     <li className="dropdown-option">
                         <span className="material-icons">favorite_border</span>
                         Favorites
@@ -69,7 +75,6 @@ class Greeting extends React.Component {
                         Sign Out
                     </li>
                 </ul>
-                <span className="dropdownBackground" onClick={this.dropdownHide}></span>
             </div>
         </span>
 
@@ -98,7 +103,6 @@ class Greeting extends React.Component {
                         Sign Out
                     </li>
                 </ul>
-                <span className="dropdownBackground" onClick={this.dropdownHide}></span>
             </div>
         </span>
     )}

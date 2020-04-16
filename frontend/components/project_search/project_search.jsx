@@ -19,8 +19,9 @@ class ProjectSearch extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0, 0)
-        let queryString = new URLSearchParams(this.props.location.search);
+        let queryString = new URLSearchParams(this.props.location.search); "?keyword=arts"
         let keyword = queryString.get("keyword");
+        
         if (keyword) {
             this.props.fetchProjects({ with_search: true, keyword: keyword })
         } else {

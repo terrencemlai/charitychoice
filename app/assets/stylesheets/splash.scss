@@ -11,7 +11,7 @@
 }
 
 .splash-row-01 {
-    height: 500px;
+    height: 550px;
 }
 
 .splash-row-01-A {
@@ -165,6 +165,129 @@
 
 }
 
+.splash-row-04 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: $gray;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    color: $blue;
+
+
+    & .project-suggest-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2em;
+        width: 980px;
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        & .project-vertical-tile {
+            display: grid;
+            grid-template-rows: 3.5fr 2fr 2fr;
+            background-color: white;
+            line-height: 1.1rem;
+            border: 1px solid lightgray;
+            height: 350px;
+
+            &:hover {
+                box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            }
+
+            & .project-photo-title {
+                background-image: linear-gradient(to bottom, rgba(48,48,48,0) 0%, rgba(48,48,48,0.85) 100%)
+                    , url('/assets/default-classroom-1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                color: white;
+                font-weight: 700;
+                outline-color: $black;
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+                width: auto;
+                padding: 1em;
+            }
+
+            & .blurb {
+                width: auto;
+                line-height: 1.2rem;
+                overflow: hidden;
+                padding: 1em;
+            }
+
+            & .project-progress {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                width: auto;
+                padding: 1em;
+
+                & .meter-frame {
+                    height: 10px;
+                    border-radius: 50px;
+                    overflow: hidden;
+                    background-color: lightgray;
+                    margin-top: 0.5em;
+                    margin-bottom: 1em;
+                }
+                
+                & .meter {
+                    height: 100%;
+                    border-radius: 50px;
+                    background-color: $orange;
+                }
+
+                & .teacher-name {
+                    line-height: 1.3rem;
+                    font-weight: 700;
+                }
+
+                & .school-name {
+                    font-style: italic;
+                }
+                
+                & .still-needed {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+
+    & .link {
+        text-decoration: none;
+    }
+
+    & .responsive-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-decoration: none;
+        text-align: center;
+        color: #414142;
+        border: 1px solid lightgray;
+        height: 50px;
+        width: 250px;
+
+        &:hover {
+            background-color: $hover-gray;
+        }
+    }
+    
+}
+
 
 
 
@@ -193,14 +316,17 @@
 }
 
 .splash-row-05 .responsive-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     font-size: 1.25rem;
     text-decoration: none;
     text-align: center;
     color: white;
     border: 1px solid lightgray;
-    padding: 1em 2em 1em 2em;
-    width: 150px;
+    height: 50px;
+    width: 250px;
 }
 
 .splash-row-05 .responsive-button:hover {
@@ -209,7 +335,7 @@
 
 // TO BE STYLED----------------------------
 
-.splash-row-04, .splash-row-06, .splash-row-08 {
+.splash-row-06, .splash-row-08 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,6 +441,34 @@
     .splash-row-03 .link {
         width: auto;
     }
+    
+    .splash-row-04 {
+        height: auto;
+        width: auto;
+        padding: 2em 1em 2em 1em;
+    }
+    
+    .splash-row-04 .link {
+        width: 100%;
+
+        & .responsive-button {
+            width: auto;
+        }
+    }
+
+
+    .splash-row-04 .project-suggest-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100%;
+        grid-row-gap: 2em;
+
+        & .project-vertical-tile {
+            grid-template-rows: 2fr 1fr 2fr;
+            height: 300px;
+        }
+    }
 
     .splash-row-05 {
         display: grid;
@@ -337,9 +491,9 @@
         width: auto;
         height: 50px;
         padding: 0;
-
-        // margin: 0 1em 0 1em;
     }
+
+
 
 
 }

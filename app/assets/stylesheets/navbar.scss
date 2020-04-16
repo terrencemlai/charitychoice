@@ -3,6 +3,7 @@
 
 //MAIN NAVBAR STYLING-------------------------
 
+
 .navbar-main {
     border-bottom: 1px solid lightgray;
 }
@@ -110,13 +111,30 @@
     }
 }
 
-.account-links .link {
-    text-decoration: none;
-    background-color: yellow;
-    margin: 0;
-    height: auto;
+.account-links .link-holder {
     border-bottom: 1px solid lightgray;
+    padding: 0;
+    height: auto;
+
+    & .link {
+        height: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
 }
+
+ 
+
+// .account-links .link {
+    // text-decoration: none;
+    // background-color: yellow;
+    // margin: 0;
+    // height: auto;
+    // border-bottom: 1px solid lightgray;
+    // border: 2px solid red;
+    // padding: 0;
+// }
 
 .account-links li span {
     color: lightgray;

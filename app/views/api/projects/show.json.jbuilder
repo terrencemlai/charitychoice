@@ -1,10 +1,12 @@
 json.project do 
-    json.extract! @project, :id, :title, :blurb, :description, :about_students, :teacher_id, :goal, :created_at
-    json.school_id @project.school.id
-    json.progress @project.progress
-    json.donors @project.donors
-    json.donationIds @project.donations.pluck(:id)
-    json.categoryIds @project.categories.pluck(:id)
+    json.extract!       @project, :id, :title, :blurb, :description, :about_students, :teacher_id, :goal, :created_at
+    json.school_id      @project.school.id
+    json.progress       @project.progress
+    json.progressPct    @project.goal >= @project.progress ? ((@project.progress/@project.goal) * 100).floor : 100
+    json.needed         @project.goal >= @project.progress ? @project.goal-@project.progress : 0 
+    json.donors         @project.donors
+    json.donationIds    @project.donations.pluck(:id)
+    json.categoryIds    @project.categories.pluck(:id)
 end
 
 json.teacher do

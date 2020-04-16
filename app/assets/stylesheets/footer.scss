@@ -10,26 +10,38 @@
     width: 980px;
     margin: 0 auto;
     padding: 2em 1em;
+
+    & label {
+        line-height: 2rem;
+        font-weight: 700;
+        color: $purple;
+    }
+
+    & li {
+        list-style-type: none;
+        line-height: 1.5rem;
+    }
+
+    & p {
+        line-height: 1.5rem;
+        margin-right: 2rem;
+    }
 }
 
-.footer-container p {
-    line-height: 2em;
-    font-weight: 700;
-    color: $purple;
-}
 
-.footer-container li {
-    list-style-type: none;
-    line-height: 1.5em;
-}
 
 @media screen and (max-width: 700px) {
     .footer-container {
         display: grid;
         grid-template-columns: 1fr;
+        width: auto;
+
+        & label {
+            margin-top: 1em;
+        }
 
         & p {
-            margin-top: 1em;
+            margin: 0;
         }
     }
 }
