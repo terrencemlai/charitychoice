@@ -1,4 +1,4 @@
-import { RECEIVE_PROJECT } from '../actions/project_actions';
+import { RECEIVE_PROJECT, RECEIVE_PROJECTS } from '../actions/project_actions';
 
 const schoolsReducer = (oldState = {}, action) => {
     Object.freeze(oldState)
@@ -7,6 +7,9 @@ const schoolsReducer = (oldState = {}, action) => {
     switch(action.type) {
       case RECEIVE_PROJECT:
         newState[action.school.id] = action.school;
+        return newState;
+      case RECEIVE_PROJECTS:
+        newState = Object.assign({}, action.schools);
         return newState;
       default:
         return oldState;

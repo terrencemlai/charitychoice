@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class Greeting extends React.Component {
@@ -9,13 +9,12 @@ class Greeting extends React.Component {
         this.state = {
             dropdown: ' account-dropdown-hidden'
         }
-
+        
         this.sessionLinks = this.sessionLinks.bind(this);
         this.teacherGreeting = this.teacherGreeting.bind(this);
         this.userGreeting = this.userGreeting.bind(this);
         this.dropdownShow = this.dropdownShow.bind(this);
         this.dropdownHide = this.dropdownHide.bind(this);
-        // this.dropdownHideState = this.dropdownHideState.bind(this);
     }
 
     dropdownShow() {
@@ -48,16 +47,22 @@ class Greeting extends React.Component {
             <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
                     <li className="dropdown-option">
-                        <span className="material-icons">person_outline</span>
-                        My Profile
-                    </li>
-                    <li className="dropdown-option">
                         <span className="material-icons">view_list</span>
                         My Projects
                     </li>
+                    <Link className="link" to="/projects/create">
+                        <li className="dropdown-option">
+                                <span className="material-icons">create</span>
+                                New Project
+                        </li>
+                    </Link>
                     <li className="dropdown-option">
                         <span className="material-icons">favorite_border</span>
                         Favorites
+                    </li>
+                    <li className="dropdown-option">
+                        <span className="material-icons">person_outline</span>
+                        My Profile
                     </li>
                     <li className="dropdown-option" onClick={ () => this.props.logout()}>
                         <span className="material-icons">close</span>
@@ -114,7 +119,7 @@ class Greeting extends React.Component {
             <div className="container">
                 <span className="subleft">
                     <Link to="/"><div id="navbar-logo"></div></Link>
-                    <Link className="navbar-button" to='/'>Find a classroom to support</Link>
+                    <Link to="/projects/search" className="navbar-button" >Find a classroom to support</Link>
                     <Link className="link" to='/'>About Us</Link>
                     <Link className="link" to='/'>Help</Link>
                 </span>

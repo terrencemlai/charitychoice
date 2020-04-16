@@ -135,6 +135,7 @@
 .projectinfo-main .project-details {
     background-color: white;
     width: auto;
+    min-height: 450px;
     padding: 2rem;
     border: 1px solid lightgray;
     
@@ -276,14 +277,179 @@
     width: auto;
 }
 
-.project-tags span {
+.project-tags .link {
     padding: 0.5em;
     margin: 0.5em;
     border: 1px solid lightgray;
 
     &:hover {
-        background-color: lightgray;
+        background-color: $hover-gray;
         border: 1px solid gray;
         cursor: pointer;
     }
 }
+
+
+//SEARCH PAGE--------
+
+.search-main {
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+// .search-main div {
+//     border: 1px dashed gray;
+// }
+
+.search-main .search-bar {
+    display: flex;
+    width:980px;
+    height: 100px;
+}
+
+.search-main .search-bar form {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+
+    & button {
+        font-size: 1.1rem;
+        margin-left: 10px;
+    }
+
+    & input {
+        font-size: 1rem;
+        padding-left: 1rem;
+
+        &::placeholder {
+            font-weight: 300;
+            color: lightgray;
+        }
+    }
+}
+
+.search-main .results-grid {
+    width: 980px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.search-main .filters-list {
+
+    & ul{
+        margin-bottom: 2em;
+        border-bottom: 1px solid lightgray;
+    }
+
+    & input {
+        margin-right: 0.5em;
+    }
+    
+    & li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1em;
+
+        &:first-child {
+            margin-top: 1em;
+        }
+
+        &:last-child {
+            margin-bottom: 2em;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+}
+
+.search-main .list-length {
+    color: gray;
+    text-align: right;
+    margin-bottom: 1em;
+}
+
+.search-main .results-grid .project-tile {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 2em;
+    background-color: white;
+    border: 1px solid lightgray;
+    min-height: 150px;
+    width: auto;
+    margin: 0 0 2em 2em;
+    padding: 1.5em;
+
+    & .classroom-photo {
+        background-image: url('/assets/default-classroom-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        // max-height: 150px;
+        max-width: 150px;
+        //not defining dimensions due to auto settings of ancestors
+    }
+
+    & .project-summary {
+        line-height: 1.2rem;
+
+        & h3 {
+            line-height: 1.5rem;
+            color: $blue;
+            font-size: 1.25rem;
+        }
+
+        & p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-right: 1rem;
+        }
+        
+        & .teacher {
+            font-weight: 700;
+        }
+        
+        & .school {
+            font-style: italic;
+        }
+    }
+    
+    & .project-progress {
+        & .meter-frame {
+            height: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: lightgray;
+        }
+        
+        & .meter {
+            height: 100%;
+            border-radius: 50px;
+            background-color: $orange;
+        }
+        
+        & strong {
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        
+        & div {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+}
+

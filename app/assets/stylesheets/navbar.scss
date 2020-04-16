@@ -55,7 +55,6 @@
 
     &:hover {
         background-color: $gray;
-        border: 1px solid gray;
     }
 }
 
@@ -101,14 +100,22 @@
     padding: 1em;
     border-bottom: 1px solid lightgray;
     cursor: pointer;
-
+    
     &:hover {
         background-color: $gray;
     }
-
+    
     &:last-child {
         border-bottom: none;
     }
+}
+
+.account-links .link {
+    text-decoration: none;
+    background-color: yellow;
+    margin: 0;
+    height: auto;
+    border-bottom: 1px solid lightgray;
 }
 
 .account-links li span {

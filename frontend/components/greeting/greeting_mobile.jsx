@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class GreetingMobile extends React.Component {
@@ -109,9 +109,9 @@ class GreetingMobile extends React.Component {
                     </span>
                 </div>
                 <ul className={`mobile-menu-dropdown${this.state.mobileDropdown}`}>
-                    <li>
-                        <Link className="link" to='/'>Find a classroom to support</Link>
-                    </li>
+                    <Link className="link" to='/projects/search'>
+                        <li>Find a classroom to support</li>
+                    </Link>
                     <li>
                         <Link className="link" to='/'>About Us</Link>
                     </li>
@@ -128,4 +128,4 @@ class GreetingMobile extends React.Component {
 }
 
 
-export default GreetingMobile;
+export default withRouter(GreetingMobile);

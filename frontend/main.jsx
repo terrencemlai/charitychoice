@@ -5,7 +5,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { logout } from './actions/session_actions';
 import { fetchCategories } from './actions/category_actions';
-import { fetchProject } from './actions/project_actions';
+import { fetchProject, fetchProjects } from './actions/project_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.fetchCategories = fetchCategories;
   window.fetchProject = fetchProject;
+  window.fetchProjects = fetchProjects;
   //TESTING
 
   const root = document.getElementById('root');

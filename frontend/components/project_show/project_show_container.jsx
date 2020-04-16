@@ -4,12 +4,7 @@ import { fetchProject } from '../../actions/project_actions';
 import { NavLink } from 'react-router-dom';
 import { selectProject, selectSchool, selectTeacher, selectCategories } from '../../reducers/selectors';
 
-/*
-Export a container component for the `PostShow` that maps in the appropriate
-post from the store as a `post` prop. Additionally, it should map in
-a function that will dispatch `fetchPost` to the store as a prop of the same
-name.
-*/
+
 
 const mapStateToProps = ({entities}, ownProps) => {
     const projectId = parseInt(ownProps.match.params.id);

@@ -12,3 +12,12 @@ export const fetchProject = id => (
       url: `api/projects/${id}`
     })
   );
+
+export const fetchProjects = ( data = {with_search: false} ) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `api/projects`,
+      data: data,
+    }))
+}

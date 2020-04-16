@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 
 class ProjectForm extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class ProjectForm extends React.Component {
                             description: this.state.description,
                             goal: this.state.goal };
         const categories = this.state.categories;
-        this.props.createProject(project, categories);
+        this.props.createProject(project, categories).then( () => {this.props.history.push('/')})
     }
 
     renderErrors() {
@@ -172,4 +173,4 @@ class ProjectForm extends React.Component {
     }
 }
 
-export default ProjectForm;
+export default withRouter(ProjectForm);

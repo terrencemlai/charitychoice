@@ -32,7 +32,7 @@ export const selectTeacher = ({ teachers }, id) => {
                         };
 };
 
-export const selectCategories = ({categories}, catIds) => {
+export const selectCategories = ({categories}, catIds=[]) => {
     const catArr = [];
     catIds.map( catId => catArr.push(categories[catId].category))
     return catArr;

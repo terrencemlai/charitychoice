@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class ProjectShow extends React.Component {
     constructor(props){
         super(props);
-
-        this.months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
         this.renderTags = this.renderTags.bind(this);
         this.renderTimeline = this.renderTimeline.bind(this);
@@ -13,16 +11,17 @@ class ProjectShow extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchProject(this.props.match.params.id)
+        window.scrollTo(0, 0);
+        this.props.fetchProject(this.props.match.params.id);
     }
 
     renderTags(){
         return(
             <>
-            <span>Grades {this.props.school.grade_range}</span>
-            <span>{this.props.school.city}, {this.props.school.state}</span>
+            <Link className="link" to={`/projects/search?keyword=Grades ${this.props.school.grade_range}`}><span>Grades {this.props.school.grade_range}</span></Link>
+            <Link className="link" to={`/projects/search?keyword=${this.props.school.city}, ${this.props.school.state}`}><span>{this.props.school.city}, {this.props.school.state}</span></Link>
                 {this.props.categories.map( category => (
-                    <span>{category}</span>
+                    <Link className="link" to={`/projects/search?keyword=${category}`}><span>{category}</span></Link>
                 ))}
             </>
         )
@@ -128,4 +127,4 @@ class ProjectShow extends React.Component {
 
 }
 
-export default ProjectShow;
+export default withRouter(ProjectShow);

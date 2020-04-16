@@ -1,9 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchProjects } from '../../actions/project_actions';
+
+
 
 class Splash extends React.Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            keyword: ''
+        }
+
+        this.handleProjectClick = this.handleProjectClick.bind(this);
+        this.handleSearchChange = this.handleSearchChange.bind(this);
+        this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    }
+
+    componentDidMount(){
+        window.scrollTo(0, 0)
+        this.props.fetchProjects();
+    }
+
+    handleProjectClick(project){
+        this.props.history.push(`${project.id}`);
+    }
+
+    handleSearchChange(){
+        return e => this.setState({ with_search: true, keyword: e.target.value })
+    }
+    
+    handleSearchSubmit(e){
+        e.preventDefault();
+        this.props.history.push(`projects/search?keyword=${this.state.keyword}`);
+        this.setState({keyword: ''})
     }
 
     renderWelcome(){
@@ -15,7 +46,7 @@ class Splash extends React.Component {
                     Teachers and students need your help to transform their classrooms and maximize their educational enrichment. 
                     Fund supplies, equipment, class trips, and more for a classroom project of your choice today.
                 </p>
-                <Link className="link" to="/"><div>See classroom projects</div></Link>
+                <Link to="/projects/search" className="link"><div>See classroom projects</div></Link>
                 <p className="subblurb">
                     Thank you for considering this demonstration site, inspired by DonorsChoose.org
                 </p>
@@ -35,7 +66,12 @@ class Splash extends React.Component {
                 </div>
 
                 <div className="splash-row splash-row-02">
-                    SEARCH BAR
+                    <div className="search-bar inputdiv">
+                        <form className="search-form" onSubmit={this.handleSearchSubmit}>
+                            <input type="text" onChange={this.handleSearchChange()} value={this.state.keyword} placeholder="Search subjects, supplies, teachers and schools"/>
+                            <button>Search</button>
+                        </form>
+                    </div>
                 </div>
                 <div className="splash-row splash-row-03">
                         <span>Are you a school teacher?</span>
@@ -52,10 +88,10 @@ class Splash extends React.Component {
                         Founded in 2020, CharityChoice was created by a data scientist studying software engineering at one of New York's most selective bootcamps. The objective upon graduation is to further develop creative and dynamic analytics solutions for real business challenges.
                     </p>
                     
-                    <a className="link" href="https://www.linkedin.com/in/terrencelai/">LinkedIn</a>
+                    <a className="link" href="https://www.linkedin.com/in/terrencelai/" target="_blank"><div className="responsive-button">LinkedIn</div></a>
                     
                 </div>
-                <div className="splash-row splash-row-06">
+                {/* <div className="splash-row splash-row-06">
                     MORE INFO
                 </div>
                 <div className="splash-row splash-row-07">
@@ -63,10 +99,19 @@ class Splash extends React.Component {
                 </div>
                 <div className="splash-row splash-row-08">
                     EVEN MORE INFO
-                </div>
+                </div> */}
             </div>
         )
     }
 }
 
-export default Splash;
+
+const mapStateToProps = (state) => ({
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchProjects: (data) => dispatch(fetchProjects(data)),
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Splash);

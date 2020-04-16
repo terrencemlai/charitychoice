@@ -1,6 +1,7 @@
 import * as ProjectAPIUtil from '../util/projects_api_util';
 
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
+export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_PROJECT_ERRORS = "RECEIVE_PROJECT_ERRORS";
 
 const receiveProject = ({project, teacher, school, donations, categories }) => ({
@@ -12,6 +13,16 @@ const receiveProject = ({project, teacher, school, donations, categories }) => (
     categories,
 })
 
+const receiveProjects = ({projects, teachers, schools, donations, categories, query }) => ({
+    type: RECEIVE_PROJECTS,
+    projects,
+    teachers,
+    schools,
+    donations,
+    categories,
+    query,
+})
+
 const receiveProjectErrors = (errors) => ({
     type: RECEIVE_PROJECT_ERRORS,
     errors
@@ -20,10 +31,15 @@ const receiveProjectErrors = (errors) => ({
 export const createProject = (project, categories) => dispatch => (
     ProjectAPIUtil.createProject({project, categories})
     .then(project => (dispatch(receiveProject(project))
-    ), errors => dispatch(receiveProjectErrors(errors.responseJSON)))    
+    ), errors => dispatch(receiveProjectErrors(errors.responseJSON)))
 )
 
 export const fetchProject = (id) => dispatch => (
     ProjectAPIUtil.fetchProject(id)
     .then(payload => (dispatch(receiveProject(payload)) 
+)))
+
+export const fetchProjects = (data) => dispatch => (
+    ProjectAPIUtil.fetchProjects(data)
+    .then(payload => (dispatch(receiveProjects(payload)) 
 )))

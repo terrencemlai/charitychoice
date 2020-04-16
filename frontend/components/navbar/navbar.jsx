@@ -1,10 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchCategories } from '../../actions/category_actions';
 import GreetingContainer from '../greeting/greeting_container';
 import GreetingMobileContainer from '../greeting/greeting_mobile_container';
 
 
 class NavBar extends React.Component {
+    componentDidMount(){
+        this.props.fetchCategories();
+    }
 
     render() {
         return (
@@ -16,4 +20,11 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+const mapStateToProps = (state) => ({
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchCategories: () => dispatch(fetchCategories()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
