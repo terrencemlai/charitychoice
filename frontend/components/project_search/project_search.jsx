@@ -71,9 +71,7 @@ class ProjectSearch extends React.Component {
 
                 return (
                     <div className="project-tile" key={project.id} onClick={()=> this.handleProjectClick(project)}>
-                        <div className="classroom-photo col-1-3">
-                            blah
-                        </div>
+                        <div className="classroom-photo col-1-3"></div>
                         <div className="project-summary col-2-3">
                             <h3>{project.title}</h3>
                             <p>{project.blurb}</p>
