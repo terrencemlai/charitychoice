@@ -124,11 +124,11 @@ class Greeting extends React.Component {
                 <span className="subleft">
                     <Link to="/"><div id="navbar-logo"></div></Link>
                     <Link to="/projects/search" className="navbar-button" >Find a classroom to support</Link>
-                    <Link className="link" to='/'>About Us</Link>
-                    <Link className="link" to='/'>Help</Link>
+                    <a className="link" href="https://www.linkedin.com/in/terrencelai/" target="_blank"><div className="link-holder">LinkedIn</div></a>
+                    <a className="link" href="https://github.com/terrencemlai/charitychoice" target="_blank"><div className="link-holder">GitHub</div></a>
                 </span>
                 <span className="subright">
-                    { greeting() } 
+                    {greeting()} 
                 </span>
             </div>
         </div>

@@ -52,6 +52,24 @@
     line-height: 1.5em;
 }
 
+.modal-main .demo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    width: auto;
+    height: 50px;
+    border: 1px solid lightgray;
+    background-color: $gray;
+    margin-top: 1em;
+
+    &:hover {
+        background-color: $hover-gray;
+        cursor: pointer;
+    }
+
+}
+
 @media all and (min-width: 600px) {
     .modal-child {
         position: absolute;

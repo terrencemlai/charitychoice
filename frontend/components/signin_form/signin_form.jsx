@@ -20,6 +20,10 @@ class SigninForm extends React.Component {
         this.props.signin(this.state);
     }
 
+    prefillTeacherCreds(){
+        this.setState( {email: 'teacher@gmail.com' , password: 'password'} )
+    }
+
     renderErrors() {
         if (typeof this.props.errors !== undefined) {
             return (
@@ -61,6 +65,9 @@ class SigninForm extends React.Component {
                         <button>
                             Sign In
                         </button>
+                        <div className="demo-button" onClick={() => this.prefillTeacherCreds()}>
+                            Prefill Credentials for Demo Teacher Account
+                        </div>
                     </form>
                 </div>
                 <div className="blurb">
