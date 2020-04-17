@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create]
 
     resources :schools, only: [:index, :show]
-    resources :projects, only: [:new, :create, :show, :index]
+    resources :projects
     resources :categories, only: [:index]
 
     namespace :auto do

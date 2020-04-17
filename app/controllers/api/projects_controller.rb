@@ -37,6 +37,17 @@ class Api::ProjectsController <  ApplicationController
     end
 
 
+    def edit
+        @project = Project.find(params[:id])
+        render '/api/projects/edit.html.erb'
+    end
+
+    def destroy
+        @project = Project.find(params[:id])
+        @project.destroy
+        render json: ["Successfully deleted"]
+    end
+
     private
     def project_params
         params.require(:project).permit(:title, :blurb, :description, :about_students, :goal)
