@@ -13,3 +13,10 @@ export const createTeacher = (user, teacher) => (
         data: user, teacher
     })
 )
+
+export const fetchMyProjects = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/teachers/myprojects'
+    })
+)

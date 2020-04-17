@@ -5,6 +5,7 @@ import Modal from './modal/modal';
 import NavBar from './navbar/navbar';
 import Splash from './splash/splash';
 import TeacherFormContainer from './teacher_form/teacher_form_container';
+import TeacherMyProjects from './teacher_myprojects/teacher_myprojects';
 import UserFormContainer from './user_form/user_form_container';
 import ProjectFormContainer from './project_form/project_form_container';
 import ProjectSearchContainer from './project_search/project_search_container';
@@ -25,8 +26,10 @@ const App = () => (
         <AuthRoute exact path="/teachers/signup" component={TeacherFormContainer} />
         <AuthRoute exact path="/users/signup" component={UserFormContainer} />
         <ProtectedTeacherRoute path="/projects/create" component={ProjectFormContainer} />
+        <ProtectedTeacherRoute path="/teachers/myprojects" component={TeacherMyProjects} />
         <Route path="/projects/search" component={ProjectSearchContainer} />
         <Route path="/projects/:id" component={ProjectShowContainer} />
+        <Route path="/teachers/myprojects" component={TeacherMyProjects} />
         <Route path="/teachers/signup" component={TeacherFormContainer} />
         <Route path="/users/signup" component={UserFormContainer} />
         <Route path="/signin" component={SigninFormContainer} />

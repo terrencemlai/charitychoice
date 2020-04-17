@@ -40,7 +40,7 @@ class ProjectForm extends React.Component {
                             description: this.state.description,
                             goal: this.state.goal };
         const categories = this.state.categories;
-        this.props.createProject(project, categories).then( () => {this.props.history.push('/')})
+        this.props.createProject(project, categories).then( () => {this.props.history.push('/teachers/myprojects')})
     }
 
     renderErrors() {

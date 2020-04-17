@@ -53,15 +53,19 @@ class Greeting extends React.Component {
                     <div className="link-holder">
                         <Link className="link" to="/projects/create">
                             <li className="dropdown-option">
-                                    <span className="material-icons">create</span>
+                                    <span className="material-icons">add_circle_outline</span>
                                     New Project
                             </li>
                         </Link>
                     </div>
-                    <li className="dropdown-option">
-                        <span className="material-icons">view_list</span>
-                        My Projects
-                    </li>
+                    <div className="link-holder">
+                        <Link className="link" to="/teachers/myprojects">
+                            <li className="dropdown-option">
+                                <span className="material-icons">view_list</span>
+                                My Projects
+                            </li>
+                        </Link>
+                    </div>
                     <li className="dropdown-option">
                         <span className="material-icons">favorite_border</span>
                         Favorites

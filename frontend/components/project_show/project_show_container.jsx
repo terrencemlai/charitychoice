@@ -2,16 +2,18 @@ import { connect } from 'react-redux';
 import ProjectShow from './project_show';
 import { fetchProject } from '../../actions/project_actions';
 import { NavLink } from 'react-router-dom';
-import { selectProject, selectSchool, selectTeacher, selectCategories } from '../../reducers/selectors';
+import { selectProject, selectSchool, selectTeacher, selectCategories, selectCurrentTeacher } from '../../reducers/selectors';
 
 
 
-const mapStateToProps = ({entities}, ownProps) => {
+const mapStateToProps = ({entities, session}, ownProps) => {
     const projectId = parseInt(ownProps.match.params.id);
     const project = selectProject(entities, projectId);
     const teacher = selectTeacher(entities, project.teacher_id);
     const school = selectSchool(entities, project.school_id);
     const categories = selectCategories(entities, project.categoryIds);
+    const currentTeacherId = selectCurrentTeacher(session);
+
 
     return {
         project: project,
@@ -19,6 +21,7 @@ const mapStateToProps = ({entities}, ownProps) => {
         school: school,
         donations: Object.values(entities.donations),
         categories: categories,
+        currentTeacherId: currentTeacherId,
     }
 };
 

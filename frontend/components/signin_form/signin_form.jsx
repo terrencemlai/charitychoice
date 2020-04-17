@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class SigninForm extends React.Component {
@@ -17,7 +17,7 @@ class SigninForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.signin(this.state);
+        this.props.signin(this.state).then( () => {this.props.history.push('/teachers/myprojects')});
     }
 
     prefillTeacherCreds(){
@@ -86,4 +86,4 @@ class SigninForm extends React.Component {
     }
 }
 
-export default SigninForm;
+export default withRouter(SigninForm);

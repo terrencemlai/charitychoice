@@ -112,7 +112,7 @@ class Splash extends React.Component {
                     </div>
                 </div>
                 <div className="splash-row splash-row-03">
-                        <span>Are you a school teacher?</span>
+                        <span>Are you a public school teacher?</span>
                         <Link className="link" to="/teachers/signup"><div>Register to create projects</div></Link>
                 </div>
                 <div className="splash-row splash-row-04">
@@ -133,15 +133,6 @@ class Splash extends React.Component {
                     <a className="link" href="https://www.linkedin.com/in/terrencelai/" target="_blank"><div className="responsive-button">LinkedIn</div></a>
                     
                 </div>
-                {/* <div className="splash-row splash-row-06">
-                    MORE INFO
-                </div>
-                <div className="splash-row splash-row-07">
-                    YET MORE INFO
-                </div>
-                <div className="splash-row splash-row-08">
-                    EVEN MORE INFO
-                </div> */}
             </div>
         )
     }

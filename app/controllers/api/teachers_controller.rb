@@ -33,6 +33,13 @@ class Api::TeachersController <  ApplicationController
 
     end
 
+    def myprojects
+        teacher_id = current_user.teacher_id
+        @projects = Project.all.includes(:school, :teacher, :donations, :categories).joins(:teacher).where('teachers.id = ?', teacher_id)
+        render '/api/projects/index'
+    end
+
+    
     private
     def user_params
         params.require(:user).permit(:email, :display_name, :password)

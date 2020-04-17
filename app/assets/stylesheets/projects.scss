@@ -56,6 +56,7 @@
 .progressbar-main .col-2-2 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 275px;
 }
 
 .progressbar-main .inputdiv {
@@ -65,6 +66,36 @@
     
     &:hover {
         border: 1px solid $blue;
+    }
+}
+
+.progressbar-main .col-2-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.progressbar-main .pseudo-edit-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 275px;
+    height: 50px;
+    background-color: $blue;
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    & span {
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        background-color: $hover-blue;
+        box-shadow: $box-shadow;
+        cursor: pointer;
     }
 }
 
@@ -448,3 +479,145 @@
     }
 }
 
+
+
+//MY PROJECTS -------
+
+.myprojects-main {
+    display: flex;
+    flex-direction: column;
+    background-color:$gray;
+    align-items: center;
+    min-height: 700px;
+    padding-bottom: 4em;
+
+    & .greeting-headline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $purple;
+        color: white;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        margin-bottom: 3em;
+
+        & span {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.myprojects-main .results-grid {
+    width: 700px;
+
+    & .create-pseudo-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $blue;
+        border: 1px dashed $blue;
+        width: auto;
+        height: 150px;
+
+        & .link {
+            text-decoration: none;
+        }
+        
+        & span {
+            font-size: 3em;
+            margin-bottom: 10px;
+            
+        }
+        
+        & h3 {
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        &:hover {
+            background-color: $hover-gray;
+            box-shadow: $box-shadow;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.myprojects-main .results-grid .project-tile {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 2em;
+    background-color: white;
+    border: 1px solid lightgray;
+    min-height: 150px;
+    width: auto;
+    padding: 1.5em;
+    margin-top: 2em;
+
+    & .classroom-photo {
+        background-image: url('/assets/default-classroom-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    & .project-summary {
+        line-height: 1.2rem;
+
+        & h3 {
+            line-height: 1.5rem;
+            color: $blue;
+            font-size: 1.25rem;
+        }
+
+        & p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-right: 1rem;
+        }
+        
+        & .teacher {
+            font-weight: 700;
+        }
+        
+        & .school {
+            font-style: italic;
+        }
+    }
+    
+    & .project-progress {
+        & .meter-frame {
+            height: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: lightgray;
+        }
+        
+        & .meter {
+            height: 100%;
+            border-radius: 50px;
+            background-color: $orange;
+        }
+        
+        & strong {
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        
+        & div {
+            margin-bottom: 1rem;
+        }
+
+    }
+    
+    &:hover {
+        box-shadow: $box-shadow;
+        cursor: pointer;
+    }
+}

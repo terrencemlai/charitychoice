@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   root "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
-    resources :teachers, only: [:new, :create]
+    resources :teachers, only: [:new, :create] do
+      collection do
+        get 'myprojects'
+      end
+    end
+
     resources :users, only: [:new, :create]
 
     resources :schools, only: [:index, :show]

@@ -37,27 +37,39 @@ class GreetingMobile extends React.Component {
         return (
             <div>
                 <div className="greeting" onClick={ () => this.toggleAccountLinks() }>
-                    <span className="account-photo"></span>
+                    <span className="account-photo-teacher"></span>
                     <span className="account-name">{this.props.currentUser.display_name}</span>
                 </div>
-                    <ul className={`account-links${this.state.accountDropdown}`}>
-                        <li>
-                            <span className="material-icons">person_outline</span>
-                            My Profile
-                        </li>
-                        <li>
-                            <span className="material-icons">view_list</span>
-                            My Projects
-                        </li>
-                        <li>
-                            <span className="material-icons">favorite_border</span>
-                            Favorites
-                        </li>
-                        <li onClick={ () => this.props.logout()}>
-                            <span className="material-icons">close</span>
-                            Sign Out
-                        </li>
-                    </ul>
+                <ul className={`account-links${this.state.accountDropdown}`}>
+                    <div className="link-holder">
+                        <Link className="link" to="/projects/create">
+                            <li className="dropdown-option">
+                                    <span className="material-icons">add_circle_outline</span>
+                                    New Project
+                            </li>
+                        </Link>
+                    </div>
+                    <div className="link-holder">
+                        <Link className="link" to="/teachers/myprojects">
+                            <li className="dropdown-option">
+                                <span className="material-icons">view_list</span>
+                                My Projects
+                            </li>
+                        </Link>
+                    </div>
+                    <li className="dropdown-option">
+                        <span className="material-icons">favorite_border</span>
+                        Favorites
+                    </li>
+                    <li className="dropdown-option">
+                        <span className="material-icons">person_outline</span>
+                        My Profile
+                    </li>
+                    <li className="dropdown-option" onClick={ () => this.props.logout()}>
+                        <span className="material-icons">close</span>
+                        Sign Out
+                    </li>
+                </ul>
             </div>
         )
     }
@@ -66,7 +78,7 @@ class GreetingMobile extends React.Component {
         return (
             <div>
                 <div className="greeting" onClick={ () => this.toggleAccountLinks() }>
-                    <span className="account-photo"></span>
+                    <span className="account-photo-user"></span>
                     <span className="account-name">{this.props.currentUser.display_name}</span>
                 </div>
                 <ul className={`account-links${this.state.accountDropdown}`}>
@@ -113,10 +125,10 @@ class GreetingMobile extends React.Component {
                         <li>Find a classroom to support</li>
                     </Link>
                     <li>
-                        <Link className="link" to='/'>About Us</Link>
+                        <a className="link" href="https://www.linkedin.com/in/terrencelai/" target="_blank">LinkedIn</a>
                     </li>
                     <li>
-                        <Link className="link" to='/'>Help</Link>
+                        <a className="link" href="https://github.com/terrencemlai/charitychoice" target="_blank">GitHub</a>
                     </li>
                     <div>
                         { accountLinks() }

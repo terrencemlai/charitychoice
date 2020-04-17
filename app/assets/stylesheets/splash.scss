@@ -6,6 +6,7 @@
 }
 
 //FIRST ROW----------------------------------
+
 .splash-row:first-child {
     border-top: none;
 }
@@ -83,7 +84,6 @@
 
 
 //SECOND ROW----------------------------------
-
 
 .splash-row-02 {
     display: flex;
@@ -333,25 +333,12 @@
     border: 1px solid white;
 }
 
-// TO BE STYLED----------------------------
 
-.splash-row-06, .splash-row-08 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    background: $gray;
-    color: $blue;
-}
 
-// .splash-row-07 {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 500px;
-//     background: $yellow;
-//     color: $purple;
-// }
+
+
+
+
 
 
 //MEDIA QUERIES-------------------------------

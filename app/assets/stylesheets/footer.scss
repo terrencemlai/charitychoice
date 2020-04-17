@@ -6,7 +6,7 @@
 
 .footer-container {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 90% 10%;
     width: 980px;
     margin: 0 auto;
     padding: 2em 1em;
@@ -24,7 +24,7 @@
 
     & p {
         line-height: 1.5rem;
-        margin-right: 2rem;
+        margin-right: 50%;
     }
 }
 

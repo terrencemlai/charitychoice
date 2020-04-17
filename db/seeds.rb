@@ -256,7 +256,7 @@ teacher_ids.each do |id|
         blurb: blurb,
         description: ipsum,
         about_students: ipsum,
-        goal: rand(250..1000),
+        goal: rand(250..999),
         teacher_id: id
     })
 

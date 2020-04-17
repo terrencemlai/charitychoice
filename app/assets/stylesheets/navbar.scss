@@ -220,6 +220,10 @@
     cursor: pointer;  
 }
 
+.mobile-menu-dropdown .account-links .link-holder {
+    border: 0;
+}
+
 .mobile-menu-dropdown li:hover, #mobile-signin:hover {
     background-color: $gray;
 }

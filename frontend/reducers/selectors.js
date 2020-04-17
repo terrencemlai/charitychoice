@@ -38,6 +38,9 @@ export const selectCategories = ({categories}, catIds=[]) => {
     return catArr;
 }
 
+export const selectCurrentTeacher = (session) => {
+    return session.teacherId || 0;
+}
   
 //   export const selectReviewsForBench = ({ benches, reviews }, bench) => {
 //     return bench.reviewIds.map(reviewId => reviews[reviewId]);

@@ -7,6 +7,7 @@ class ProjectShow extends React.Component {
 
         this.renderTags = this.renderTags.bind(this);
         this.renderTimeline = this.renderTimeline.bind(this);
+        this.renderDonateOrEdit = this.renderDonateOrEdit.bind(this);
 
     }
 
@@ -49,6 +50,25 @@ class ProjectShow extends React.Component {
         )
     }
 
+    renderDonateOrEdit(){
+        if (this.props.teacher.id === this.props.currentTeacherId) {
+            return (
+                    <div className="pseudo-edit-button"><span class="material-icons">edit</span> Edit Project</div>
+                )
+        } else {
+            return (
+                <form>
+                    <div className="inputdiv">
+                        <div className="inputfield">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                    <button>Donate</button>
+                </form>
+            )
+        }
+    }
+
     render() {
         const { project, teacher, school, donations, categories } = this.props;
         const stillNeeded = Math.floor(project.goal - project.progress);
@@ -76,14 +96,7 @@ class ProjectShow extends React.Component {
                         </div>
 
                         <div className="col-2-2">
-                            <form>
-                                <div className="inputdiv">
-                                    <div className="inputfield">
-                                        <input type="text"/>
-                                    </div>
-                                </div>
-                                <button>Donate</button>
-                            </form>
+                            {this.renderDonateOrEdit()}
                         </div>
 
                     </div>
