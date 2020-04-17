@@ -72,7 +72,7 @@ teachers = [{ full_name: 'Dana Demo', honorific: 'Ms.', teacher_name: 'Teacher'}
             { full_name: 'Celia Frampton', honorific: 'Mr.', teacher_name: 'Frampton' },
             { full_name: 'Amal Jaffee', honorific: 'Ms.', teacher_name: 'Jaffee' },
             { full_name: 'Madelaine Thweatt', honorific: 'Ms.', teacher_name: 'Thweatt' },
-            { full_name: 'Janae Fails', honorific: 'Mrs.', teacher_name: 'Fails' },
+            { full_name: 'Janae Falls', honorific: 'Mrs.', teacher_name: 'Falls' },
             { full_name: 'Phillip Toye', honorific: 'Dr.', teacher_name: 'Toye' },
             { full_name: 'Nathalie Treat', honorific: 'Coach', teacher_name: 'Treat' },
             { full_name: 'Rod Mcfee', honorific: 'Dr.', teacher_name: 'Mcfee' },
@@ -241,34 +241,36 @@ title_adjectives = ['Adventurous',
 
 title_nouns = ['Kids', 'Students', 'Children']
 
-title_verbs = ['Exploring', 'Expanding', 'Broadening', 'Learning More About', 'Discovering', 'Finding']
+title_verbs = ['Exploring', 'Expanding', 'Broadening', 'Learning More About', 'Pursuing', 'Discovering', 'Finding']
     
 title_objects = ['Their Horizons','Their Interests','Their World','Their Imaginations','Their Passions','Their Educations','Their Dreams','Their Hobbies','Their Voices']
 
 teacher_ids.each do |id|
-    topic = Category.where(group: 'subject').sample
-    need = Category.where(group: 'need').sample
-    title = title_adjectives.sample + " " + title_nouns.sample + " " + title_verbs.sample + " " + title_objects.sample
-    blurb = "Help me give my students " + need.category.downcase + " for their " + topic.category.downcase + " lessons"
+    2.times {
+        topic = Category.where(group: 'subject').sample
+        need = Category.where(group: 'need').sample
+        title = title_adjectives.sample + " " + title_nouns.sample + " " + title_verbs.sample + " " + title_objects.sample
+        blurb = "Help me give my students " + need.category.downcase + " for their " + topic.category.downcase + " lessons"
 
-    project = Project.create({
-        title: title,
-        blurb: blurb,
-        description: ipsum,
-        about_students: ipsum,
-        goal: rand(250..999),
-        teacher_id: id
-    })
+        project = Project.create({
+            title: title,
+            blurb: blurb,
+            description: ipsum,
+            about_students: ipsum,
+            goal: rand(250..999),
+            teacher_id: id
+        })
 
-    CategoryAssociation.create({
-        project_id: project.id,
-        category_id: topic.id
-    })
+        CategoryAssociation.create({
+            project_id: project.id,
+            category_id: topic.id
+        })
 
-    CategoryAssociation.create({
-        project_id: project.id,
-        category_id: need.id
-    })
+        CategoryAssociation.create({
+            project_id: project.id,
+            category_id: need.id
+        })
+    }
 end
 
 comments = ['Great cause',
@@ -283,7 +285,7 @@ comments = ['Great cause',
             ''
             ]
 
-90.times {
+180.times {
     user = User.all.sample
     project = Project.all.sample
     
@@ -292,11 +294,11 @@ comments = ['Great cause',
         display_name: user.display_name,
         comment: comments.sample,
         project_id: project.id,
-        donation_amount: rand(50..100)
+        donation_amount: rand(25..75)
     })
 }
 
-30.times {
+40.times {
     user = User.all.sample
     project = Project.all.sample
     
@@ -306,6 +308,6 @@ comments = ['Great cause',
         anonymous: true,
         comment: comments.sample,
         project_id: project.id,
-        donation_amount: rand(50..100)
+        donation_amount: rand(25..75)
     })
 }

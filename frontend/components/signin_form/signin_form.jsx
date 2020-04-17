@@ -66,7 +66,7 @@ class SigninForm extends React.Component {
                             Sign In
                         </button>
                         <div className="demo-button" onClick={() => this.prefillTeacherCreds()}>
-                            Prefill Credentials for Demo Teacher Account
+                            Pre-fill Credentials for Demo Teacher Account
                         </div>
                     </form>
                 </div>
