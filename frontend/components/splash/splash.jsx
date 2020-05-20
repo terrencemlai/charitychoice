@@ -34,7 +34,7 @@ class Splash extends React.Component {
     
     handleSearchSubmit(e){
         e.preventDefault();
-        this.props.history.push(`projects/search?keyword=${this.state.keyword}`);
+        this.props.history.push(`projects/search?keyword=${this.state.keyword}&page=1`);
         this.setState({keyword: ''})
     }
 

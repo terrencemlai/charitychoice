@@ -5,7 +5,7 @@ import { RECEIVE_PROJECTS } from '../actions/project_actions';
 
     switch(action.type) {
       case RECEIVE_PROJECTS:
-        return Object.assign({}, action.query);
+        return Object.assign({}, action.search);
         
       default:
         return oldState;

@@ -35,8 +35,11 @@ json.schools do
     end
 end
 
-json.query do
+json.search do
     json.query @query
+    json.page @page
+    json.pageLength @page_length
+    json.projectsTotal @projects_total
 end
 
 # json.categories do

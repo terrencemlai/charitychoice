@@ -1,7 +1,6 @@
 
 class Api::ProjectsController <  ApplicationController
 
-
     def create
         @project = Project.new(project_params)
         @project.teacher_id = current_user.teacher_id
@@ -26,13 +25,19 @@ class Api::ProjectsController <  ApplicationController
 
 
     def index
+        match_query = "lower(projects.title)||' '||lower(projects.blurb)||' '||lower(categories.category)||' grades '||lower(schools.grade_range)||' '||lower(schools.name)||', '||lower(schools.city)||', '||lower(schools.state) like ?"
+        @page_length = 5
+        @page = params.fetch(:page, 1).to_i - 1
         if params[:with_search] == "true" && params[:keyword].length > 0
             @query = params[:keyword].downcase
-            @projects = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where("lower(projects.title)||' '||lower(projects.blurb)||' '||lower(categories.category)||' grades '||lower(schools.grade_range)||' '||lower(schools.name)||', '||lower(schools.city)||', '||lower(schools.state) like ?", '%'+@query+'%').limit(10)
+            @projects_total = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%').count
+            @projects = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%').limit(@page_length).offset(@page * @page_length)
         else
-            @projects = Project.all.includes(:school, :teacher, :donations, :categories).order("RANDOM()").limit(10)
             @query = ""
+            @projects_total = Project.all.count
+            @projects = Project.all.includes(:school, :teacher, :donations, :categories).limit(@page_length).offset(@page * @page_length)
         end
+        @page += 1
         render '/api/projects/index'
     end
 

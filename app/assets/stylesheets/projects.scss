@@ -479,6 +479,53 @@
     }
 }
 
+.pagination-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-arrow-prior, .page-arrow-prior-disabled {
+    text-align: right;
+    
+    &:before {
+        content: '< ';
+        white-space: pre;
+    }
+
+    &:after {
+        content: ' |';
+        white-space: pre;
+    }
+}
+
+.page-arrow-next, .page-arrow-next-disabled {
+    &:before {
+        content: '| ';
+        white-space: pre;
+    }
+
+    &:after {
+        content: ' >';
+        white-space: pre;
+    }
+}
+
+.page-arrow-prior, .page-arrow-next {
+    font-weight: 400;
+    color: $blue;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.page-arrow-prior-disabled, .page-arrow-next-disabled {
+    color: gray;
+}
+
 
 
 //MY PROJECTS -------

@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import ProjectSearch from './project_search';
 import { fetchCategories } from '../../actions/category_actions';
 import { fetchProjects } from '../../actions/project_actions';
-import { NavLink } from 'react-router-dom';
 
 
 const mapStateToProps = ({entities, ui}, ownProps) => ({
@@ -11,7 +10,7 @@ const mapStateToProps = ({entities, ui}, ownProps) => ({
         teachers: entities.teachers,
         schools: entities.schools,
         categories: Object.values(entities.categories),
-        query: ui.search.query
+        search: ui.search,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -13,14 +13,14 @@ const receiveProject = ({project, teacher, school, donations, categories }) => (
     categories,
 })
 
-const receiveProjects = ({projects, teachers, schools, donations, categories, query }) => ({
+const receiveProjects = ({projects, teachers, schools, donations, categories, search }) => ({
     type: RECEIVE_PROJECTS,
     projects,
     teachers,
     schools,
     donations,
     categories,
-    query,
+    search,
 })
 
 const receiveProjectErrors = (errors) => ({

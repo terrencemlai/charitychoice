@@ -22,7 +22,7 @@ class ProjectShow extends React.Component {
             <Link className="link" to={`/projects/search?keyword=Grades ${this.props.school.grade_range}`}><span>Grades {this.props.school.grade_range}</span></Link>
             <Link className="link" to={`/projects/search?keyword=${this.props.school.city}, ${this.props.school.state}`}><span>{this.props.school.city}, {this.props.school.state}</span></Link>
                 {this.props.categories.map( category => (
-                    <Link className="link" to={`/projects/search?keyword=${category}`}><span>{category}</span></Link>
+                    <Link className="link" to={`/projects/search?keyword=${category}&page=1`} key={category}><span>{category}</span></Link>
                 ))}
             </>
         )
@@ -35,7 +35,7 @@ class ProjectShow extends React.Component {
                 {this.props.donations.map( donation => {
                     const d = new Date(donation.created_at);
                     return (
-                    <li>
+                    <li key={donation.id}>
                         <span className="timeline-date">{d.toLocaleDateString('en-us', {month: 'short', day: 'numeric'})}</span>
                         <span className="timeline-photo-donor"></span>
                         <span className="timeline-name"><strong>{donation.display_name}</strong> donated</span>
