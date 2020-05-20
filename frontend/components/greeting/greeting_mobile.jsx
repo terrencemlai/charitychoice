@@ -97,7 +97,10 @@ class GreetingMobile extends React.Component {
                     </ul>
             </div>
         )
+    }
 
+    handleSearchNavClick() {
+        this.props.fetchProjects({ with_search: false, page: 1 });
     }
     
     render () {
@@ -121,7 +124,7 @@ class GreetingMobile extends React.Component {
                     </span>
                 </div>
                 <ul className={`mobile-menu-dropdown${this.state.mobileDropdown}`}>
-                    <Link className="link" to='/projects/search'>
+                    <Link className="link" to='/projects/search' onClick={()=>this.handleSearchNavClick()}>
                         <li>Find a classroom to support</li>
                     </Link>
                     <li>

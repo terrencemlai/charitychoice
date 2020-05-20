@@ -17,7 +17,6 @@ class ProjectSearch extends React.Component {
         this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
         this.handleFilterCheck = this.handleFilterCheck.bind(this);
         this.renderResults = this.renderResults.bind(this);
-        // this.renderResultsTotals = this.renderResultsTotals.bind(this);
         this.renderSubjectCategories = this.renderSubjectCategories.bind(this);
     }
 
@@ -158,12 +157,13 @@ class ProjectSearch extends React.Component {
     }
 
     renderResultsTotals(){
+        let query = this.props.search.query !== '' ? this.props.search.query : 'All Projects' 
         if (this.props.projectsArray.length === 0) {
             return <div className="list-length">No matches for <strong>"{this.props.search.query}"</strong>. Please try another search.</div>
         } else {
             const resultsStart = (this.props.search.page-1) * this.props.search.pageLength + 1;
             const resultsEnd = resultsStart - 1 + this.props.projectsArray.length;
-            return <div className="list-length">Showing {resultsStart}-{resultsEnd} of {this.props.search.projectsTotal} Result(s) for <strong>"{this.props.search.query}"</strong></div>
+            return <div className="list-length">Showing {resultsStart}-{resultsEnd} of {this.props.search.projectsTotal} Result(s) for <strong>"{query}"</strong></div>
         }
     }
 

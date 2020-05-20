@@ -111,6 +111,10 @@ class Greeting extends React.Component {
         </span>
     )}
     
+    handleSearchNavClick() {
+        this.props.fetchProjects({ with_search: false, page: 1 });
+    }
+
     render () {
         const greeting = () => {
             if (!this.props.currentUser) {
@@ -127,7 +131,7 @@ class Greeting extends React.Component {
             <div className="container">
                 <span className="subleft">
                     <Link to="/"><div id="navbar-logo"></div></Link>
-                    <Link to="/projects/search" className="navbar-button" >Find a classroom to support</Link>
+                    <Link to="/projects/search" className="navbar-button" onClick={()=>this.handleSearchNavClick()}>Find a classroom to support</Link>
                     <a className="link" href="https://www.linkedin.com/in/terrencelai/" target="_blank"><div className="link-holder">LinkedIn</div></a>
                     <a className="link" href="https://github.com/terrencemlai/charitychoice" target="_blank"><div className="link-holder">GitHub</div></a>
                 </span>
