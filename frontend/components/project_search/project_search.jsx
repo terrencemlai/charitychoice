@@ -6,7 +6,6 @@ class ProjectSearch extends React.Component {
         super(props);
 
         this.state = {
-            with_search: false,
             keyword: '',
             filters: [],
             page: 1,
@@ -18,6 +17,7 @@ class ProjectSearch extends React.Component {
         this.handleFilterCheck = this.handleFilterCheck.bind(this);
         this.renderResults = this.renderResults.bind(this);
         this.renderSubjectCategories = this.renderSubjectCategories.bind(this);
+        this.renderFilterClear = this.renderFilterClear.bind(this);
     }
 
     componentDidMount(){
@@ -28,9 +28,9 @@ class ProjectSearch extends React.Component {
         if (page === null) {page = 1};
 
         if (keyword) {
-            this.props.fetchProjects({ with_search: true, keyword: keyword, page: page })
+            this.props.fetchProjects({ keyword, page})
         } else {
-            this.props.fetchProjects({ with_search: false, page: page });
+            this.props.fetchProjects(this.state);
         }
     }
 
@@ -39,7 +39,7 @@ class ProjectSearch extends React.Component {
     }
 
     handleSearchChange(){
-        return e => this.setState({ with_search: true, keyword: e.target.value })
+        return e => this.setState({ keyword: e.target.value })
     }
 
     handleSearchSubmit(e){
@@ -49,43 +49,30 @@ class ProjectSearch extends React.Component {
         urlParams.set('page', this.state.page)
         this.props.history.push('search?' + urlParams.toString())
         this.props.fetchProjects(this.state);
-        this.setState({ with_search: false, keyword: ''})
+        this.setState({ keyword: ''})
         window.scrollTo(0, 0)
     }
 
     handleFilterCheck(categoryId){
         const filters = this.state.filters;
-
-        if (filters.includes(categoryId)) {
-            filters.splice(filters.indexOf(categoryId), 1)
-        } else {
-            filters.push(categoryId)
-        }
-
+        filters.includes(categoryId) ? filters.splice(filters.indexOf(categoryId), 1) : filters.push(categoryId)
         this.setState({filters})
+        this.props.fetchProjects({ keyword: this.props.search.query, page: 1, filters: this.state.filters })
     }
 
-    // filterProjects(){
-    //     let filteredProjects;
-    //     let that = this;
-
-    //     if (this.state.filters.length === 0){
-    //         filteredProjects = this.props.projectsArray;
-    //     } else {
-    //         filteredProjects = this.props.projectsArray.filter(project => that.state.filters.some(catId => project.categoryIds.includes(catId)))
-    //     }
-
-    //     this.resultsNum = filteredProjects.length;
-    //     return filteredProjects;
-    // }
+    handleFilterClear(){
+        this.setState({filters: []})
+        this.props.fetchProjects({ keyword: this.props.search.query, page: 1, filters: [] })
+    }
 
     renderSubjectCategories(group) {
         return (
         this.props.categories.map( category => {
             if (category.group === group) {
+                const checkBox = this.state.filters.includes(category.id);
                 return (
-                    <li key={category.category}>
-                        <input type="checkbox" onClick={()=> this.handleFilterCheck(category.id)}/>
+                    <li key={category.category} onClick={()=> this.handleFilterCheck(category.id)} >
+                        <input type="checkbox" checked={checkBox} />
                         <label>{category.category}</label>
                     </li>
                 )
@@ -93,9 +80,16 @@ class ProjectSearch extends React.Component {
         )
     }    
 
+    renderFilterClear(){
+        if (this.state.filters.length > 0) {
+            return <div className="clear-button" onClick={()=>this.handleFilterClear()}>Clear Filters</div>
+        }
+
+        window.scrollTo(0, 0)
+    }
+
 
     renderResults(){
-
         return (
             this.props.projectsArray.map(project => {
                 const school = `${this.props.schools[project.school_id].name}, ${this.props.schools[project.school_id].city}, ${this.props.schools[project.school_id].state}`
@@ -132,7 +126,7 @@ class ProjectSearch extends React.Component {
         dir === 'next' ? page = this.props.search.page + 1 : page = this.props.search.page - 1;
         urlParams.set('page', page)
         this.props.history.push('search?' + urlParams.toString())
-        this.props.fetchProjects({ with_search: true, keyword: this.props.search.query, page: page })
+        this.props.fetchProjects({ keyword: this.props.search.query, filters: this.state.filters, page })
         window.scrollTo(0, 0)
     }
 
@@ -159,18 +153,17 @@ class ProjectSearch extends React.Component {
     renderResultsTotals(){
         let query = this.props.search.query !== '' ? this.props.search.query : 'All Projects' 
         if (this.props.projectsArray.length === 0) {
-            return <div className="list-length">No matches for <strong>"{this.props.search.query}"</strong>. Please try another search.</div>
+            return <div className="list-length">No matches for <strong>"{this.props.search.query}"</strong> and any selected filters. Please try another search.</div>
         } else {
             const resultsStart = (this.props.search.page-1) * this.props.search.pageLength + 1;
             const resultsEnd = resultsStart - 1 + this.props.projectsArray.length;
-            return <div className="list-length">Showing {resultsStart}-{resultsEnd} of {this.props.search.projectsTotal} Result(s) for <strong>"{query}"</strong></div>
+            return <div className="list-length">Showing {resultsStart}-{resultsEnd} of {this.props.search.projectsTotal} Result(s) for <strong>"{query}"</strong> and any selected filters</div>
         }
     }
 
 
     render() {
-        
-
+    
         return(
             <div className="search-main">
                 <div className="search-bar inputdiv">
@@ -190,10 +183,10 @@ class ProjectSearch extends React.Component {
                         <ul>
                             {this.renderSubjectCategories('need')}
                         </ul>
+                        {this.renderFilterClear()}
                     </div>
 
                     <div className="results-list">
-
                         {this.renderResultsTotals()}
                         {this.renderResults()}
                         <div className="pagination-bar">

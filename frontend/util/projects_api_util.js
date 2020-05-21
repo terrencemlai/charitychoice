@@ -13,7 +13,7 @@ export const fetchProject = id => (
     })
   );
 
-export const fetchProjects = ( data = {with_search: false} ) => {
+export const fetchProjects = (data) => {
   return (
     $.ajax({
       method: 'GET',

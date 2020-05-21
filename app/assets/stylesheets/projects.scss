@@ -396,7 +396,20 @@
             color: $blue;
         }
     }
+}
 
+.clear-button {
+    background-color: $blue;
+    font-weight: 400;
+    width: auto;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    cursor:pointer;
+
+    &:hover {
+        background-color: $hover-blue;
+    }
 }
 
 .search-main .list-length {

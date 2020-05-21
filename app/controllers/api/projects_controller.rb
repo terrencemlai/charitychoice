@@ -25,18 +25,26 @@ class Api::ProjectsController <  ApplicationController
 
 
     def index
-        match_query = "lower(projects.title)||' '||lower(projects.blurb)||' '||lower(categories.category)||' grades '||lower(schools.grade_range)||' '||lower(schools.name)||', '||lower(schools.city)||', '||lower(schools.state) like ?"
+        match_query = "lower(projects.title)||' '||lower(projects.blurb)||' '||lower(categories.category)||' grades '||lower(schools.grade_range)||' '||lower(schools.name)||', '||lower(schools.city)||', '||lower(schools.state) like ? AND categories.id in (?)"
         @page_length = 5
         @page = params.fetch(:page, 1).to_i - 1
-        if params[:with_search] == "true" && params[:keyword].length > 0
-            @query = params[:keyword].downcase
-            @projects_total = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%').count
-            @projects = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%').limit(@page_length).offset(@page * @page_length)
+
+        if !params[:filters] || params[:filters].length == 0
+            @filters = Category.pluck(:id)
         else
-            @query = ""
-            @projects_total = Project.all.count
-            @projects = Project.all.includes(:school, :teacher, :donations, :categories).limit(@page_length).offset(@page * @page_length)
+            @filters = params[:filters]
         end
+
+        if !params[:keyword] || params[:keyword].length == 0
+            @query = ""
+            @projects_total = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where('categories.id in (?)', @filters).count
+            @projects = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where('categories.id in (?)', @filters).limit(@page_length).offset(@page * @page_length)
+        else
+            @query = params[:keyword].downcase
+            @projects_total = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%', @filters).count
+            @projects = Project.includes(:school, :teacher, :donations, :categories).joins(:teacher).joins(:categories).joins(:school).where(match_query, '%'+@query+'%', @filters).limit(@page_length).offset(@page * @page_length)
+        end
+
         @page += 1
         render '/api/projects/index'
     end
