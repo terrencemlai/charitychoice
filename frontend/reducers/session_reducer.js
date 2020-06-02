@@ -16,12 +16,14 @@ const sessionsReducer = (oldState = _nullUser, action) => {
             return { id: action.user.id, 
                      teacherId: action.user.teacher_id,
                      is_teacher: action.user.is_teacher, 
-                     display_name: action.user.display_name};
+                     display_name: action.user.display_name,
+                     funds: 50};
         case RECEIVE_CURRENT_USER:
             return { id: action.user.id, 
                     teacherId: action.user.teacher_id,
                     is_teacher: action.user.is_teacher, 
-                    display_name: action.user.display_name};
+                    display_name: action.user.display_name,
+                    funds: 50};
         case LOGOUT_CURRENT_USER:
             return _nullUser;
         default:
