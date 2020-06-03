@@ -12,7 +12,7 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal) {
     case 'signin':
-      component = <SigninFormContainer />
+      component = <SigninFormContainer type="generic"/>
       break;
     default:
       return null;

@@ -17,7 +17,11 @@ class SigninForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.signin(this.state).then( () => {this.props.history.push('/teachers/myprojects')});
+        if (this.props.type === 'generic') {
+            this.props.signin(this.state).then( () => {this.props.history.push('/teachers/myprojects')});
+        } else {
+            this.props.signin(this.state)
+        }
     }
 
     prefillTeacherCreds(){
@@ -38,11 +42,20 @@ class SigninForm extends React.Component {
         }
     }
 
+    renderMessage(){
+        debugger;
+        if (this.props.type === 'generic') {
+            return <h2>Welcome back!</h2>
+        } else if (this.props.type === 'donate') {
+            return <h2>Sign in to complete your donation</h2>
+        }
+    }
+
     render () {
             
         return (
             <div className="modal-main">
-                <h2>Welcome back!</h2>
+                {this.renderMessage()}
                 <div className="subcontainer">                  
                     <form className="create-form" onSubmit={this.handleSubmit}>
                         {this.renderErrors()}
