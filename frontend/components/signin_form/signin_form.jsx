@@ -43,7 +43,6 @@ class SigninForm extends React.Component {
     }
 
     renderMessage(){
-        debugger;
         if (this.props.type === 'generic') {
             return <h2>Welcome back!</h2>
         } else if (this.props.type === 'donate') {

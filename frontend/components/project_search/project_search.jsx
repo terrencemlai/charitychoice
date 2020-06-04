@@ -72,7 +72,7 @@ class ProjectSearch extends React.Component {
                 const checkBox = this.state.filters.includes(category.id);
                 return (
                     <li key={category.category} onClick={()=> this.handleFilterCheck(category.id)} >
-                        <input type="checkbox" checked={checkBox} />
+                        <input type="checkbox" checked={checkBox} onChange={()=>{}}/>
                         <label>{category.category}</label>
                     </li>
                 )

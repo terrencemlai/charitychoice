@@ -53,7 +53,7 @@ class ProjectShow extends React.Component {
     renderDonateOrEdit(){
         if (this.props.teacher.id === this.props.currentTeacherId) {
             return (
-                    <div className="pseudo-edit-button"><span class="material-icons">edit</span> Edit Project</div>
+                    <div className="pseudo-edit-button"><span className="material-icons">edit</span> Edit Project</div>
                 )
         } else {
             return (

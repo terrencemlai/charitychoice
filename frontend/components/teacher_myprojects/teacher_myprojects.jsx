@@ -62,7 +62,7 @@ class MyProjects extends React.Component {
         return(
             <div className="myprojects-main">
                 <div className="greeting-headline">
-                    <span class="material-icons">school</span>
+                    <span className="material-icons">school</span>
                     { typeof teacherName !== 'undefined' ? <h2>Welcome back, {teacherName}</h2> : ''}
                 </div>
                 <div className="results-grid">
@@ -70,7 +70,7 @@ class MyProjects extends React.Component {
                     <div className="results-list">
                         <Link className="link" to="/projects/create">
                             <div className="create-pseudo-button">
-                                <span class="material-icons">add_circle</span>
+                                <span className="material-icons">add_circle</span>
                                 <h3>Create a Project</h3>
                             </div>
                         </Link>
