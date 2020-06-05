@@ -71,10 +71,6 @@ class ProjectForm extends React.Component {
         )
     }
 
-
-    
-    
-
     render () {
             
         return (

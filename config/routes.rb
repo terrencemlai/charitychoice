@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     resources :schools, only: [:index, :show]
     resources :projects
+    resources :donations, only: [:create]
     resources :categories, only: [:index]
 
     namespace :auto do

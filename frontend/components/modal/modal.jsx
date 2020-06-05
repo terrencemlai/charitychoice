@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import SigninFormContainer from '../signin_form/signin_form_container';
+import ModalMessages from './modal_messages';
 
 
 function Modal({modal, closeModal}) {
@@ -13,6 +14,9 @@ function Modal({modal, closeModal}) {
   switch (modal) {
     case 'signin':
       component = <SigninFormContainer type="generic"/>
+      break;
+    case 'donation-confirm':
+      component = <ModalMessages type="donation-confirm"/>
       break;
     default:
       return null;

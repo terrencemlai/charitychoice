@@ -14,6 +14,7 @@ class DonationsForm extends React.Component {
         }
 
         this.handleCheck = this.handleCheck.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount(){
@@ -27,11 +28,17 @@ class DonationsForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        // if (this.props.type === 'generic') {
-        //     this.props.signin(this.state).then( () => {this.props.history.push('/teachers/myprojects')});
-        // } else {
-        //     this.props.signin(this.state)
-        // }
+        if (this.state.amount > 0 && this.state.amount <= this.props.session.funds && this.state.displayName.length > 0) {
+            const donation = {   
+                user_id: this.props.session.id,
+                display_name: this.state.displayName,
+                anonymous: this.state.anonymous,
+                project_id: this.props.project.id,
+                donation_amount: this.state.amount 
+            };
+            this.props.createDonation({donation: donation}).then(() => this.props.openModal('donation-confirm')).then( () => {this.props.history.push(`/projects/${this.props.project.id}`)});
+        }
+
     }
 
     handleCheck(){
@@ -43,40 +50,50 @@ class DonationsForm extends React.Component {
         const re = /^[0-9\b]+$/;
         if (this.state.amount > this.props.session.funds) {
             return(
-                <div className="amount-errors-div">
+                <div className="errors-div">
                     You do not have sufficient funds in your account to donate this amount.
                 </div>
             )
         } else if (this.state.amount <= 0 || !re.test(this.state.amount)) {
             return(
-                <div className="amount-errors-div">
+                <div className="errors-div">
                     Please enter a valid donation amount.
                 </div>
             )
         }
     }
 
-    // renderErrors() {
-    //     if (typeof this.props.errors !== undefined) {
-    //         return (
-    //             <div className="errors">
-    //                 <ul>
-    //                 {this.props.errors.map( error => (
-    //                     <li key={error}>- {error}</li>
-    //                 ))}
-    //                 </ul>
-    //             </div>
-    //         )
-    //     }
-    // }
+    renderNameErrors(){
+        if (this.state.displayName.length === 0) {
+            return(
+                <div className="errors-div">
+                    Name cannot be blank. <br/>
+                    Your donation will be listed as anonymous if selected below.
+                </div>
+            )
+        }
+    }
 
+    renderBackendErrors() {
+        if (typeof this.props.errors !== undefined) {
+            return (
+                <div className="errors">
+                    <ul>
+                    {this.props.errors.map( error => (
+                        <li key={error}>- {error}</li>
+                    ))}
+                    </ul>
+                </div>
+            )
+        }
+    }
 
     renderDonationForm(){
         return(
-                <form className="create-form">
-                    {/* {this.renderErrors()} */}
+                <form className="create-form" onSubmit={this.handleSubmit}>
+                    {this.renderBackendErrors()}
                     <div className="inputdiv">
-                        <h3>Your Prepaid Funds Available to Donate: ${this.props.session.funds}</h3>
+                        <h3>Your Prepaid Funds Available for Donation: ${this.props.session.funds}</h3>
                         <label>Donation Amount</label>
                         <span className="input-funding">
                             <input 
@@ -95,6 +112,7 @@ class DonationsForm extends React.Component {
                         onChange={this.handleChange('displayName')}
                         />
                     </div>
+                    {this.renderNameErrors()}
                     <div className="inputdiv-checkbox">
                         <input 
                         type="checkbox" 

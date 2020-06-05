@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import { createTeacher } from '../../actions/teacher_actions';
 import { autocompleteSchools } from '../../actions/autocomplete_actions';
 import TeacherForm from './teacher_form';
@@ -16,7 +15,7 @@ const mapStateToProps = (state) => ({
       searchText: '',
       searchHidden: ' createAutoHidden'
     },
-
+    cart: state.ui.cart,
     errors: state.errors.teachers,
 
     autocomplete: state.ui.autocomplete

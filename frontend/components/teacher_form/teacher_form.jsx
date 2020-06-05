@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class TeacherForm extends React.Component {
     constructor(props) {
@@ -59,6 +59,11 @@ class TeacherForm extends React.Component {
                             honorific: this.state.honorific,
                             teacher_name: this.state.teacher_name}
         this.props.createTeacher(user, teacher)
+        .then(() => { 
+            if (this.props.cart.projectId !== null) {
+                this.props.history.push(`/donate/${this.props.cart.projectId}`);
+            }
+        });
     }
 
     renderAutocompleteList() {
@@ -164,7 +169,7 @@ class TeacherForm extends React.Component {
     }
 }
 
-export default TeacherForm;
+export default withRouter(TeacherForm);
 
 
 

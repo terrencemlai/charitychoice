@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class UserForm extends React.Component {
     constructor(props) {
@@ -20,7 +20,12 @@ class UserForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createUser({ user: this.state } );
+        this.props.createUser({ user: this.state } )
+        .then(() => { 
+            if (this.props.cart.projectId !== null) {
+                this.props.history.push(`/donate/${this.props.cart.projectId}`);
+            }
+        });
     }
 
     renderErrors() {
@@ -84,4 +89,4 @@ class UserForm extends React.Component {
     }
 }
 
-export default UserForm;
+export default withRouter(UserForm);

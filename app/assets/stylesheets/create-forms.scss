@@ -320,9 +320,10 @@
                 }
         }
 
-        & .amount-errors-div {
+        & .errors-div {
             width: auto;
             color: red;
+            line-height: 1rem;
             padding: 1em;
             background-color: $gray;
             border: 1px solid red;

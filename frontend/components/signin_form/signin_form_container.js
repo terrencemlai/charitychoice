@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { signin } from '../../actions/session_actions';
 import { closeModal } from '../../actions/modal_actions';
+import { receiveCartItem } from '../../actions/cart_actions';
 import SigninForm from './signin_form';
 
 const mapStateToProps = (state) => ({
