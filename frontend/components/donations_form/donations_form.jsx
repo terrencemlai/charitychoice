@@ -28,10 +28,10 @@ class DonationsForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        if (this.state.amount > 0 && this.state.amount <= this.props.session.funds && this.state.displayName.length > 0) {
+        if (this.state.amount > 0 && this.state.amount <= this.props.session.funds) {
             const donation = {   
                 user_id: this.props.session.id,
-                display_name: this.state.displayName,
+                display_name: this.props.session.display_name,
                 anonymous: this.state.anonymous,
                 project_id: this.props.project.id,
                 donation_amount: this.state.amount 
@@ -63,16 +63,16 @@ class DonationsForm extends React.Component {
         }
     }
 
-    renderNameErrors(){
-        if (this.state.displayName.length === 0) {
-            return(
-                <div className="errors-div">
-                    Name cannot be blank. <br/>
-                    Your donation will be listed as anonymous if selected below.
-                </div>
-            )
-        }
-    }
+    // renderNameErrors(){
+    //     if (typeof this.state.displayName !== "undefined" && this.state.displayName.length === 0) {
+    //         return(
+    //             <div className="errors-div">
+    //                 Name cannot be blank. <br/>
+    //                 Your donation will be listed as anonymous if selected below.
+    //             </div>
+    //         )
+    //     }
+    // }
 
     renderBackendErrors() {
         if (typeof this.props.errors !== undefined) {
@@ -90,7 +90,7 @@ class DonationsForm extends React.Component {
 
     renderDonationForm(){
         return(
-                <form className="create-form" onSubmit={this.handleSubmit}>
+                <form className="create-form donate-form" onSubmit={this.handleSubmit}>
                     {this.renderBackendErrors()}
                     <div className="inputdiv">
                         <h3>Your Prepaid Funds Available for Donation: ${this.props.session.funds}</h3>
@@ -104,7 +104,7 @@ class DonationsForm extends React.Component {
                         </span>
                     </div>
                     {this.renderAmountErrors()}
-                    <div className="inputdiv">
+                    {/* <div className="inputdiv">
                         <label>Name</label>
                         <input 
                         type="text"
@@ -112,7 +112,7 @@ class DonationsForm extends React.Component {
                         onChange={this.handleChange('displayName')}
                         />
                     </div>
-                    {this.renderNameErrors()}
+                    {this.renderNameErrors()} */}
                     <div className="inputdiv-checkbox">
                         <input 
                         type="checkbox" 

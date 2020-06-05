@@ -285,8 +285,6 @@
     }
 
     & .create-form {
-        border: 1px solid lightgray;
-        padding: 3em;
         background-color: white;
 
         & h3 {
@@ -341,6 +339,11 @@
                 margin: 0 0.5em 0 0;
             }
         }
+    }
+
+    & .donate-form {
+        border: 1px solid lightgray;
+        padding: 3em;
     }
 
 }
