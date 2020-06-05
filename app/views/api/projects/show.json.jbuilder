@@ -20,6 +20,6 @@ json.school do
     json.teacherIds @project.school.teachers.pluck(:id)
 end
 
-json.donations @project.donations.order('created_at DESC')
+json.donations @project.donations.order('id DESC')
 
 json.categories @project.categories

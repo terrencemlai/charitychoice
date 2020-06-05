@@ -39,7 +39,7 @@ class ProjectShow extends React.Component {
         const pd = new Date(this.props.project.created_at);
         return (
             <ul className="timeline-list">
-                {this.props.donations.map( donation => {
+                {this.props.donations.reverse().map( donation => {
                     const d = new Date(donation.created_at);
                     return (
                     <li key={donation.id}>
