@@ -66,14 +66,14 @@ class Greeting extends React.Component {
                             </li>
                         </Link>
                     </div>
-                    <li className="dropdown-option">
+                    {/* <li className="dropdown-option">
                         <span className="material-icons">favorite_border</span>
                         Favorites
                     </li>
                     <li className="dropdown-option">
                         <span className="material-icons">person_outline</span>
                         My Profile
-                    </li>
+                    </li> */}
                     <li className="dropdown-option" onClick={ () => this.props.logout()}>
                         <span className="material-icons">close</span>
                         Sign Out
@@ -94,14 +94,14 @@ class Greeting extends React.Component {
             </span>
             <div className={`account-dropdown${this.state.dropdown}`}>
                 <ul className="account-links">
-                    <li className="dropdown-option">
+                    {/* <li className="dropdown-option">
                         <span className="material-icons">person_outline</span>
                         My Profile
                     </li>
                     <li className="dropdown-option">
                         <span className="material-icons">favorite_border</span>
                         Favorites
-                    </li>
+                    </li> */}
                     <li className="dropdown-option" onClick={ () => this.props.logout()}>
                         <span className="material-icons">close</span>
                         Sign Out
