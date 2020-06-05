@@ -5,7 +5,7 @@ json.project do
     json.progressPct    @project.goal >= @project.progress ? ((@project.progress/@project.goal) * 100).floor : 100
     json.needed         @project.goal >= @project.progress ? @project.goal-@project.progress : 0 
     json.donors         @project.donors
-    json.donationIds    @project.donations.pluck(:id)
+    json.donationIds    @project.donations.order('created_at DESC').pluck(:id)
     json.categoryIds    @project.categories.pluck(:id)
 end
 
@@ -20,6 +20,6 @@ json.school do
     json.teacherIds @project.school.teachers.pluck(:id)
 end
 
-json.donations @project.donations
+json.donations @project.donations.order('created_at DESC')
 
 json.categories @project.categories

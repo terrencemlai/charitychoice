@@ -45,7 +45,7 @@ class ProjectShow extends React.Component {
                     <li key={donation.id}>
                         <span className="timeline-date">{d.toLocaleDateString('en-us', {month: 'short', day: 'numeric'})}</span>
                         <span className="timeline-photo-donor"></span>
-                        <span className="timeline-name"><strong>{donation.display_name}</strong> donated</span>
+                        <span className="timeline-name"><strong>{donation.anonymous ? "Anonymous" : donation.display_name}</strong> donated</span>
                     </li>
                     )})}
                     <li>
