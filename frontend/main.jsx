@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       session: { id: window.currentUser.id,
                  is_teacher: window.currentUser.is_teacher,
                  teacherId: window.currentUser.teacher_id,
-                 display_name: window.currentUser.display_name },
+                 display_name: window.currentUser.display_name,
+                 funds: 50 },
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
       }

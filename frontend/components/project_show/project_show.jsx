@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { receiveCartItem } from '../../actions/cart_actions';
 
 class ProjectShow extends React.Component {
     constructor(props){
         super(props);
 
+        this.state = {
+            donationAmount: 0,
+        }
+
         this.renderTags = this.renderTags.bind(this);
         this.renderTimeline = this.renderTimeline.bind(this);
         this.renderDonateOrEdit = this.renderDonateOrEdit.bind(this);
+        this.handleDonateAmount = this.handleDonateAmount.bind(this);
+        this.handleDonateSubmit = this.handleDonateSubmit.bind(this);
 
     }
 
@@ -50,6 +57,18 @@ class ProjectShow extends React.Component {
         )
     }
 
+    handleDonateAmount(){
+        return e => this.setState({ donationAmount: e.target.value })
+    }
+
+    handleDonateSubmit(e){
+        e.preventDefault();
+        if (this.state.donationAmount > 0) {
+            this.props.receiveCartItem({ projectId: this.props.project.id, amount: this.state.donationAmount });
+            this.props.history.push(`/donate/${this.props.project.id}`);
+        }
+    }
+
     renderDonateOrEdit(){
         if (this.props.teacher.id === this.props.currentTeacherId) {
             return (
@@ -57,13 +76,13 @@ class ProjectShow extends React.Component {
                 )
         } else {
             return (
-                <form>
+                <form onSubmit={this.handleDonateSubmit}>
                     <div className="inputdiv">
                         <div className="inputfield">
-                            <input type="text"/>
+                            <input type="text" onChange={this.handleDonateAmount()}/>
                         </div>
                     </div>
-                    <button>Donate</button>
+                    <button >Donate</button>
                 </form>
             )
         }
@@ -78,7 +97,6 @@ class ProjectShow extends React.Component {
         const meterWidthStyle = {
             width: meterPct,
         };
-
 
         return (
             <div className="project-show">

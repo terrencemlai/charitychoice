@@ -245,13 +245,80 @@
     width: 650px;
     margin: 0 auto;
 
-    & .project-info {
-        width: 650px;
-        padding: 2em;
+    & .subcontainer {
+        margin-top: 2em;
+        width: 100%;
+
+        & .project-info {
+            & h3, p {
+                margin-bottom: 0.5em;
+            }
+            & h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        & .donate-total {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid lightgray;
+            margin-top: 1em;
+            padding: 1em 0 2em 0;
+            width: auto;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    & .form-container {
+        margin-bottom: 4em;
     }
 
     & .modal-main {
         width: auto;
+
+        & div {
+            width: auto;
+        }
+    }
+
+    & .create-form {
+        border: 1px solid lightgray;
+        padding: 3em;
+        background-color: white;
+
+        & h3 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        & .input-funding {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            border: 1px solid lightgray;
+            padding-left: 1em;
+            width: auto;
+
+                & input {
+                    width: 100%;
+                    border: none;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+                &::before {
+                        content: '$';
+                        color: lightgray;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                }
+        }
     }
 
 }
