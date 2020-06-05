@@ -12,6 +12,8 @@ class DonationsForm extends React.Component {
             comment: '',
             amount: this.props.cart.amount,
         }
+
+        this.handleCheck = this.handleCheck.bind(this);
     }
 
     componentDidMount(){
@@ -32,18 +34,23 @@ class DonationsForm extends React.Component {
         // }
     }
 
+    handleCheck(){
+        const newValue = !this.state.anonymous;
+        this.setState({ anonymous: newValue })
+    }
+
     renderAmountErrors(){
+        const re = /^[0-9\b]+$/;
         if (this.state.amount > this.props.session.funds) {
             return(
                 <div className="amount-errors-div">
-                    <p>Sorry, you do not have sufficient funds in your account.</p>
-                    <p>Please enter a lower amount.</p>
+                    You do not have sufficient funds in your account to donate this amount.
                 </div>
             )
-        } else if (this.state.amount < 0) {
+        } else if (this.state.amount <= 0 || !re.test(this.state.amount)) {
             return(
                 <div className="amount-errors-div">
-                    <p>Please enter a valid amount.</p>
+                    Please enter a valid donation amount.
                 </div>
             )
         }
@@ -69,7 +76,7 @@ class DonationsForm extends React.Component {
                 <form className="create-form">
                     {/* {this.renderErrors()} */}
                     <div className="inputdiv">
-                        <h3>Funds in Your Account Available to Donate: ${this.props.session.funds}</h3>
+                        <h3>Your Prepaid Funds Available to Donate: ${this.props.session.funds}</h3>
                         <label>Donation Amount</label>
                         <span className="input-funding">
                             <input 
@@ -87,6 +94,14 @@ class DonationsForm extends React.Component {
                         value={this.state.displayName}
                         onChange={this.handleChange('displayName')}
                         />
+                    </div>
+                    <div className="inputdiv-checkbox">
+                        <input 
+                        type="checkbox" 
+                        checked={this.state.anonymous}
+                        onChange={this.handleCheck}
+                        />
+                        <label>Donate Anonymously</label>
                     </div>
                     <button>
                         Place Donation

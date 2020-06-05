@@ -319,6 +319,27 @@
                         font-weight: 400;
                 }
         }
+
+        & .amount-errors-div {
+            width: auto;
+            color: red;
+            padding: 1em;
+            background-color: $gray;
+            border: 1px solid red;
+            margin-bottom: 1em;
+        }
+
+        & .inputdiv-checkbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 1em 0 1em 0;
+            
+            & input {
+                margin: 0 0.5em 0 0;
+            }
+        }
     }
 
 }
