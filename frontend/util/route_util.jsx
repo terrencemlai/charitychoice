@@ -35,7 +35,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.id),
-  isTeacher: state.session.is_teacher
+  isTeacher: state.session.is_teacher,
 });
 
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
