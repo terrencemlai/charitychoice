@@ -8,6 +8,7 @@ import TeacherFormContainer from './teacher_form/teacher_form_container';
 import TeacherMyProjects from './teacher_myprojects/teacher_myprojects';
 import UserFormContainer from './user_form/user_form_container';
 import ProjectFormContainer from './project_form/project_form_container';
+import ProjectEditFormContainer from './project_form/project_edit_container';
 import ProjectSearchContainer from './project_search/project_search_container';
 import ProjectShowContainer from './project_show/project_show_container';
 import SigninFormContainer from './signin_form/signin_form_container';
@@ -30,6 +31,7 @@ const App = () => (
         <ProtectedTeacherRoute path="/projects/create" component={ProjectFormContainer} />
         <Route path="/projects/search" component={ProjectSearchContainer} />
         <Route path="/projects/:id" component={ProjectShowContainer} />
+        <Route path="/edit/:id" component={ProjectEditFormContainer} />
         <Route path="/donate/:id" component={DonationsFormContainer} />
         <Route path="/teachers/myprojects" component={TeacherMyProjects} />
         <Route path="/teachers/signup" component={TeacherFormContainer} />

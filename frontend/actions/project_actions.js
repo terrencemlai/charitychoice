@@ -43,3 +43,9 @@ export const fetchProjects = (data) => dispatch => (
     ProjectAPIUtil.fetchProjects(data)
     .then(payload => (dispatch(receiveProjects(payload)) 
 )))
+
+export const updateProject = (project, categories) => dispatch => (
+    ProjectAPIUtil.updateProject({project, categories})
+    .then(project => (dispatch(receiveProject(project))
+    ), errors => dispatch(receiveProjectErrors(errors.responseJSON)))
+)

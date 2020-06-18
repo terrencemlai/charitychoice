@@ -1,4 +1,5 @@
 
+
 class Api::ProjectsController <  ApplicationController
 
     def create
@@ -49,10 +50,21 @@ class Api::ProjectsController <  ApplicationController
         render '/api/projects/index'
     end
 
-
-    def edit
-        @project = Project.find(params[:id])
-        render '/api/projects/edit.html.erb'
+    def update
+        @project = Project.find(params[:project][:id])
+        @project.update(title: params[:project][:title], description: params[:project][:description], about_students: params[:project][:about_students], goal: params[:project][:goal], blurb: params[:project][:blurb])
+        if @project.save
+            if params[:categories].is_a?(Array) 
+                @categories = CategoryAssociation.where( project_id: params[:project][:id] ).all
+                @categories.destroy_all
+                params[:categories].each do |category_id|
+                    CategoryAssociation.create( project_id: @project.id, category_id: category_id)
+                end
+            end
+            render '/api/projects/show'
+        else 
+            render json: @project.errors.full_messages, status: 422
+        end
     end
 
     def destroy

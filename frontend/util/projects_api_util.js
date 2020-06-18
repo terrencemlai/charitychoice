@@ -6,6 +6,15 @@ export const createProject = (project, categories) => (
     })
 )
 
+export const updateProject = (project, categories) => (
+    $.ajax({
+        method: 'PATCH',
+        url: `api/projects/${project.id}`,
+        data: project, categories
+    })
+)
+
+
 export const fetchProject = id => (
     $.ajax({
       method: 'GET',
